@@ -1,4 +1,6 @@
-# Creating BYOP provider Node.js Packaged Module
+# Node.js Programming
+
+## Creating BYOP provider Node.js Packaged Module
 - 1. create a folder: package - e.g. censorify 
 - 2. create a file: module - e.g. censortext.js
 - 3. write code
@@ -6,7 +8,6 @@
 - 5. place this readme instructions document
 - 6. build a local package module with the command: **npm pack**
 
-# Node JS Practical Programming
 ## Modifying BYOP provider Node.js Packaged Module
 - 1. change packgage.json version property for new provider package
 
