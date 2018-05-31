@@ -1,0 +1,15 @@
+ {
+  "name": "censorify",
+  "version": "0.1.1",
+  "description": "censor words out of text",
+  "main": "censortext",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sun S. Oo",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "censor words out of text"
+  }
+}

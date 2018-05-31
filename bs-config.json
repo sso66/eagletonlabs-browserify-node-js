@@ -1,0 +1,12 @@
+{
+  "injectChanges": false,
+  "files": [ "./**/*.{html,htm,css,js }" ],
+  "watchOptions": { "ignored": "node_modules" },
+  "server": { "baseDir": "./" },
+  "host": "http://dev.bga.com",
+  "browser": [ "chrome" ],
+  "port" : 3000,
+  "ui": {
+    "port": 3001
+  }
+}

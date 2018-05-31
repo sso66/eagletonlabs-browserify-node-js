@@ -13,7 +13,7 @@
 
 ### Creating BYOP consumer Node.js Packaged Module
   - 1. create a folder: package e.g readwords 
-  - 2. install provider module: **npm install ../censorify/censorify-0.1.0.tgz**
+  - 2. install provider module: - **npm install ../censorify/censorify-0.1.0.tgz**
   - 3. create a file: module - e.g readwords.js
   - 4. write code
   - 5. run the application with **node readwords.js**
