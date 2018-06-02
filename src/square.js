@@ -1,5 +1,5 @@
 // square.js
-console.info('Mounting square.js UIViewController...');
+console.info('Mounting square.js-Node Model...');
 
 var multiply = require('./multiply');
 

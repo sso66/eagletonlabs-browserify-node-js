@@ -7,7 +7,7 @@ console.log(censor.censor("Some very sad, bad and mad text."));
 censor.addCensoredWord("gloomy");
 console.log(censor.getCensoredWords());
 console.log(censor.censor("\nA very gloomy up day.\n"));
-console.info("-----------------------------------------------");
+console.log("-----------------------------------------------");
 
 const content = document.querySelector('#content');
 content.innerHTML = '<i>'+censor.getCensoredWords()+'</i><br />';
