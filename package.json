@@ -1,7 +1,7 @@
 {
   "name": "webpack-nodejs",
-  "version": "1.0.0",
-  "description": "Webpack module loader and Browserfiy transpiler for Node.js modules",
+  "version": "1.1.1",
+  "description": "Webpack module loader and Browserify transpiler for Node.js modules",
   "main": "index.js",
   "scripts": {
     "build": "browserify -t [ babelify ] src/index.js -o build/bundle.js",
