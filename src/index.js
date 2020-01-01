@@ -1,15 +1,15 @@
 // index.js
 console.log('Mounting index.js Node Application...');
 
-var square = require('./square');
+const square = require('./square');
 console.log(square(125)); // =. 15625
 
-var _ = require('underscore');
+const _ = require('underscore');
 _.each([1, 2, 3], function(n) {
   console.log(n); //=> 1, 2, 3
 });
 
-var readwords = require('./readwords');
+const readwords = require('./readwords/readwords');
 console.info(readwords);
 
 // eof 

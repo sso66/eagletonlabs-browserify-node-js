@@ -1,7 +1,8 @@
 // readwords.js - consumer NPM
 console.info('Mounting readwords.js...');
  
-var censor = require("./censorify");
+let censor = require("../censorify");
+
 console.log(censor.getCensoredWords());
 console.log(censor.censor("Some very sad, bad and mad text."));
 censor.addCensoredWord("gloomy");
@@ -15,4 +16,5 @@ const content = document.querySelector('#content');
 content.innerHTML = '<i>'+censor.getCensoredWords()+'</i><br />';
 content.innerHTML += censor.censor("Some very sad, bad and mad text. <hr/>");
 content.innerHTML += "Render Node App in the Browser";
+
 // eof 
