@@ -1,5 +1,5 @@
 // square.js
-console.info('Mounting square.js-Node Model...');
+console.info('Mounting square.js...');
 
 let multiply = require('./multiply');
 
