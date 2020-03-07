@@ -1,6 +1,5 @@
-## README.md - basics directory
-
-###Getting Started with Node.js 
+### README.md - basics directory
+####Getting Started with Node.js 
 
 1. Understanding Node.js
 	1.1 Who Uses Node.js?
