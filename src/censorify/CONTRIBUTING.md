@@ -1,4 +1,4 @@
-## Node.js Programming
+## Node.js Programming: NPM
 
 ### Creating BYOP publisher Node Packaged Module
   - create a folder: package - e.g. censorify - 
