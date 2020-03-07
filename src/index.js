@@ -39,10 +39,8 @@ projects = [...projects, "Learn Malayalam"];
 
 console.log("__forEach__");
 projects.forEach((element, index) => {
-
 	console.log(element + ", " + index);
 });
-
 
 //removing first item from an array
 let numbers = [1, 2, 3, 4];
@@ -88,7 +86,6 @@ let data = [51, 12, 8, 130, 44];
 let found = data.find(function(element) {
 	return element > 100;
 });
-
 console.log(found); 
 
 for (let index in projects) {
@@ -99,7 +96,6 @@ for (let index in projects) {
 let squared = numbers.map((value, index, origArr) => {
    return value * value;
 });
-
 console.log(squared);
 
 let newProjects = projects.map((project, index) => {
