@@ -1,4 +1,7 @@
-// basics/censortext.js - provider NPM
+// File: basics/censortext.js 
+// Note: Provider/Publisher NPM
+// Date: 03/07/2020
+//.............................................................................. 
 console.info('Mounting censortext.js...');
 
 var censoredWords = ['sad', 'bad', 'mad'];

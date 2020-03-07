@@ -1,4 +1,7 @@
-// basics/readwords.js - consumer NPM
+// File: basics/readwords.js 
+// Note: Consumer/Subscriber NPM
+// Date: 03/07/2020
+//.............................................................................. 
 console.info('Mounting readwords.js...');
  
 const censor = require("../censorify");

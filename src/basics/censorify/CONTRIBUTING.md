@@ -1,4 +1,4 @@
-## Node.js Programming: NPM + Browserify
+## Node.js Programming: NPM + Browserify + React JS
 
 ### Creating BYOP publisher Node Packaged Module
   - create a folder: package - e.g. censorify
