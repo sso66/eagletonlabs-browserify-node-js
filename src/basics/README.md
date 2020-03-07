@@ -2,9 +2,9 @@
 
 Getting Started with Node.js 
 
-- 1. Understanding Node.js
-  - 1.1 Who Uses Node.js?
-	1.2 What is Node.js Used For?
+- Understanding Node.js
+  - Who Uses Node.js?
+  - What is Node.js Used For?
 	
 2. Installing Node.js
 	2.1 Looking at the Nodes.js
