@@ -1,19 +1,20 @@
 // index.js
-console.log('Mounting index.js Node Application...');
+console.log('Mounting index.js Node.js Application...');
 
 const square = require('./square');
 console.log(square(125)); //  15625
 
-const _ = require('underscore');
-//const _ = require('lodash');
+const _ = require('lodash');
+
 _.each([1, 2, 3], function(n) {
   console.log(n); //=> 1, 2, 3
 });
 
-const readwords = require('./readwords/readwords');
+// ___ basics Node.js directory ___
+const readwords = require('./basics/readwords/readwords');
 console.info(readwords);
 
-// all about javascript arrays
+// ___ all about javascript array extras ___
 //...................................................................
 let tasks = new Array(10)
 console.log("length = " + tasks.length);
@@ -106,4 +107,3 @@ let newProjects = projects.map((project, index) => {
 console.log(newProjects);
 
 // eof 
-

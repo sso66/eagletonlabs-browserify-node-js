@@ -1,7 +1,7 @@
-// readwords.js - consumer NPM
+// basics/readwords.js - consumer NPM
 console.info('Mounting readwords.js...');
  
-let censor = require("../censorify");
+const censor = require("../censorify");
 
 console.log(censor.getCensoredWords());
 console.log(censor.censor("Some very sad, bad and mad text."));

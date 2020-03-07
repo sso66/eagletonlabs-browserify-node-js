@@ -1,4 +1,4 @@
-// censortext.js - provider NPM
+// basics/censortext.js - provider NPM
 console.info('Mounting censortext.js...');
 
 var censoredWords = ['sad', 'bad', 'mad'];
