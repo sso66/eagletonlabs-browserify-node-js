@@ -1,6 +1,6 @@
-/* README.md - basics Markdown file */
+### README.md - basics directory
 
-Getting Started with Node.js 
+####Getting Started with Node.js 
 
 1. Understanding Node.js
 	1.1 Who Uses Node.js?
@@ -27,5 +27,3 @@ Getting Started with Node.js
 5. Writing Data to the Console
 
 6. Summary
-
-7. Up Next
