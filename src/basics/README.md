@@ -1,4 +1,4 @@
-### README.md - basics directory
+### basics
 
 Getting Started with Node.js 
 
