@@ -1,5 +1,5 @@
 // File: os_info.js
-// Note: Call method on the os module
+// Note: Calling methods on the os module
 // Date: 03/07/2020
 //..............................................................................
 console.log( "Mounting os_info.js..." );
