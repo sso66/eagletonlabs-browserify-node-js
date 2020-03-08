@@ -1,4 +1,4 @@
-## os/util/dns 
+## os/util/dns: Using Additional Node.js Modules
 
 Using Additional Node.js Modules 
 

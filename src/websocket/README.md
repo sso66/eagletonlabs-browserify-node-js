@@ -1,1 +1,1 @@
-# websocket: Implement Web Sockets in Node.js
+# websocket: Implementing Web Sockets in Node.js

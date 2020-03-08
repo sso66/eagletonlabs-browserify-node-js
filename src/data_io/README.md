@@ -33,4 +33,4 @@ Handling Data I/O in Node.js
  - The opposite of this is dynamic data (also known as transactional data) where information 
    is asynchronously changed as further updates to the information become available.
  
-6. Up Next
+- Up Next
