@@ -18,7 +18,8 @@
     "browserify",
     "webpack",
     "babel",
-    "lodash"
+    "lodash",
+    "react"
   ],
   "author": "Sun Stephen Oo",
   "license": "ISC",
@@ -28,8 +29,7 @@
   "homepage": "https://github.com/sso66/webpack-node.js#readme",
   "devDependencies": {
     "babelify": "^7.3.0",
-    "lodash": "^4.17.15",
-    "underscore": "^1.8.3"
+    "lodash": "^4.17.15"
   },
   "dependencies": {
     "babel-preset-react": "^6.24.1",
