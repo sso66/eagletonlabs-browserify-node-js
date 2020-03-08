@@ -1,4 +1,4 @@
-## multi_processors
+## multi_processors: Scaling Applications Using Multiple Processors in Node.js
 
 Scaling Applications Using Multiple Processors in Node.js
 

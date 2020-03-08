@@ -1,4 +1,4 @@
-## sockets
+## sockets: Implementing Socket Services in Node.js
 
 Implementing Socket Servces in Node.js 
 
