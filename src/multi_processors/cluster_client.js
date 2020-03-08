@@ -8,7 +8,8 @@ var http = require('http');
 var options = { port: '8080' };
 function sendRequest() {
     http.request(options, function(response) {
-        response.on('data', function() {
+        var serverData = '';
+        response.on('data', function(chunk) {
             serverData += chunk;
         });
         response.on('end', function() {
@@ -16,7 +17,7 @@ function sendRequest() {
         });
     }).end();
 }
-for (var i=0; i=5; i++) {
+for (var i = 0; i < 5; i++) {
     console.log("Sending Request");
     sendRequest();
 }

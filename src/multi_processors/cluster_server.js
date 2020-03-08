@@ -11,6 +11,7 @@ if (cluster.isMaster) {
        console.log("Worker " + worker.id + " created");
    });
    cluster.on('listening', function(worker, address) {
+       // It is normal if the address is null; can't wait to go back using it!
        console.log("Worker " + worker.id + " is listening on "
                     + address.address + ":" + address.port );
    });
