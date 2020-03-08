@@ -1,0 +1,5 @@
+/* wireframe.css */
+body { background: aqua; }
+h1 { font-size: 36px; }
+
+header, footer { border: 1px solid gray;}
