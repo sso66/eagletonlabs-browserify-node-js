@@ -9,7 +9,7 @@ Scaling Applications Using Multiple Processors in Node.js
 	- Getting Information from the process Module
 
 - Implementing Child Process
-  - Understanding the ChildProcess object\
+  - Understanding the ChildProcess object
   - Executing a System Command on Another Process by Using exec()
   - Executing an Executing File on Another Process Using execFile()
   - Spawning Process in Another Node.js Instance Using spawn()
