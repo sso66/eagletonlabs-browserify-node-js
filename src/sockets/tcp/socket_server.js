@@ -9,9 +9,11 @@ var net = require('net');
 var server = net.createServer(function(client) {
     console.log('Client connection: ');
     console.log( ' local = %s:%s', this.localAddress, client.localPort);
-    console.log( ' remote = %s:%s', this.remoteAddress, client.remotePort);     
+    console.log( ' remote = %s:%s', this.remoteAddress, client.remotePort); 
+        
     client.setTimeout(500);
     client.setEncoding('utf8'); 
+    
     client.on('data', function(data) {
         console.log('Received data from client on port %d: %s', 
                client.remotePort, data.toString());
@@ -32,6 +34,7 @@ var server = net.createServer(function(client) {
         console.log("Socket Timed Out");
     });
 });  
+
 server.listen(8107, function() {
    console.log('Server listening: ' + JSON.stringify(server.address()));
    server.on('close', function() {

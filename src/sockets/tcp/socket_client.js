@@ -10,9 +10,11 @@ function getConnection(connName) {
     var client = net.connect({ port: 8107, host: 'localhost' }, function() {
         console.log(connName + ' Connected: ');
         console.log( ' local = %s:%s', this.localAddress, this.localPort);
-        console.log( ' remote = %s:%s', this.remoteAddress, this.remotePort);     
+        console.log( ' remote = %s:%s', this.remoteAddress, this.remotePort);   
+          
         this.setTimeout(500);
         this.setEncoding('utf8'); 
+        
         this.on('data', function(data) {
             console.log(connName + " from Server: " + data.toString());
             this.end();
@@ -47,6 +49,7 @@ function writeData(socket, data) {
 var Dwarves = getConnection("Dwarves");
 var Elves = getConnection("Elves");
 var Hobbits = getConnection("Hobbits");
+
 writeData(Dwarves, "More Axes");
 writeData(Elves, "More Arrows");
 writeData(Hobbits, "More Pipes Weed");
