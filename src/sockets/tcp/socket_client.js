@@ -5,6 +5,7 @@
 console.info('Mounting TCP socket clients...');
 
 var net = require('net');
+
 function getConnection(connName) {
     var client = net.connect({ port: 8107, host: 'localhost' }, function() {
         console.log(connName + ' Connected: ');
@@ -31,6 +32,7 @@ function getConnection(connName) {
     });
     return client;
 }
+
 function writeData(socket, data) {
     var success = !socket.write(data);
     if (!success) {
@@ -41,6 +43,7 @@ function writeData(socket, data) {
         })(socket, data);
     }
 }
+
 var Dwarves = getConnection("Dwarves");
 var Elves = getConnection("Elves");
 var Hobbits = getConnection("Hobbits");

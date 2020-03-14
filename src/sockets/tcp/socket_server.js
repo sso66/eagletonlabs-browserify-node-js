@@ -5,6 +5,7 @@
 console.info('Mounting TCP socket server...');
 
 var net = require('net');
+
 var server = net.createServer(function(client) {
     console.log('Client connection: ');
     console.log( ' local = %s:%s', this.localAddress, client.localPort);
@@ -40,6 +41,7 @@ server.listen(8107, function() {
        console.log("Server Error: " + JSON.stringify(err));
    }); 
 });
+
 function writeData(socket, data) {
     var success = !socket.write(data);
     if (!success) {

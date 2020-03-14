@@ -6,13 +6,13 @@ console.log( "Mounting process_info.js...\n" );
 
 var util = require('util');
 console.log('Current Working Directory: ' + process.cwd());
-// console.log('Environment Settings: ' + JSON.stringify(process.env));
+console.log('Environment Settings: ' + JSON.stringify(process.env));
 console.log('Node Args: ' + process.argv);
 console.log('Execution Path: ' + process.execPath);
 console.log('Execution Args: ' + JSON.stringify(process.execArgv));
 console.log('Node Version: ' + process.version);
 console.log('Module Versions: ' + JSON.stringify(process.versions));
-// console.log('Process Config: ' + process.config);
+console.log('Process Config: ' + process.config);
 console.log('Process Title: ' + process.title);
 console.log('Process Platform: ' + process.platform);
 console.log('Process Architecture: ' + process.arch);

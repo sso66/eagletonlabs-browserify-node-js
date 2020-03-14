@@ -11,7 +11,7 @@ const square = require('./square');
 console.log("Browserify: " + square(125)); //  15625
 
 ReactDOM.render(
-  <div style={{fontSize: '1.5em'}}>React JS + Browserify:  {square(125)}</div>,
+  <div style={{fontSize: '1.5em', color: '#00F'}}>React JS + Browserify:  {square(125)}</div>,
   document.getElementById('app')
 );
 
