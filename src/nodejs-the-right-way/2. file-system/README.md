@@ -8,10 +8,10 @@
   - Reading and Writing Files Asychronously
   - Creating Read and Write Streams
   - Blocking the Event Loop with Synchronous File Access
-  - Performing Other File-System Operations
-### The Two Phases of a Node Program
+  - Performing Other File-System Operations: copy(), unlink(), chmod() and mkdir()
+### The Two Phases of a Node.js Program
 ### Wrapping Up
   - Fortifying Code
   - Expanding Functionality
-  
+   
   
