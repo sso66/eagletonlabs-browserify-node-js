@@ -1,10 +1,10 @@
 'use strict';
 const
 	fs = require('fs'),
-	zmq = require('zmq'),
+	zeromq = require('zeromq'),
 
 	// create publisher endpoint
-	publisher = zmq.socket('pub'),
+	publisher = zeromq.socket('pub'),
 
 	filename = process.argv[2];
 
@@ -21,5 +21,5 @@ fs.watch(filename, function(){
 
 // listen on TCP port 5432
 publisher.bind('tcp://*:5432', function(err) {
-	console.log('Listening for zmq subscribers...');
+	console.log('Listening for zeromq subscribers...');
 });

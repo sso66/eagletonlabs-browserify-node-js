@@ -1,9 +1,9 @@
 "use strict";
 const
-	zmq = require('zmq'),
+	zeromq = require('zeromq'),
 
 	// create subscriber endpoint
-	subscriber = zmq.socket('sub');
+	subscriber = zeromq.socket('sub');
 
 // subscribe to all messages
 subscriber.subscribe("");
