@@ -1,12 +1,12 @@
 {
   "name": "4.-messaging",
   "version": "1.0.0",
-  "description": "- Advantanges of 0MQ\r   - Importing External Modules with npm\r   - Installing the 0MQ Base Library\r   - Installing zmq Node.js Module\r ### Message-Publishing and -Subscribing\r   - Publishing Messages over TCP\r   - Subscribing to a Publisher\r   - Automatically Reconnecting Endpoints\r   - Responding to Requests\r   - Implementing a Responder\r   - Issuing Requests\r   - Trading Synchronicity for Scale\r ### Routing and Dealing Messages\r   - Routing Messages\r   - Dealing Messages\r ### Clustring Node.js Process\r   - Forking Worker Process in a Cluster\r   - Building a Cluster\r ### Pushig and Pulling Messages\r   - Pushing Jobs to Workers\r   - Avoding Common Pitfalls\r     - The First-Joiner Problem\r     - The Limited-Resource Problem\r ### Wrapping Up\r   - Error Handling\r   - Robustness\r   - Bidirectional Messaging",
-  "main": "zmq-filer-rep-cluster.js",
+  "description": "Robust Messaging System",
+  "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Stephen Oo",
   "license": "ISC",
   "dependencies": {
     "zeromq": "^5.2.0"
