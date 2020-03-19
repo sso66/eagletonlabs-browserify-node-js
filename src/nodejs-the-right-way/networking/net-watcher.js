@@ -8,26 +8,26 @@ const
 	fs = require('fs'),
 	net = require('net'),
 
-	filename = process.argv[2],
+filename = process.argv[2],
 	
-	// binding a server to a TCP port
-	server = net.createServer(function(connection) {
+// binding a server to a TCP port
+server = net.createServer(function(connection) {
 
-		// reporting
-		console.log('Subscriber connected.');
-		connection.write("Now watching '" + filename + "' for changes...\n");
+	// reporting
+	console.log('Subscriber connected.');
+	connection.write("Now watching '" + filename + "' for changes...\n");
 
-		// watcher setup
-		let watcher = fs.watch(filename, function() {
-			connection.write("File '" + filename + "' changed: " + Date() + "\n");
-	      	});
+	// watcher setup
+	let watcher = fs.watch(filename, function() {
+		connection.write("File '" + filename + "' changed: " + Date.now() + "\n");
+    });
 
-		// cleanup
-		connection.on('close', function() {
-			console.log('Subscriber disconnected.');
-			watcher.close();
-		});
+	// cleanup
+	connection.on('close', function() {
+		console.log('Subscriber disconnected.');
+		watcher.close();
 	});
+});
 
 if (!filename) {
 	throw Error('No target filename was specified.');
