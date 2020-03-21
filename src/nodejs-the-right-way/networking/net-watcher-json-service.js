@@ -1,4 +1,9 @@
+// File: net-watcher-json-service.js
+// Note: Writing JSON Data to a Socket
+// Date: 03/19/2020
+//..............................................................................
 'use strict';
+
 const
 
 	fs = require('fs'),

@@ -1,7 +1,13 @@
-"use strict";
+// File: net-watcher-json-client.js
+// Note: Writing JSON Data to a Socket
+// Date: 03/19/2020
+//..............................................................................
+'use strict';
+
 const
 	net = require('net'),
 	client = net.connect({port: 5432});
+	
 client.on('data', function(data) {
 	let message = JSON.parse(data);
 	if (message.type === 'watching') {

@@ -1,6 +1,6 @@
 // File: net-watcher.js
-// Note: Writing Data to a Socket
-// Date: 03/17/2020
+// Note: Writing Text Data to a Socket
+// Date: 03/19/2020
 //..............................................................................
 'use strict';
 
