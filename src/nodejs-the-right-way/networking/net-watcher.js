@@ -40,6 +40,7 @@ server = net.createServer(function(connection) {
  * Finally, notice the callback passed into the server.listen at the end Node
  * invokes this function after it has succfully bound port 5432 and is ready to
  * start receiving connections.
+ * 
  */
 	// reporting
 	console.log('Subscriber connected.');
