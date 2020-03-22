@@ -1,3 +1,7 @@
+// File: zeromq-watcher-sub.js
+// Note: Subscribing to a Publisher
+// Date: 03/22/2020
+//..............................................................................
 "use strict";
 const
 	zeromq = require('zeromq'),

@@ -1,4 +1,12 @@
+// File: zeromq-watcher-pub.js
+// Note: Publishing Messages over TCP
+// Date: 03/22/2020
+//..............................................................................
+/*
+ * 
+ */
 'use strict';
+
 const
 	fs = require('fs'),
 	zeromq = require('zeromq'),
