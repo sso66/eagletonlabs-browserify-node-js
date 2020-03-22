@@ -1,11 +1,11 @@
 // File: net-watcher-json-service.js
 // Note: Extending Core Classes in Custom Modules
-// Date: 03/21/2020
+// Date: 03/22/2020
 //..............................................................................
 'use strict';
 /*
- * To fix the client exposed a flaw in code, namely it doesn't buffer its input
- * Any message that arrives as multiple data events will crash it.
+ * Need to fix the client exposed a flaw in code, namely it doesn't buffer its 
+ * input. Any message that arrives as multiple data events will crash it.
  * 
  * So really the client program has two jobs to do. One is to buffer incoming
  * data into messages. The other is to handle each message when it arrives.
