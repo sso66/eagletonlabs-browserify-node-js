@@ -20,7 +20,7 @@
  */
 const
 	net = require('net'),
-	ldj = require('./ldj.js'),
+	ldj = require('./ldj'),
 	
 	netClient = net.connect({port: 5432}),
 	ldjClient = ldj.connect(netClient);
