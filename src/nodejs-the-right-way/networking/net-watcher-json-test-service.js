@@ -1,4 +1,21 @@
+// File: net-watcher-json-service.js
+// Note: Testing Network Application Functionality
+// Date: 03/21/2020
+//..............................................................................
 "use strict";
+/*
+ * Understanding the Message-Boundary Problem
+ * 
+ * When you develop networked programs in Node.js, they'll often communicate by
+ * passing messages. In the best case, a message will arrive all at once.
+ * 
+ * But sometimes messages will arrive in pieces, split into distinct data events.
+ * 
+ * To develop neworked applications, you'll need to deal with these splits when
+ * they happen.
+ * 
+ */
+
 const
 	net = require('net'),
 
@@ -22,8 +39,10 @@ const
 			clearTimeout(timer);
 			console.log('Subscriber disconnected');
 		});
-        });
+    });
 
 server.listen(5432, function() {
 	console.log('Test server listening for subscribers...');
 });
+
+// eof
