@@ -1,11 +1,29 @@
 // File: socket_client.js
 // Note: Implementing basic TCP socket clients
-// Date: 03/08/2020
+// Date: 03/22/2020
 //..............................................................................
 console.info('Mounting TCP socket clients...');
 
 var net = require('net');
-
+/*
+ * At the most basic level, implementing a TCP socket client invols creating a
+ * Socket object that connects to the server and then writing data to the server
+ * and handling the data that comes back. In addition you should build the socket
+ * so that it can handle errors, the buffer being full, and timeouts.
+ * 
+ * Steps involved in implement a socket client using the Socket object.
+ * 
+ * The first step is to create the socket client by calling net.connect(). Pass
+ * in the port and host that you want to connect to as well and implement the 
+ * callback fuction to handle the connect event.
+ * 
+ * Then inside the callback, you set up the connection behavior. For example 
+ * you might want to add a timeout or the encoding.
+ * 
+ * You also need to add the handlers for the 'data', 'end', 'error', 'time' 
+ * and 'close' events that you want to handle. For example, to handle 'data'
+ * event so that you can read data coming back from the server.
+ */
 function getConnection(connName) {
     var client = net.connect({ port: 8107, host: 'localhost' }, function() {
         console.log(connName + ' Connected: ');
@@ -34,7 +52,19 @@ function getConnection(connName) {
     });
     return client;
 }
-
+/*
+ * To write data to the sever you implement write() command. If you
+ * are writing a lot of data to the server and the write fails,you 
+ * might also want to implement a 'drain' event handler to begin 
+ * writing again whe the buffer is empty. The following shows an
+ * example of implementing a 'drain' hendlr because of a write failure.
+ * 
+ * Notice that a closure is used to preserve the values of the socket
+ * and data variables once the function has ended.
+ * 
+ * Observe the used of success flag.
+ * 
+ */
 function writeData(socket, data) {
     var success = !socket.write(data);
     if (!success) {
@@ -45,14 +75,29 @@ function writeData(socket, data) {
         })(socket, data);
     }
 }
+/*
+ * The full implementation of a basic TCP socket client:
+ * 
+ * * The client just sends a bit of data and receives a bit
+ * data back; however, the example could be easily be expanded
+ * to support more complex data handling across the socket.
+ * 
+ * Notice that there are three separate sockets opened to the
+ * server, and they are communicating  at the same time.
+ * 
+ * Also, notice that each client that is created gets a different
+ * random port number.
+ */
+// var Dwarves = getConnection("Dwarves");
+// var Elves = getConnection("Elves");
+// var Hobbits = getConnection("Hobbits");
+// 
+// writeData(Dwarves, "More Axes");
+// writeData(Elves, "More Arrows");
+// writeData(Hobbits, "More Pipes Weed");
 
-var Dwarves = getConnection("Dwarves");
-var Elves = getConnection("Elves");
-var Hobbits = getConnection("Hobbits");
-
-writeData(Dwarves, "More Axes");
-writeData(Elves, "More Arrows");
-writeData(Hobbits, "More Pipes Weed");
+module.exports.getConnection = getConnection;
+module.exports.writeData = writeData;
 
 // eof
 

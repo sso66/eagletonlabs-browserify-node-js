@@ -1,0 +1,20 @@
+Mounting TCP socket main...
+Mounting TCP socket clients...
+Dwarves Connected: 
+ local = 127.0.0.1:61682
+ remote = 127.0.0.1:8107
+Elves Connected: 
+ local = 127.0.0.1:61683
+ remote = 127.0.0.1:8107
+Hobbits Connected: 
+ local = 127.0.0.1:61684
+ remote = 127.0.0.1:8107
+Dwarves from Server: Sending: More Axes
+Elves from Server: Sending: More Arrows
+Hobbits from Server: Sending: More Pipes Weed
+Dwarves Client disconnected
+Socket Closed
+Hobbits Client disconnected
+Elves Client disconnected
+Socket Closed
+Socket Closed
