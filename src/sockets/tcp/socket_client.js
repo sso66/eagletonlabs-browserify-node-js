@@ -15,7 +15,7 @@ var net = require('net');
  * 
  * The first step is to create the socket client by calling net.connect(). Pass
  * in the port and host - Options object -that you want to connect to as well 
- * and implement the callback fuction to handle the connect event.
+ * and implement the callback function to handle the connect event.
  * 
  * Then inside the callback, you set up the connection behavior. For example 
  * you might want to add a timeout or the encoding.
@@ -55,7 +55,7 @@ function getConnection(connName) {
 /*
  * To write data to the sever you implement write() command. If you are writing 
  * a lot of data to the server and the write fails, you might also want to 
- * implement a 'drain' event handler to begin writing again whe the buffer is 
+ * implement a 'drain' event handler to begin writing again when the buffer is 
  * empty. The following shows an example of implementing a 'drain' handler because 
  * of a write failure.
  * 
@@ -83,7 +83,7 @@ function writeData(socket, data) {
  * across the socket.
  * 
  * Notice that there are three separate sockets opened to the server, and they
- * are communicating  at the same time.
+ * are communicating at the same time.
  * 
  * Also, notice that each client that is created gets a different random port 
  * number at runtime.

@@ -22,7 +22,7 @@ var net = require('net');
  * begin listening on the port.
  * 
  * Inside the 'listen' callback handler, you also add handlers to support the
- * 'close' and 'error' events of the Server Object. They may jus be log 
+ * 'close' and 'error' events of the Server Object. They may just be log 
  * statements, or you might want to add additional code that is executed when 
  * these events occur.
  * 
@@ -79,7 +79,7 @@ server.listen(8107, function() {
  * in your code. 
  * 
  * If you are writing a lot of data, you may also want to implement a 'drain' 
- * event handle that will begin writing when the buffer is empty. This can 
+ * event handler that will begin writing when the buffer is empty. This can 
  * help if write() returns filure because the buffer is full or if you want 
  * to throttle back writing to the socket.
  * 
