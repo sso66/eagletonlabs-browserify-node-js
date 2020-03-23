@@ -7,24 +7,24 @@ console.info('Mounting TCP socket server...');
 var net = require('net');
 /*
  * At the most basic level, implementing a TCP server client involves creating
- * a Server object, listening on a port, and handling incoming connections, 
+ * a net.Server object, listening on a port, and handling incoming connections, 
  * including reading and writing data to and from the connections.
  * 
  * In addition, the socket server should handle the 'close' and 'error' events
- * on the server object, as well as the events occur in the incoming client
- * connection Socket object.
+ * on the net.Server object, as well as the events occur in the incoming client
+ * connection net.Socket object.
  * 
- * The steps involved in implementing a socket server using the Server object as
- * following.
+ * The steps involved in implementing a socket server using the net.Server 
+ * object as following.
  * 
  * The first step is to create socket server by calling net.createServer(). You
  * also need to provide a connection callback handler and then call listen() to
  * begin listening on the port.
  * 
  * Inside the 'listen' callback handler, you also add handlers to support the
- * 'close' and 'error' events of the Server Object. They may jus be log statements,
- * or you might want to add additional code that is executed when these events
- * occur.
+ * 'close' and 'error' events of the Server Object. They may jus be log 
+ * statements, or you might want to add additional code that is executed when 
+ * these events occur.
  * 
  * Inside the 'connection' event callback, you set up the connection behavior. 
  * For example, you might want to add timeout or set the encoding.
@@ -75,13 +75,13 @@ server.listen(8107, function() {
    }); 
 });
 /*
- * To write data to the server, you implement a write() command some where
+ * To write data to the server, you implement a write() command somewhere
  * in your code. 
  * 
- * If you are writing a lot of data, you may also want to 
- * implement a 'drain' event handle that will begin writing when the buffer
- * is empty. This can help if write() returns filure because the buffer is
- * full or if you want to throttle back writing to the socket.
+ * If you are writing a lot of data, you may also want to implement a 'drain' 
+ * event handle that will begin writing when the buffer is empty. This can 
+ * help if write() returns filure because the buffer is full or if you want 
+ * to throttle back writing to the socket.
  * 
  * The following is an example of implementing a 'drain' handler because of
  * the write failure.
@@ -108,11 +108,15 @@ function writeData(socket, data) {
  * Although the implementation is basic, it illustrates handling the events
  * as well as reading and writing data in the client connection.
  * 
- * Notice the client parameter is the client connection object Socket object.
+ * Notice the client parameter in creating net.Server object; that is the client
+ * connection object net.Socket object.
  * 
- * Just like working with Event Source, Event Object and the Event Listener 
+ * It's just like working with Event Source, Event Object and the Event Listener 
  * as well as EventEmitter Class, Event Loop, Event Queue and the Thread Pool 
  * scenarios.
  *  
  */
+// expose module methods
+module.exports.writeData = writeData;
+
 // eof
