@@ -3,7 +3,10 @@
 // Date: 03/22/2020
 //..............................................................................
 /*
+ * Implement the PUB half of PUB/SUB pair using the 'zeromq' module.
  * 
+ * First, instead of requiring the 'net' module, now we're requiring 'zeromq'.
+ * We use it to create a publisher endpoint by calling zeromq.socket('pub).
  */
 'use strict';
 
