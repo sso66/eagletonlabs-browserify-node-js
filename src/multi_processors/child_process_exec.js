@@ -1,4 +1,4 @@
-// File: child_exec.js
+// File: child_process_exec.js
 // Note: Executing a system command in another process
 // Date: 03/07/2020
 //..............................................................................
@@ -6,7 +6,7 @@ console.log( "Mounting child_exec.js..." );
 
 var childProcess = require('child_process');
 var options = { maxBuffer: 100*1024, encoding: 'utf8', timeout: 5000 };
-var child = childProcess.exec('dir /B', options, function(error, stdout, stderr) {   
+var child = childProcess.exec('dir /D', options, function(error, stdout, stderr) {   
     if (error) {
         console.log(error.stack);
         console.log('Error Code: ' + error.code);

@@ -1,8 +1,8 @@
 // File: main.js
-// Note: Implementing basic TCP socket main process
+// Note: Implementing full basic TCP socket main process
 // Date: 03/22/2020
 //..............................................................................
-console.info('Mounting TCP socket main...');
+console.info('Mounting TCP socket main process...');
 
 var client = require('./socket_client');
 

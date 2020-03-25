@@ -1,6 +1,6 @@
 // File: socket_client.js
-// Note: Implementing basic TCP socket clients
-// Date: 03/22/2020
+// Note: Implementing full basic TCP socket clients
+// Date: 03/24/2020
 //..............................................................................
 console.info('Mounting TCP socket clients...');
 

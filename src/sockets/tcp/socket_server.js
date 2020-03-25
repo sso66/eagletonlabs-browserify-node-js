@@ -1,6 +1,6 @@
 // File: socket_server.js
-// Note: Implementing basic TCP socket server
-// Date: 03/22/2020
+// Note: Implementing full basic TCP socket server
+// Date: 03/24/2020
 //..............................................................................
 console.info('Mounting TCP socket server...');
 
@@ -35,7 +35,6 @@ var net = require('net');
  * you might add the following handler once the connection has been established.
  * 
  */
-
 var server = net.createServer(function(client) {
     console.log('Client connection: ');
     console.log( ' local = %s:%s', this.localAddress, client.localPort);

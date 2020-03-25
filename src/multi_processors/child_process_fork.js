@@ -1,5 +1,6 @@
-// File: child_fork.js
-// Note: A parent process that creates three child process and send commands to each executing in parallel
+// File: child_process_fork.js
+// Note: A parent process that creates three child process and send commands 
+//       to each executing in parallel
 // Date: 03/07/2020
 //..............................................................................
 console.log( "Mounting child_fork.js..." );
