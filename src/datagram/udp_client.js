@@ -13,15 +13,17 @@ console.info('Mounting TCP socket client...');
  * 
  * The third parameter message.length, is the number of bytes we want to send 
  * from the offset in the buffer. 
+ * 
  * In our case, the offset is 0, and the length is message.length (16 bytes), 
  * which is quite tiny and the whole buffer can be sent in a single UDP packet. 
  * This might always not be the case. For large buffers, you will need to 
  * iterate over the buffer and send it in smaller chunks of UDP packets.
  * 
  * Exceeding the allowed packet size will not result in any error. The packet 
- * will  * be silently dropped. That's just the nature of UDP. The err object in 
- * the callback function of client.send() is going to be only of the DNS lookup
- * kind.
+ * will be silently dropped. That's just the nature of UDP. 
+ * 
+ * The err object in the callback function of client.send() is going to be only 
+ * of the DNS lookup kind.
  * 
  * Make sure the HOST / IP address is in conformance with the IP version you 
  * use, else your packets will not reach the destination.
