@@ -15,6 +15,7 @@ console.log("Mounting buffer_slice.js...");
  * 
  * Buffer() is deprecated due to security and usability issues. Use the 
  * Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+ * 
  */
 var numbers = new Buffer.from("123456789");
 console.log(numbers.toString());

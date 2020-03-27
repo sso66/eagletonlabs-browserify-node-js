@@ -10,13 +10,13 @@ console.log("Mounting buffer_copy.js...");
  * 
  * Node.js provides the 
  * copy(targetBuffer, [targetStart], [sourceStart], [sourceIndex]) function
- * for Buffer objects. The targetBuffer parameter is anothe Buffer object, and
- * targetStart, sourceStart, sourceEnd are indexes inside the source and target
- * buffers.
+ * for Buffer objects. The targetBuffer parameter is another Buffer object, 
+ * and targetStart, sourceStart, sourceEnd are indexes inside the source and 
+ * target buffers.
  * 
  * Note:
- * To copy string data from one buffer to anothe, make sure that both buffers
- * use the same encoding, our you may get unexpected results when decoding the
+ * To copy string data from one buffer to another, make sure that both buffers
+ * use the same encoding, or you may get unexpected results when decoding the
  * resulting buffer.
  * 
  * You can also copy data from one buffer to the other by indexing them 
@@ -24,6 +24,7 @@ console.log("Mounting buffer_copy.js...");
  * 
  * Buffer() is deprecated due to security and usability issues. Use the 
  * Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+ * 
  */
 var alphabet = new Buffer.from('abcdefghijklmnopqrstuvwxyz');
 console.log(alphabet.toString());

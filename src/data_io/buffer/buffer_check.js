@@ -15,8 +15,8 @@ console.log("Mounting buffer_check.js...");
  * cannot use the .length property. Instead, you need to use the
  * Buffer.byteLength(string, [encoding]).
  * 
- * It is important to note that there is a difference between the string length
- * and byte length of a buffef.
+ * It is important to note that there is a difference between the string 
+ * length and byte length of a buffer.
  * 
  */
 console.log("UTF8 text \u00b6".length);
@@ -32,8 +32,8 @@ console.log(Buffer.from("UTF8 text \u00b6").length);
  * Notice that the same evaluate to 11, but because it contains a double-byte
  * character, the byteLength is 12.
  * 
- * Also note theat Butter.from("UTF8 text \u00bc6").length evaluates to 12
- * also. This is because .lenght on buffer returns the byte length.
+ * Also note that Butter.from("UTF8 text \u00bc6").length evaluates to 12 also. 
+ * This is because .lenght on buffer returns the byte length.
  * 
  */
 

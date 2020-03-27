@@ -5,18 +5,19 @@
 console.log("Mounting buffer_concat.js...");
 
 /*
- * You can concatenate two or more Buffer objects together to form a new buffer.
+ * You can concatenate two or more Buffer objects together to form a new 
+ * buffer.
  * 
- * The concat(list, [totalLength]) method accepts an array of Buffer objects as
- * first parameter and totalLength, defining the maximum bytes in the buffer, 
- * as optional second argument.
+ * The concat(list, [totalLength]) method accepts an array of Buffer objects 
+ * as first parameter and totalLength, defining the maximum bytes in the 
+ * buffer, as optional second argument.
  * 
- * The Buffer objects are concatenated in the order in which the appear in the
- * list, and a new Buffer object is returned, containing the contents of the
- * original buffers up to totalLength bytes.
+ * The Buffer objects are concatenated in the order in which the appear in 
+ * the list, and a new Buffer object is returned, containing the contents of 
+ * the original buffers up to totalLength bytes.
  * 
- * If you don no provide a totalLength parameter, concat() figures out the total
- * length for you. However, it has to iterate thorugh the list, so providing a
+ * If you do not provide a totalLength parameter, concat() figures out the total
+ * length for you. However, it has to iterate thorugh the list, so providing a 
  * totalLength value is a bit faster.
  * 
  */
@@ -33,3 +34,4 @@ console.log(Buffer.concat([question, eu]).toString());
 // Mounting buffer_concat.js...
 // Air Speed Velocity of an African Swallow?
 // Air Speed Velocity of an European Swallow?
+

@@ -5,8 +5,8 @@
 console.log("Mounting buffer_write.js...");
 
 /* 
- * You cannot extend the size of a buffer object after been created, by you can
- * write data to any location in buffer.
+ * You cannot extend the size of a buffer object after been created, but you 
+ * can write data to any location in buffer.
  *
  * Buffer() is deprecated due to security and usability issues. Use the 
  * Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.

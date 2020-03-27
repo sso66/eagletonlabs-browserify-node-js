@@ -6,12 +6,11 @@ console.log("Mounting buffer_read.js...");
 
 /* 
  * There are several methods for reading buffers. The simplest is to use the
- * toString() method to convert all or part of a buffer to string. However,
- * you can also access specific indexes in the buffer directly or by using 
- * read(). 
+ * toString() method to convert all or part of a buffer to string. However, you
+ * can also access specific indexes in the buffer directly or by using read(). 
  * 
- * Also, Node.js provides a StringDecoder object taht has a write(buffer) 
- * method that decodes and writes buffered data using specified endocing.
+ * Also, Node.js provides a StringDecoder object that has a write(buffer) 
+ * method that decodes and writes buffered data using specified encoding.
  * 
  * Buffer() is deprecated due to security and usability issues. Use the 
  * Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
@@ -47,5 +46,4 @@ console.log(bufUTF8.readUInt32BE(18).toString(16));
 // Some UTF8 Text ¶ テテ €
 // e3
 // e3838620
-
 
