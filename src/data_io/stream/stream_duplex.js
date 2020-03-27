@@ -1,6 +1,6 @@
 // File: stream_duplex.js
-// Note: Duplex data streams
-// Date: 03/01/2020
+// Note: Implementing a Duplex stream object
+// Date: 03/27/2020
 //..............................................................................
 console.log("Mounting stream_duplex.js...");
 
