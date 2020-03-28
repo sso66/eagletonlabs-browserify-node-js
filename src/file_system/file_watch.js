@@ -39,3 +39,5 @@ fs.watchFile('./data/config.json', options , function(curr, prev) {
     console.log('./data/config.json modified at: ' + curr.mtime);
     console.log('Previous modification was: ' + prev.mtime);
 });
+
+// eof
