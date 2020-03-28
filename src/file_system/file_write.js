@@ -5,8 +5,8 @@
 console.log("Mounting file_write.js...");
 /*
  * The fs module provides four different ways to write data to the files.
- * You can write data to file in as single call, write chuncks using synchronous
- * writes, write chunks using asynchronous writes or stram writes through 
+ * You can write data to file in as single call, write chunks using synchronous
+ * writes, write chunks using asynchronous writes or stream writes through 
  * Writable stream.
  * 
  * Each of these methods accepts either a String or Buffer Object as input.
@@ -19,7 +19,14 @@ var config = {
 	maxConnections: 15,
 	rootPath: "/webroot"
 };
+var configTxt = JSON.stringify(config);
+var options = { encoding: 'utf8', flag: 'w' };
 /*
+ * Simple File Writing
+ * 
+ * The simplest method for writing data to a file is to used one of the
+ * writeFile() methods:
+ *
  * fs.writeFile(path, data [options], callback)
  * fs.writeFileSync(path, data [options])
  * 
@@ -39,9 +46,6 @@ var config = {
  * To implement a simple asynchronous fileWrite() request to store as JSON
  * string of a config object in a file:
  */
-var configTxt = JSON.stringify(config);
-var options = { encoding: 'utf8', flag: 'w' };
-
 fs.writeFile('./data/config.json', configTxt, options, function(err) {
 	if (err) {
 		console.log("Config Write Failed!");

@@ -69,8 +69,8 @@ function writeFruit(fd) {
  * function and passes the file descriptor. 
  * 
  * Also notice that the fs.write() method also call writeFruit()funciton and
- * passes the file descripter. This ensures that the asynchronous
- * write completes before another executes.
+ * passes the file descripter. This ensures that the asynchronous write completes
+ * before another executes.
  */
 fs.open('fruit.txt', 'w', function(err, fd) {
     writeFruit(fd);	               

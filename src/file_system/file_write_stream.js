@@ -24,7 +24,7 @@ console.log("Mounting file_write_stream.js...");
  * as well as mode and flags used when openning the file.
  * 
  * Once you have opened the Writable file stream, you can write to it using the
- * standard stream write(buffer)methods. When you finished writing call the 
+ * standard stream write(buffer) methods. When you finished writing call the 
  * end method to close the stream.
  * 
  */
