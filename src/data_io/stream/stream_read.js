@@ -37,7 +37,7 @@ reader.on('data', function(data) {
 });
 
 reader.on('end',function(data) {
-	console.log("No more Readers.");
+	console.log("No more readers.");
 });
 
 module.exports = Reader;
@@ -49,4 +49,4 @@ module.exports = Reader;
 // Direct read: yes
 // Callback read: no
 // Callback read: maybe
-// No more Readers.
+// No more readers.

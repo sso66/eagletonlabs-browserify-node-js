@@ -1,7 +1,16 @@
+// File: file_read.js
+// Note: Reading a JSON string file to an object
+// Date: 03/28/2020
+//..............................................................................
+console.log("Mounting file_read.js...");
+/*
+ * 
+ */
 var fs = require('fs');
+
 var options = { encoding: 'utf8', flag: 'r'};
 
-fs.readFile('config.txt', options, function(err, data) {
+fs.readFile('./data/config.json', options, function(err, data) {
 	if (err) {
 		console.log("Failed to open Config File.");
 	} else {
@@ -12,3 +21,5 @@ fs.readFile('config.txt', options, function(err, data) {
 		console.log("Root Path: " + config.rootPath);
 	}
 });
+
+// eof
