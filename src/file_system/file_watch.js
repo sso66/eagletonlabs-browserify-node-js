@@ -33,6 +33,7 @@ const fs = require('fs');
  * The following code snippet monitors a file name config.json every 5 seconds
  * and uses the Stats object to output the current and previous times the file
  * was modified.
+ * 
  */
 const options = { persistent: true, interval: 5000 };
 fs.watchFile('./data/config.json', options , function(curr, prev) {
