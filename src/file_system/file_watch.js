@@ -1,3 +1,5 @@
+console.log("Mounting file_watch.js... ");
+
 const fs = require('fs');
 
 fs.watchFile('./data/config.json', { persistent: true, interval: 5000 }, function(curr, prev) {
