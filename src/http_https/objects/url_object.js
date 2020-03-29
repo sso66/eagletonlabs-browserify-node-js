@@ -77,6 +77,8 @@ console.log(urlObj);
 console.info('To: URL String');
 console.log(url.format(urlObj));
 
+// eof
+
 // output 
 // Mounting url_object.js...
 // 
@@ -100,4 +102,3 @@ console.log(url.format(urlObj));
 // To: URL String
 // http://user:pass@host.com:80/resource/path?query=string#hash
 
-// eof
