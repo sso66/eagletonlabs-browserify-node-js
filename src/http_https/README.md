@@ -41,6 +41,16 @@
 - Processing Query Strings and Form Parameters
 
 - Understanding Request, Response, and Server Objects
+  > To use the `http` module in Node.js application, you first need to 
+  > understand the request and response objects.
+  > 
+  > They provide the information and much of the functionality that comes
+  > into and out of HTTP clients and servers.
+  >
+  > Once you see the makeup of these objects - including the properties,
+  > events, and methods they provide - it will be simple to implement 
+  > your own HTTP servers and clients.
+  
   - The http.Client.Request Object
   - The http.Server.Response Object
   - The http.IncomingMessage Object
