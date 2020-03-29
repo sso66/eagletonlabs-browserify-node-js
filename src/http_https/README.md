@@ -24,12 +24,13 @@
 > This is where the `http` module is an invaluable tool in your
 > arsenal.
 >
-> You can create basic HTTP that provide and interface for 
-> communications behind your firewall, and then create basic
-> HTTP clients that interact with those services: `websocket`.
+> You can create basic HTTP ***servers*** that provide and interface 
+> for communications behind your firewall, and then create basic
+> HTTP ***clients*** that interact with those services, for example,
+> `websocket`, TCP `net`, UDP `dgram` and 'ip` modules.
 >
-> Focus on the objects you use when implementing clients and
-> servers using `http` module.
+> Focus on the objects you use when implementing ***clients*** and
+> ***servers***using `http` module.
 
 ### Implementing HTTP Services in Node.js 
 
