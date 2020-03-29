@@ -6,7 +6,7 @@ Implementing HTTP Services in Node.js
 >
 > Node.js provides the 'http' and 'https' modues out of the box,
 > and they give you a basic framework to do just about anything
-> you might need to do form an HTTP and HTTPS standpoint
+> you might need to do from an HTTP and HTTPS standpoint
 >
 > In fact, it is not dificult to implement a full webserver using
 > just the 'http' module.
