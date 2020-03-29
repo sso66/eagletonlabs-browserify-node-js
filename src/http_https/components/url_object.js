@@ -1,4 +1,8 @@
-// url_object.js
+// File: url_object.js
+// Note: Processing URLs
+// Date: 3/28/2020
+//..............................................................................
+console.log("Mounting url_object.js...");
 /*
  * URL - http://user:pass@host.com:80/resource/path/?query=string#hash
  * 
@@ -14,6 +18,7 @@
  * 10; query -    This either parameter potion of the Query String or parsed object containing
  *                 the query string parameter=values if the parseQueryString is set to true.
  * 11. hash -     The hash portion of the URL, including pound sign (#).
+ * 
  */
 //
 // Understanding the URL Object
