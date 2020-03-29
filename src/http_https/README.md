@@ -4,7 +4,7 @@ Implementing HTTP Services in Node.js
 - Reason
 > One of the most important aspects of Node.js is the ability to 
 > implement HTTP and HTTPS server and services quickly.
->
+- Purpose
 > Node.js provides the 'http' and 'https' modues out of the box,
 > and they give you a basic framework to do just about anything
 > you might need to do from an HTTP and HTTPS standpoint
