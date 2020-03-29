@@ -77,4 +77,27 @@ console.log(urlObj);
 console.info('To: URL String');
 console.log(url.format(urlObj));
 
+// output 
+// Mounting url_object.js...
+// 
+// From: URL Stirng
+// http://user:pass@host.com:80/resource/path?query=string#hash
+// To: URL Object
+// Url {
+  // protocol: 'http:',
+  // slashes: true,
+  // auth: 'user:pass',
+  // host: 'host.com:80',
+  // port: '80',
+  // hostname: 'host.com',
+  // hash: '#hash',
+  // search: '?query=string',
+  // query: [Object: null prototype] { query: 'string' },
+  // pathname: '/resource/path',
+  // path: '/resource/path?query=string',
+  // href: 'http://user:pass@host.com:80/resource/path?query=string#hash' 
+// }
+// To: URL String
+// http://user:pass@host.com:80/resource/path?query=string#hash
+
 // eof
