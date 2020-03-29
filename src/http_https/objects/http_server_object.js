@@ -8,12 +8,12 @@ console.log("Mounting http_server_object.js...\n");
  * implement the HTTP servers.
  * 
  * It provide an underlying socket that listens on port and handles receiving
- * requestuests and then sending responseponses out to client connections.
+ * request and then sending responses out to client connections.
  * 
  * While the server is listening, the Node.js application does not end.
  * 
  * The http.Server implements the << EventEmitter >> and emits the events:
- * - requestuest
+ * - request
  * - connection (socket)
  * - close
  * - checkContinue
@@ -23,7 +23,7 @@ console.log("Mounting http_server_object.js...\n");
  * 
  * As you implement an HTTP server, you need to handle at least some or all of
  * the listed events. For example, at a minimum, you need an event handler to
- * handle the requestuest event (EHC) that is triggered when a client requestuest 
+ * handle the request event (EHC) that is triggered when a client request
  * (TMC) - "action/command" is received.
  * 
  * To start the HTTP server, you need to first create a Server object, using
