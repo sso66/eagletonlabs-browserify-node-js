@@ -8,15 +8,15 @@
 **Purpose**
 > Node.js provides the `http` and `https` modues out of the box,
 > and they give you a basic framework to do just about anything
-> you might need to do from an HTTP and HTTPS standpoint
+> you might need to do from an HTTP and HTTPS standpoint.
 >
-> In fact, it is not dificult to implement a full webserver using
+> In fact, it is not difficult to implement a full webserver using
 > just the 'http' module. However, the 'http' module is pretty 
 > low level.
 >
 > You will likely to use different module to handle routing, 
-> cookies, caching, etc. Explore `express` module to see the advantages 
-> of this module provides.
+> cookies, caching, etc. Explore `express` module to see the 
+> advantages of this module provides.
 >
 > What you will more likely be using the 'http' module for is 
 > implementing backend web services for your applications.
