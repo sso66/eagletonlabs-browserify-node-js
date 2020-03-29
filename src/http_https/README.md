@@ -1,11 +1,11 @@
 ## http_https: Implementing HTTP Services in Node.js
 
 Implementing HTTP Services in Node.js 
-#### Reason
+**Reason**
 > One of the most important aspects of Node.js is the ability to 
 > implement HTTP and HTTPS server and services quickly.
 
-- Purpose
+**Purpose**
 > Node.js provides the 'http' and 'https' modues out of the box,
 > and they give you a basic framework to do just about anything
 > you might need to do from an HTTP and HTTPS standpoint
@@ -21,7 +21,7 @@ Implementing HTTP Services in Node.js
 > What you will more likely be using the 'http' module for is 
 > implementing backend web services for your applications.
 
-- Impact
+- **Impact**
 > This is where the 'http' module is an invaluable tool in your
 > arsenal.
 
