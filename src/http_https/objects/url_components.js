@@ -10,18 +10,17 @@ console.log("Mounting url_components.js...\n");
  * This allows you to manipulate URL strings on the server side to make
  * adjustments in a URL. 
  * 
- * For example, you might want to change the URL location
- * befor processing a request because a resouce has moved or changed 
- * paramentes.
+ * For example, you might want to change the URL location before processing a 
+ * request because a resouce has moved or changed paramenters.
  * 
  * To resolve a URL to a new location:
  * 
  * url.resolve(from, to)
  * 
- * The from paramente specifices the original base URL string.
+ * The from paramenter specifies the original base URL string.
  * 
- * The to paramenter specifies the new location to which you want to the
- * URL to resolve.
+ * The to paramenter specifies the new location to which you want to the URL 
+ * to resolve.
  * 
  */
 var url = require('url');
