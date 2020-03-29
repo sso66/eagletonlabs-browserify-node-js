@@ -14,7 +14,13 @@ Implementing HTTP Services in Node.js
 > low level.
 >
 > You will likely to use different module to handle routing, 
-> cookies
+> cookies, caching, etc. Re: 'express' module to see the advantages 
+> of this module provides.
+> What you will more likely be using the 'http' module for is 
+> implementing backend web services for your applications.
+
+> This is where the 'http' module is an invaluable tool iy your
+> arsenal.
 
 
 - Processing URLs
