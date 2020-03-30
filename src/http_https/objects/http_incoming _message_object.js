@@ -34,7 +34,7 @@ console.log("Mounting http_incoming_message_object.js...\n");
  * - socket
  * 
  * Events:
- * close
+ * - close
  * 
  * Methods:
  * - setTimeout(msecs, callback)
