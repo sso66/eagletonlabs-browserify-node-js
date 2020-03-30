@@ -1,5 +1,5 @@
 // File: http_server_external.js
-// Note: Implementing an HTTP web services that connects remotely to to an 
+// Note: Implementing an HTTP web services that connects remotely to an 
 //       external source for weather data.
 // Date: 3/30/2020
 //..............................................................................
@@ -30,11 +30,11 @@ console.log("Mounting http_server_external.js...\n");
  * form.
  * 
  * The big difference between this case study and the previous case studies is
- * that this webserver aslo implement local web client to connect to the 
+ * that this webserver also implement local web client to connect to the 
  * external service and get data to formulate the response.
  * 
  * Notice the webserver is implemenation that if the method is POST, we read
- * the data form the form data from the request stream and use 
+ * the data from the form data from the request stream and use 
  * querystring.parse() to get the city name and call into the getWeather() 
  * function.
  * 
