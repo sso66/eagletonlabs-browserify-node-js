@@ -1,5 +1,13 @@
 /* http_server_static.js */
-/* Implementing a basic static file webserver */
+// File: http_server_static.js.js
+// Note: Serving Static Files
+// Date: 3/30/2020
+//..............................................................................
+console.log("Mounting http_server_static.js.js...\n");
+
+/*
+ *  Basic implementing a basic static file webserver 
+ */
 var fs = require('fs');
 var http = require ('http');
 var url = require('url');

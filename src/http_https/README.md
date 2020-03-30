@@ -50,12 +50,30 @@
   > **properties**, **methods** and **events** they provide - it will be simple 
   > to implement your own HTTP servers and clients.
   
-  - The http.Client.Request Object
-  - The http.Server.Response Object
+  - The http.ClientRequest Object
+  - The http.ServerResponse Object
   - The http.IncomingMessage Object
   - The HTTP Server Object
 	
 - Implementing HTTP Clients and Servers in Node.js
+	> Now that you understand the http.ClientRequest, http.ServerResponse, and
+	> http.IncomingMessage object, you are ready to jump in and implement some
+	> Node.js HTTP clients and the servers.
+	>
+	> Follow the guidelines through the process of implementing basic HTTP 
+	> clients and servers in Node.js.
+	>
+	> You implement a client and server in each section to see how the two 
+	> interacts.
+	>
+	> These sections are extremely basic to make it easy for you to grasp the
+	> concepts of starting the client/server and then handling the different
+	> types of request and responses.
+	>
+	> Notice there are no error handling, no protection against attack, and
+	> not much other functionality. However, they provide a variety of basic
+	> flow and structure required to handle HTTP request using `http` module
+	
   - Serving Static Files
   - Implementing GET Servers
   - Implementing POST Servers
