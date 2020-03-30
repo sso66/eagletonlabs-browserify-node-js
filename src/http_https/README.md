@@ -72,7 +72,7 @@
 	>
 	> Notice there are no error handling, no protection against attack, and
 	> not much other functionality. However, they provide a variety of basic
-	> flow and structure required to handle HTTP request using `http` module
+	> flow and structure required to handle HTTP request using `http` module.
 	
   - Serving Static Files
   - Implementing GET Servers
