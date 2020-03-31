@@ -27,5 +27,12 @@
 > between single-threaded Node.js applications running on the same computer or on
 > different computers on the same network.
 
+> Sockets are a key part of Unix and Windows-based operating systems, and they make it
+> easier for developers to create network-enable software. Instead of constructiong
+> from scratch, app developers can include sockets in their programs. Since network 
+> sockets are used for a number of different network protocols (HTTP, FTP, Telnet
+> etc.), several sockets can be used simultaneously.
+
+
 
 
