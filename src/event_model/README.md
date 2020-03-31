@@ -19,7 +19,7 @@ Using Events, Listeners, Timers, and Callbacks
 		- Adding Event Listeners to Objects
 		- Removing Listeners from Objects
 		- Implementing Event Listeners and Event Emitters
-
+		
 - Implementing Callbacks
   - Adding Additional Parameters to Callbacks
   - Implementing Closure in Callbacks

@@ -1,5 +1,5 @@
 # webpack-node.js
-Learning of Node.js
+Applying of Node.js
 - Getting Started With Node.js
 - Using Events, Listeners, and Callbacks in Node.js
 - Handling Data I/O in Node.js

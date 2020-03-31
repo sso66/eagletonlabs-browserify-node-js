@@ -12,11 +12,11 @@ Getting Started with Node.js
   - Selecting a Node'js IDE
 
 - Working with Node.js Packages
-  - What are Node Package Modules?
-  - Understanding the Node Package Registry
-  - Using the Node Package Manager
-  - Searching the Node Packaged Modules
-  - Installing Node Packaged Modules
+  - What are Node.js Package Modules?
+  - Understanding the Node.js Package Registry
+  - Using the Node.js Package Manager
+  - Searching the Node.js Packaged Modules
+  - Installing Node.js Packaged Modules
   - Using package.json
 	
 - Creating a Node.js Application
