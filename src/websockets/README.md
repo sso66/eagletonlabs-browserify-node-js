@@ -19,6 +19,13 @@
 > online games, instant messagers, tracking apps, and so on. This guide explains how
 > WebSockets operate and shows how we can build WebSocket application in Node.js.
 
-### Network sockets vs Websockets
+### Network sockets vs WebSockets
+> Getting started with WebSockets in Node.js, let's draw the line between network 
+> sockets and WebSockets.
+#### Network socket
+> A network socket or simply socket serves as an internal endpoint for exchanging data
+> between single-threaded Node.js applications running on the same computer or on
+> different computers on the same network.
+
 
 
