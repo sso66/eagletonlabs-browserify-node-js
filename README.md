@@ -8,6 +8,7 @@ Learning of Node.js
 - IMplementing Socket Services in Node.js
 - Scaling Applications Using Multiple Processors in Node.js
 - Using Additional Nodes.js Modules
-- Implementing Websocket in Node.js
 - Implementing UDP Services in Nodes.
 - Implementing raw IP Services in Node.js
+- Implementing Websocket in Node.js
+- Implementing React.jsx in Node.js
