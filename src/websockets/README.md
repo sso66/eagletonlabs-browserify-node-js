@@ -66,5 +66,36 @@
 > TCP and UDP are two major protocols for communicating between hosts. Explore how your
 > Node.js application connect to TCP and UDP sockets.
 
+### What WebSockets are
+> The Websocket communication protocol provides a full-duplex communicatiion channel
+> over a single TCP connection.
+>
+> In contrast to HTTPs, WebSockets don't require you to send a request to get a response.
+> They alllow for bidirectional data flows, so you can just wait the server to respond.
+> It will send you a message when it's available.
+
+> WebSockets are a good solution for services require continuous data exchange - for 
+> instance, instant messengers, online games, and real-time trading systems. Refer to
+> a complete information about WebSockets protocol in the RFC 6455 specification.
+
+> WebSocket connections are requested by browsers and are responded to by the servers,
+> after which connections is established.
+>
+> This process is often called a handshake. The special kind of header in WebSockets 
+> require only one handshake between a browser (user-agent) and server for establishing
+> a connection that will remain active thorough its lifetime.
+
+> WebSockets solve many of the headaches of real-time web development and have several
+> benefits over traditional HTTP:
+  - The lightweight header reduces data transmission overhead.
+  - Only one TCP connection is required for a single web client.
+  - WebSocket servers can push data to web clients.
+
+> The WebSocket protocol is relative simple to implement. It uses the HTTP protocol for
+> initial handshake. After a successful handshake, a connection is established and the
+> WebSocket essential user raw TCP - `ip` to read/write data.
+
+### Explore how to create WebSocket app in Node.js and plain JavaScirpt or React.jsx
+
 
 
