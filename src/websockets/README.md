@@ -112,12 +112,12 @@
 > Explore the WebSocket specification that defines a specific frame format that's used
 > between a client and server. 
 
-> Observe the bit pattern for formulating messages:
+> Observe the bit pattern on formulating messages:
   - Usage of code to decode the client payload
     - function to receive data and returns a Frame   
   - Usage of code for encoding data
     - function to send a Frame
-    - Save fragmentation & opcode information in first byte
+    - function to save fragmentation & opcode information in first byte
   
 #### Closing a handshake
 > A handshake is closed when on of the parties sends a close frame with close status
