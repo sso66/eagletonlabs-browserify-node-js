@@ -33,6 +33,12 @@
 > sockets are used for a number of different network protocols (HTTP, FTP, Telnet
 > etc.), several sockets can be used simultaneously.
 
+> Sockets are created and used with a set function calls, which are sometimes referred
+> to as socket's application programming interface (API). Due to function calls, 
+> socket can be opened just like regular files.
+
+> There are several types of network sockets:
+- **Datagram Sockets**
 
 
 
