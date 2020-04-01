@@ -29,7 +29,7 @@ Handling Data I/O in Node.js
 
 - Summary
   - Persistent Data denotes information that is infrequently accessed and not likely to be modified. 
- - The opposite of this is dynamic data (also known as transactional data) where information 
-   is asynchronously changed as further updates to the information become available.
+  - The opposite of this is dynamic data (also known as transactional data) where information 
+    is asynchronously changed as further updates to the information become available.
  
 - Up Next
