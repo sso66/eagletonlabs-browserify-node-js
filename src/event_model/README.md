@@ -26,5 +26,18 @@ Using Events, Listeners, Timers, and Callbacks
   - Chaining Callbacks
 
 - Summary
+> The event-driven model that Node.js uses provides scalability and performance.
+> Lessons learned on the difference between the event-driven and the traditional
+> threaded model for webservers.
+> Also, on that you can add events to the event queue when blocking I/O s called,
+> and you can use events, timers or the nextTick() method to schedule events.
+
+> You have seen that there are three types of timer events: timeout, interval and
+> immediate. You can use each of these events to delay the execution of work for
+> a period of time.
+
+> You have also seen how to implement your own custom event emitters and add 
+> listener function to them
+
 
 - Up Next
