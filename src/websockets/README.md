@@ -13,9 +13,9 @@
 > interactive session between a user's browser and a server. 
 >
 > Websockets allow a browser to send messages to a server and receives event-driven
-> responses with having to poll the server for a reply
+> responses without having to poll the server for a reply
 #### Impact:
-> For now, WebSockets are teh number one solution for building real-time applications: 
+> For now, WebSockets are the number one solution for building real-time applications: 
 > online games, instant messagers, tracking apps, and so on. This guide explains how
 > WebSockets operate and shows how we can build WebSocket application in Node.js.
 
