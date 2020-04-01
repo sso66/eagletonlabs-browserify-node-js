@@ -21,7 +21,7 @@
 
 ### Network sockets vs WebSockets
 > Getting started with WebSockets in Node.js, let's draw the line between network 
-> sockets (`net`) and WebSockets (`websocket`).
+> sockets - npm `net` and WebSockets - npm (`websocket`).
 #### Network socket
 > A network socket or simply socket serves as an internal endpoint for exchanging data
 > between single-threaded Node.js applications running on the same computer or on
@@ -40,6 +40,13 @@
 > There are several types of network sockets:
 - **Datagram Sockets** also known as connection-oriented sockets, use the User Datagram
   Prototol (UDP) - npm `dgram`.
+- **Stream sockets** also know as connection-oriented sockets, use the Tramission Control
+  Protocoo (TCP) - npm 'net', Stream Control Transmission Protocol (SCTP), Datagram
+  Congestion Control Protocol (DCCP). Thise sockets provide a bidirectional, reliable,
+  sequenced, and unduplicated flow of data with no record boundaries.
+- **Raw socket** (or raw **IP sockets**) are typically available in routers and other 
+  networking equipment (e.g. IPG100 device). These sockets are nomally datagram-oriented,
+  although 
 
 
 
