@@ -21,7 +21,7 @@
 
 ### Network sockets vs WebSockets
 > Getting started with WebSockets in Node.js, let's draw the line between network 
-> sockets - npm `net` and WebSockets - npm (`websocket`).
+> sockets - npm `net` and WebSockets - npm `websocket`.
 #### Network socket
 > A network socket or simply socket serves as an internal endpoint for exchanging data
 > between single-threaded Node.js applications running on the same computer or on
