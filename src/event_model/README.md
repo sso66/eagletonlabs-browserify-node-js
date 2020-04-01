@@ -39,6 +39,6 @@ Using Events, Listeners, Timers, and Callbacks
 > a period of time.
 
 > You have also seen how to implement your own custom event emitters and add 
-> listener function to them
+> listener function to them.
 
 - Up Next
