@@ -47,7 +47,7 @@
 - **Raw socket** (or raw **IP sockets**) are typically available in routers and other 
   networking equipment (e.g. IPG100 device). These sockets are nomally datagram-oriented,
   although the exacted characteristics depend on the interface provided by the protocol.
-  Raw sockets are not use by most applications. They're provided *to support the 
+  Raw sockets are not use by most applications. They're provided *to support the* 
   *development of the new protocols* and *to provide access to more esoteric facilities*
   *of existing protocols.* 
 
