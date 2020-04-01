@@ -99,7 +99,8 @@
   - To write a simple WebSocket URL client connecting to  echo.websocket.org server 
     based on the `http`/`net` libraries
   - To write a complex WebSocket HTTP GET client (React.jsx) connecting to WebSocket server (Node.js) 
-    based on the 'http`/`websocket` libraries
+    based on the `http`/`websocket` libraries, then connectiong to `net` TCP , `dgram` and
+    `ip` host-to-host communications
 
 #### Transfering the data frame
 > When the handshake has been successfully completed, your app can read and write data
