@@ -96,9 +96,21 @@
 > WebSocket essential user raw TCP - `ip` to read/write data.
 
 #### Explore how to create WebSocket app in Node.js and plain JavaScirpt or React.jsx
+  - To write a simple WebSocket echo server based on the `net`/`http` libraries
+  - To write a complex WebSocket custom server 
 
 #### Transfering the data frame
-
+> When the handshake has been successfully completed, your app can read and write data
+> form the client.
+>
+> Explore the WebSocket specification that defines a specific frame format that's used
+> between a client and server. Observe the bit pattern for formulating messages:
+  - Usage of code to decode to decode the client payload
+    - function to receive data and returns a Frame   
+  - Usage of code for encoding data
+    - function to send a Frame
+    - Save fragmentation & opcode information in first byte
+  
 #### Closing a handshake
 > A handshake is closed when on of the parties sends a close fraem with close status
 > as the payload.
