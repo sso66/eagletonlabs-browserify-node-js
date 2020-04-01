@@ -2,7 +2,7 @@
 #### Purpose:
 > Sending a message and getting an instance response without refreshing the page is
 > something we take for granted. But in the past, enabling real-time functionality was 
-> a real challenge for developer. 
+> a real challenge for developers. 
 >
 #### Reason:
 > The developer community has come a long from HTTP long polling and AJAX (Asyncyronous
