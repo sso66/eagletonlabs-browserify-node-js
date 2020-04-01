@@ -38,7 +38,8 @@
 > socket can be opened just like regular files.
 
 > There are several types of network sockets:
-- **Datagram Sockets**
+- **Datagram Sockets** also known as connection-oriented sockets, use the User Datagram
+  Prototol (UDP) - npm `dgram`.
 
 
 
