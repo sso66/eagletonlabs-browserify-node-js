@@ -51,5 +51,8 @@
   *development of the new protocols* and *to provide access to more esoteric facilities*
   *of existing protocols.* 
 
+##### Socket communications
+> Firs, let's figure out how to ensure that every socket is unique. If they're not, you 
+> can't establish a reliable communication channel
 
 
