@@ -2,7 +2,7 @@
 #### Purpose:
 > Sending a message and getting an instance response without refreshing the page is
 > something we take for granted. But in the past, enabling real-time functionality was 
-> a real challenge for developer. 
+> a real challenge for developers. 
 >
 #### Reason:
 > The developer community has come a long from HTTP long polling and AJAX (Asyncyronous
@@ -13,15 +13,16 @@
 > interactive session between a user's browser and a server. 
 >
 > Websockets allow a browser to send messages to a server and receives event-driven
-> responses with having to poll the server for a reply
+> responses without having to poll the server for a reply
 #### Impact:
-> For now, WebSockets are teh number one solution for building real-time applications: 
+> For now, WebSockets are the number one solution for building real-time applications: 
 > online games, instant messagers, tracking apps, and so on. This guide explains how
 > WebSockets operate and shows how we can build WebSocket application in Node.js.
 
 ### Network sockets vs WebSockets
 > Getting started with WebSockets in Node.js, let's draw the line between network 
 > sockets - npm `net` and WebSockets - npm `websocket`.
+
 #### Network socket
 > A network socket or simply socket serves as an internal endpoint for exchanging data
 > between single-threaded Node.js applications running on the same computer or on
@@ -34,26 +35,28 @@
 > etc.), several sockets can be used simultaneously.
 
 > Sockets are created and used with a set function calls, which are sometimes referred
-> to as socket's application programming interface (API). Due to function calls, 
+> to as socket's application programming interface (API). Thanks to function calls, 
 > socket can be opened just like regular files.
 
 > There are several types of network sockets:
-- **Datagram Sockets** also known as connection-oriented sockets, use the User Datagram
+- **Datagram Sockets** also known as connection-less sockets, use the User Datagram
   Prototol (UDP) - npm `dgram`.
+  
 - **Stream sockets** also know as connection-oriented sockets, use the Tramission Control
   Protocoo (TCP) - npm 'net', Stream Control Transmission Protocol (SCTP), Datagram
-  Congestion Control Protocol (DCCP). Thise sockets provide a bidirectional, reliable,
+  Congestion Control Protocol (DCCP). These sockets provide a bidirectional, reliable,
   sequenced, and unduplicated flow of data with no record boundaries.
+  
 - **Raw socket** (or raw **IP sockets**) are typically available in routers and other 
   networking equipment (e.g. IPG100 device). These sockets are nomally datagram-oriented,
-  although the exacted characteristics depend on the interface provided by the protocol.
+  although their exact characteristics depend on the interface provided by the protocol.
   Raw sockets are not use by most applications. They're provided *to support the* 
   *development of the new protocols* and *to provide access to more esoteric facilities*
   *of existing protocols.* 
 
 ##### Socket communications
 > First, let's figure out how to ensure that every socket is unique. If they're not, you 
-> can't establish a reliable communication channel
+> can't establish a reliable communication channel.
 >
 > Giving every `process` a unique PID helps to deal with the problem locally. But such
 > an approach doesn't work over network.
@@ -79,11 +82,11 @@
 > a complete information about WebSockets protocol in the RFC 6455 specification.
 
 > WebSocket connections are requested by browsers and are responded to by the servers,
-> after which connections is established.
+> after which a connection is established.
 >
 > This process is often called a handshake. The special kind of header in WebSockets 
 > require only one handshake between a browser (user-agent) and server for establishing
-> a connection that will remain active thorough its lifetime.
+> a connection that will remain active throughout its lifetime.
 
 > WebSockets solve many of the headaches of real-time web development and have several
 > benefits over traditional HTTP:
@@ -91,28 +94,30 @@
   - Only one TCP connection is required for a single web client.
   - WebSocket servers can push data to web clients.
 
-> The WebSocket protocol is relative simple to implement. It uses the HTTP protocol for
+> The WebSocket protocol is relatively simple to implement. It uses the HTTP protocol for
 > initial handshake. After a successful handshake, a connection is established and the
 > WebSocket essential user raw TCP - `ip` to read/write data.
 
 #### Explore how to create WebSocket app lifecycle in Node.js and plain JavaScirpt or React.jsx
-  - To write a simple WebSocket *URL* client connecting to  echo.websocket.org server 
-    based on the `http`/`net` libraries
-  - To write a complex WebSocket *HTTP GET* client (React.jsx) connecting to WebSocket server (Node.js) 
-    based on the `http`/`websocket` libraries, then connecting to `net` TCP , `dgram` and
-    `ip` via host-to-host communications
+  - To write a simple WebSocket *URL* client connecting to echo.websocket.org server  based on 
+    the `http`/`net` libraries
+  - To write a complex WebSocket *HTTP GET* client (React.jsx) connecting to WebSocket server
+  - (Node.js) based on the `http`/`websocket` libraries, then connecting to `net` TCP , `dgram`
+    and `ip` via host-to-host communications
 
 #### Transfering the data frame
 > When the handshake has been successfully completed, your app can read and write data
 > from the client.
->
+
 > Explore the WebSocket specification that defines a specific frame format that's used
-> between a client and server. Observe the bit pattern for formulating messages:
+> between a client and server. 
+
+> Observe the bit pattern on formulating messages:
   - Usage of code to decode the client payload
     - function to receive data and returns a Frame   
   - Usage of code for encoding data
     - function to send a Frame
-    - Save fragmentation & opcode information in first byte
+    - function to save fragmentation & opcode information in first byte
   
 #### Closing a handshake
 > A handshake is closed when on of the parties sends a close frame with close status
