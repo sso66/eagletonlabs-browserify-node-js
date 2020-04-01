@@ -52,7 +52,19 @@
   *of existing protocols.* 
 
 ##### Socket communications
-> Firs, let's figure out how to ensure that every socket is unique. If they're not, you 
+> First, let's figure out how to ensure that every socket is unique. If they're not, you 
 > can't establish a reliable communication channel
+>
+> Giving every `process` a unique PID helps to deal with the problem locally. But such
+> an approach doesn't work over network.
+>
+> To create a unique within a given network, and the protocol and port are unique among
+> we recommed using the TCP/IP - `ip` protocol. With the TCP/IP, the IP addresses of the
+> network layer are unique within a given network, and the protocol and port are unique
+> among host Node.js applications.
+
+> TCP and UDP are two major protocols for communicating between hosts. Explore how your
+> Node.js application connect to TCP and UDP sockets.
+
 
 
