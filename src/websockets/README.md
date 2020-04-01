@@ -104,11 +104,11 @@
 
 #### Transfering the data frame
 > When the handshake has been successfully completed, your app can read and write data
-> form the client.
+> from the client.
 >
 > Explore the WebSocket specification that defines a specific frame format that's used
 > between a client and server. Observe the bit pattern for formulating messages:
-  - Usage of code to decode to decode the client payload
+  - Usage of code to decode the client payload
     - function to receive data and returns a Frame   
   - Usage of code for encoding data
     - function to send a Frame
