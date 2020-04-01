@@ -95,10 +95,10 @@
 > initial handshake. After a successful handshake, a connection is established and the
 > WebSocket essential user raw TCP - `ip` to read/write data.
 
-#### Explore how to create WebSocket app in Node.js and plain JavaScirpt or React.jsx
-  - To write a simple WebSocket URL client connecting to  echo.websocket.org server 
+#### Explore how to create WebSocket app lifecycle in Node.js and plain JavaScirpt or React.jsx
+  - To write a simple WebSocket *URL* client connecting to  echo.websocket.org server 
     based on the `http`/`net` libraries
-  - To write a complex WebSocket HTTP GET client (React.jsx) connecting to WebSocket server (Node.js) 
+  - To write a complex WebSocket *HTTP GET* client (React.jsx) connecting to WebSocket server (Node.js) 
     based on the `http`/`websocket` libraries, then connecting to `net` TCP , `dgram` and
     `ip` via host-to-host communications
 
