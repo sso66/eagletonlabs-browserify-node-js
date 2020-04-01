@@ -1,0 +1,14 @@
+{
+  "name": "websockets",
+  "version": "1.0.0",
+  "description": "Implementing Websockets in Node.js",
+  "main": "wsclient.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stephen Oo",
+  "license": "ISC",
+  "dependencies": {
+    "websocket": "^1.0.31"
+  }
+}

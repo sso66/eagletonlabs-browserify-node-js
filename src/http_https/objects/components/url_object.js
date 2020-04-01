@@ -4,7 +4,7 @@
 //..............................................................................
 console.log("Mounting url_object.js...\n");
 /*
- * A uniform resource locatopr (URL) acts as an address label that an HTTP
+ * A uniform resource locator (URL) acts as an address label that an HTTP
  * server uses to handle requests form the client. It provides all the 
  * information needed to get a request to the correct server on a specific
  * port and to access the proper data.

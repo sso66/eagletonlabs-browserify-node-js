@@ -1,3 +1,8 @@
+// File: wsclient.js
+// Note: A simple WebSocket URL client connecting to  echo.websocket.org server
+// Date: 3/31/2020
+//..............................................................................
+console.log("Mounting wsserver.js...\n");
 var webSocket   = null;
 var ws_protocol = null;
 var ws_hostname = null;
@@ -24,7 +29,7 @@ function onDisconnectClick() {
  */
 function openWSConnection(protocol, hostname, port, endpoint) {
     var webSocketURL = null;
-    // use hostname: echo.websocket.org for understanding
+    // use hostname: echo.websocket.org for HTML5 WebSocket test against the echo server.
     webSocketURL = protocol + "://" + hostname + ":" + port + endpoint;
     console.log("openWSConnection::Connecting to: " + webSocketURL);
     try {
