@@ -104,7 +104,6 @@
 > as the payload.
 >
 > Optionally, the party sending the close frame can send a close reason in the payload.
->
 > If closing is initiated by the client the server should send a corresponding close
 > frame in response.
 
