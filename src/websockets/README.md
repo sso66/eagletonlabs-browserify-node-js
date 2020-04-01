@@ -122,9 +122,3 @@
 > If closing is initiated by the client the server should send a corresponding close
 > frame in response.
 
-
-
-
-
-
-
