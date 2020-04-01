@@ -95,7 +95,12 @@
 > initial handshake. After a successful handshake, a connection is established and the
 > WebSocket essential user raw TCP - `ip` to read/write data.
 
-### Explore how to create WebSocket app in Node.js and plain JavaScirpt or React.jsx
+#### Explore how to create WebSocket app in Node.js and plain JavaScirpt or React.jsx
+
+#### Transfering the data frame
+
+#### Closing a handshake
+
 
 
 
