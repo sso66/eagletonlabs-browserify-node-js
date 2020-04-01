@@ -28,6 +28,14 @@ Handling Data I/O in Node.js
 	- Compressing/Decompressing Streams
 
 - Summary
+> At the heart of most intense web applications and services is a lot of data streaming from 
+> one system to another.
+> You have learned how to use functionality build into Node.js to work with JSON data, manipulated
+> binary buffer data and utilize data streams.
+> Also had a chance to play around with compression in compressing buffered data as well as 
+> running data streams through compression/decompressions.
+
+- Note to file
   - Persistent data denotes information that is infrequently accessed and not likely to be modified. 
   - The opposite of this is dynamic data (also known as transactional data) where information 
     is asynchronously changed as further updates to the information become available.
