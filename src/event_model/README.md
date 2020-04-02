@@ -2,6 +2,25 @@
 
 Using Events, Listeners, Timers, and Callbacks 
 
+<<<<<<< HEAD
+=======
+**Purpose**
+> Node.js provides scablablility and performance through its powerful event-driven model.
+
+> Focus on understanding the model and how ti differs from traditional threaded models
+> used by most applications
+
+> Understainding the event model is critical because it may force you to change your
+> design thinking for your applications.
+> However, those changes will be well worth the improvements in speed that you get by
+> using Node.js
+
+**Reason**
+> Covers the different methods you use to add work to the Node.js event queue:
+> - You can add work by using event listeners or times or you can schedule work directly
+> - Learn also how to implement events in your own custom modules and objects
+
+>>>>>>> 01f9b63c0ab830dc031efcbeb96053c4a378032e
 
 - Understanding the Node.js Event Model
 	- Comparing Event Callbacks and Threaded Models
@@ -43,3 +62,6 @@ Using Events, Listeners, Timers, and Callbacks
 > listener function to them.
 
 - Up Next
+> Get a chance to see how to manage data I/O by using streams and buffers. Also, learn
+> about Node.js functionality that allows you to manipulate JSON and compressed forms
+> of data.
