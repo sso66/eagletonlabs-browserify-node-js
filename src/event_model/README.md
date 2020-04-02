@@ -1,6 +1,11 @@
 ## event_model: Using Events, Listeners, Timers, and Callback in Node.js
 
 Using Events, Listeners, Timers, and Callbacks 
+**Purpose*
+>
+
+**Reason**
+>
 
 - Understanding the Node.js Event Model
 	- Comparing Event Callbacks and Threaded Models
