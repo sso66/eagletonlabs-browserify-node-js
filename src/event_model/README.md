@@ -3,7 +3,15 @@
 Using Events, Listeners, Timers, and Callbacks 
 
 **Purpose**
->
+> Node.js provides scablablility and performance through its powerful event-driven model.
+
+> Focus on understanding the model and how ti differs from traditional threaded models
+> used by most applications
+
+> Understainding the event model is critical because it may force you to change your
+> design thinking for your applications.
+> However, those changes will be well worth the improvements in speed that you get by
+> using Node.js
 
 **Reason**
 >
