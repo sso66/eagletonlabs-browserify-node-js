@@ -42,3 +42,6 @@ Using Events, Listeners, Timers, and Callbacks
 > listener function to them.
 
 - Up Next
+> Get a chance to see how to manage data I/O by using streams and buffers. Also, learn
+> about Node.js functionality that allows you to manipulate JSON and compressed forms
+> of data.
