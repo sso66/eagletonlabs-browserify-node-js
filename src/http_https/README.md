@@ -92,12 +92,12 @@
 > However, the `http` and `https` modules work well for some basics web services and are 
 > super simple to implement.
 >
-> Here it covers enoght HTTP basics to give you a good start on implementing your own
+> Here it covers enought HTTP basics to give you a good start on implementing your own
 > services. You also got a chance to seed how to use the `url` and `querystring` modules
 > to parse URLs and query strings into object and back.
 
-
-
 - Up Next
-
+> You'll get a chance to go a little bit deeper and learn about the 'net` module. You
+> will also learn how to implement your own socket services, using TCP clients and
+> servers.
 
