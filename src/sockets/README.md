@@ -22,14 +22,14 @@ Implementing Socket Servces in Node.js
 
 > They allow a servce on one system to communicate with a service on another system
 > through an IP address and port.
-
-> They also provide the ability to implement IPC (Inter-process Communication) 
+>
+> They also provide the ability to implement IPC (inter-process Communication) 
 > between two processes running on the same server.
-
+>
 > The `net` module allow you to create net.Server objects act as socket servers and 
 > net.Socket object act as socket clients.
-
-> Because the net.Socket object extends *Duplex* streams, you can read and write data
+>
+> Because the net.Socket object extends **Duplex** streams, you can read and write data
 > from both the server and the client.
 
 > For secure connections, Node.js provides `tls` module, which allows you to implement
