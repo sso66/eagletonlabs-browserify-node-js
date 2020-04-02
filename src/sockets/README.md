@@ -23,7 +23,7 @@ Implementing Socket Servces in Node.js
 > They allow a servce on one system to communicate with a service on another system
 > through an IP address and port.
 >
-> They also provide the ability to implement IPC (inter-process Communication) 
+> They also provide the ability to implement IPC (inter-process communication) 
 > between two processes running on the same server.
 >
 > The `net` module allow you to create net.Server objects act as socket servers and 
@@ -37,6 +37,6 @@ Implementing Socket Servces in Node.js
 
 - Up Next
 > You will get a chance to implement multiprocessing in a Node.js environment. This
-> allows yyou to farm out work to other process on the system and take advantages
+> allows you to farm out work to other process on the system and take advantages
 > of multiprocessor servers.
 
