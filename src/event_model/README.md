@@ -1,7 +1,8 @@
 ## event_model: Using Events, Listeners, Timers, and Callback in Node.js
 
 Using Events, Listeners, Timers, and Callbacks 
-**Purpose*
+
+**Purpose**
 >
 
 **Reason**
