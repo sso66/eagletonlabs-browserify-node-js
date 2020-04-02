@@ -25,6 +25,6 @@ Using Additional Node.js Modules
 > a Node.js
 
 - Up Next
-> You will jump inot the world of CouchDB. Learn CouchDB basics and how to
+> You will jump inot the world of **CouchDB**. Learn CouchDB basics and how to
 > implement CouchDB in the Nodes.js world.
 
