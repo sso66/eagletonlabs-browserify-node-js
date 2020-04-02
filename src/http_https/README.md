@@ -87,7 +87,7 @@
 > An important aspects of Node.js is the ability to implement HTTP and HTTPS servers and the
 > services quickly.
 
-> The `http` and `https` modules provide everything you need to implement webserver basics
+> The `http` and `https` modules provide everything you need to implement webserver basics.
 > For your full webserver, you are still going to want to use a more extended library, such
 > as `express`. 
 
