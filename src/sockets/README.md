@@ -20,7 +20,7 @@ Implementing Socket Servces in Node.js
 > Sockets are extremely useful when you're implementing backend services in Node.js
 > applications. 
 
-> They allow a servce on one system to communicate with a service on another system
+> They allow a service on one system to communicate with a service on another system
 > through an IP address and port.
 >
 > They also provide the ability to implement IPC (inter-process communication) 
