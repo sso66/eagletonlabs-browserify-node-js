@@ -84,5 +84,20 @@
   - Creating a HTTPS Server
 
 - Summary
+> An important aspects of Node.js is the ability to implement HTTP and HTTPS servers and the
+> services quickly.
+> The `http` and `https` modules provide everything you need to implement webserver basics
+> For your full webserver, you are still going to want to use a more extended library, such
+> as `express`. 
+> However, the `http` and `https` modules work well for some basics web services and are 
+> super simple to implement.
+>
+> Here it covers enoght HTTP basics to give you a good start on implementing your own
+> services. You also got a chance to seed how to use the `url` and `querystring` modules
+> to parse URLs and query strings into object and back.
+
+
+
+- Up Next
 
 
