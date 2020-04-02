@@ -15,8 +15,8 @@ Using Events, Listeners, Timers, and Callbacks
 
 **Reason**
 > Covers the different methods you use to add work to the Node.js event queue:
-- You can add work by using event listeners or times or you can schedule work directly
-- Learn also how to implement events in your own custom modules and objects
+> - You can add work by using event listeners or times or you can schedule work directly
+> - Learn also how to implement events in your own custom modules and objects
 
 
 - Understanding the Node.js Event Model
