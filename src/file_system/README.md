@@ -38,5 +38,5 @@ Assessing the File System from Node.js
 - Up Next
 > Focus on using the `http` module to implement basic webservers. You will get a chance
 > to see how to parse a query strings. You will learn how to implement a basic webserver
-> in Node.js
+> in Node.js.
 
