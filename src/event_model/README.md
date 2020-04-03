@@ -32,9 +32,9 @@ Using Events, Listeners, Timers, and Callbacks
 	> When you have designed your code correctly, you can use the event model to schedule work on the 
 	> event queue. In Node.js applications, you schedule work on the event queue by passing a callback
 	> function to using one of these methods:
-	- Make a call to one of the blocking I/O library calls, such as writing a file or connecting
-	  to a database.
-
+	>	- Make a call to one of the blocking I/O library calls, such as writing a file or connecting to a database.
+	>	- Add an event listener to a build-in event such as an `http.request` or `server.connection`.
+	
 	- Implementing Timers
 		- Delaying Work with Timeouts
 		- Performing Periodic Work with Intervals
