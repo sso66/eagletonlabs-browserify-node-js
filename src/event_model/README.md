@@ -5,10 +5,10 @@ Using Events, Listeners, Timers, and Callbacks
 **Purpose**
 > Node.js provides scablablility and performance through its powerful event-driven model.
 
-> Focus on understanding the model and how ti differs from traditional threaded models
-> used by most applications
+> Focus on understanding the model and how it differs from traditional threaded models
+> used by most applications.
 
-> Understainding the event model is critical because it may force you to change your
+> Understanding the event model is critical because it may force you to change your
 > design thinking for your applications.
 > However, those changes will be well worth the improvements in speed that you get by
 > using Node.js
@@ -23,8 +23,33 @@ Using Events, Listeners, Timers, and Callbacks
 	- Blocking I/O in Node.js
 	- A Conversation Example
 	
-- Adding Work to the Event Queue
+- *Adding Work to the Event Queue*
+	> As you create Node.js application and design code, you need to keep in mind the event model described:
+	>	- **Node.js Application**
+	>	- **Event Queue**
+	>	- **Event Loop**
+	>	- **Thread Pool**
+	
+	>```
+	> In the Node.js event model work is added as a function (TMC) with callback(EHC) to the event queue, 
+	>then picked up on the event loop thread. The function (TMC) is then executed on the event loop
+	>thread in case of non-blocking or on a separate thread in case of blocking.
+	>```
+
+	> To leverage the scalability and performance of the event model make sure you break up the work into
+	> chunks that can be performed as a series of *callbacks*.
+	>
+	> When you have designed your code correctly, you can use the event model to schedule work on the 
+	> event queue. In Node.js applications, you schedule work on the event queue by passing a callback
+	> function to using one of these methods:
+	>	- Make a call to one of the blocking I/O library calls, such as writing a file or connecting to a database.
+	>	- Add an event listener to a build-in event such as an `http.request` or `server.connection`.
+	>	- Create your own event emitters and add customer listeners to them.
+	>	- Using the `process.nextTick` option to schedule work to be picked up on the next cycle of the the event loop.
+	>	- Use timers to schedule work to be done after particular amount of time or at periodic intervals.
+	
 	- Implementing Timers
+<<<<<<< HEAD
 	> A useful feature of Node.js and JavaScript is the ability to delay execution
 	> of code for the period of time.
       - Delaying Work with Timeouts
@@ -32,16 +57,22 @@ Using Events, Listeners, Timers, and Callbacks
 	  - Performing Immediate Work with an Immediate Timer
 	  - Dereferencing Timers from the Event Loop
 	  - Using nextTick to Schedule Work
+=======
+		- Delaying Work with Timeouts
+		- Performing Periodic Work with Intervals
+	  	- Performing Immediate Work with an Immediate Timer
+	  	- Dereferencing Timers from the Event Loop
+	  	- Using nextTick to Schedule Work
+>>>>>>> 6583378dfaad6833727a7cd278be649dbd8f4186
 	- Implementing Event Emitters and Listeners
 		- Adding Custom Events to Your JavaScript Objects
 		- Adding Event Listeners to Objects
 		- Removing Listeners from Objects
 		- Implementing Event Listeners and Event Emitters
-		
-- Implementing Callbacks
-  - Adding Additional Parameters to Callbacks
-  - Implementing Closure in Callbacks
-  - Chaining Callbacks
+	- Implementing Callbacks
+  		- Adding Additional Parameters to Callbacks
+  		- Implementing Closure in Callbacks
+  		- Chaining Callbacks
 
 - Summary
 > The event-driven model that Node.js uses provides scalability and performance.
