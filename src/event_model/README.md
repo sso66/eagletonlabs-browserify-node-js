@@ -31,7 +31,7 @@ Using Events, Listeners, Timers, and Callbacks
 
 	- Implementing Timers
 		- Delaying Work with Timeouts
-      		- Performing Periodic Work with Intervals
+		- Performing Periodic Work with Intervals
 	  	- Performing Immediate Work with an Immediate Timer
 	  	- Dereferencing Timers from the Event Loop
 	  	- Using nextTick to Schedule Work
