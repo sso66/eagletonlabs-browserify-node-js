@@ -33,7 +33,7 @@ Using Events, Listeners, Timers, and Callbacks
 	> `In the Node.js event model work is added as a function (TMC) with callback(EHC) to the event queue, 
 	> then picked up on the event loop thread. The function (TMC) is then executed on the event loop
 	> thread in case of non-blocking or on a separate thread in case of blocking`
-	>
+
 	> To leverage the scalability and performance of the event model make sure you break up the work into
 	> chunks that can be performed as a series of *callbacks*.
 	>
