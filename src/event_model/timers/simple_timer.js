@@ -1,5 +1,5 @@
 // File: simple_timer.js
-// Note: Delaying work with timeouts
+// Note: Delaying Work with Timeouts
 // Date: 03/01/2020
 //..............................................................................
 console.info('Mounting simple_timer.js...');

@@ -25,6 +25,8 @@ Using Events, Listeners, Timers, and Callbacks
 	
 - Adding Work to the Event Queue
 	- Implementing Timers
+	> A useful feature of Node.js and JavaScript is the ability to delay execution
+	> of code for the period of time.
       - Delaying Work with Timeouts
       - Performing Periodic Work with Intervals
 	  - Performing Immediate Work with an Immediate Timer
