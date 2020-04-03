@@ -23,7 +23,7 @@ Using Events, Listeners, Timers, and Callbacks
 	- Blocking I/O in Node.js
 	- A Conversation Example
 	
-- Adding Work to the Event Queue
+- *Adding Work to the Event Queue*
 	> As you create Node.js application and design code, you need to keep in mind the event model described.
 	>
 	> To leverage the scalability and performance of the event model make sure you break up the work into
