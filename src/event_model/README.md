@@ -27,7 +27,13 @@ Using Events, Listeners, Timers, and Callbacks
 	> As you create Node.js application and design code, you need to keep in mind the event model described.
 	>
 	> To leverage the scalability and performance of the event model make sure you break up the work into
-	> chunks that can be perfored as a series of *callbacks*.
+	> chunks that can be performed as a series of *callbacks*.
+	>
+	> When you have designed your code correctly, you can use the event model to schedule work on the 
+	> event queue. In Node.js applications, you schedule work on the event queue by passing a callback
+	> function to using one of these methods:
+		- Make a call to one of the blocking I/O library calls, such as writing a file or connecting
+		  to a database.
 
 	- Implementing Timers
 		- Delaying Work with Timeouts
