@@ -47,61 +47,19 @@ Using Events, Listeners, Timers, and Callbacks
 	>	- Create your own event emitters and add customer listeners to them.
 	>	- Using the `process.nextTick` option to schedule work to be picked up on the next cycle of the the event loop.
 	>	- Use timers to schedule work to be done after particular amount of time or at periodic intervals.
-	
-- Implementing Timers
-	> A useful feature of Node.js and JavaScript is the ability to delay execution
-	> of code for the period of time.
-	>
-	> This cn be useful for cleanup and refresh work that you do not want to always
-	> be running.
-	> 
-	> There are three types of timers in Node.js: the timeout, interval and intermediate
-	> timers. 
-	
-	- Delaying Work with Timeouts
-	- Performing Periodic Work with Intervals
-	- Performing Immediate Work with an Immediate Timer
-	- Dereferencing Timers from the Event Loop
-	- Using nextTick to Schedule Work
-	- Delaying Work with Timeouts
-	- Performing Periodic Work with Intervals
-	- Performing Immediate Work with an Immediate Timer
-	- Dereferencing Timers from the Event Loop
-	- Using nextTick to Schedule Work
-	
-- Implementing Event Emitters and Listeners
-	- Adding Custom Events to Your JavaScript Objects
-	- Adding Event Listeners to Objects
-	- Removing Listeners from Objects
-	- Implementing Event Listeners and Event Emitters
-	- Implementing Callbacks
-		- Adding Additional Parameters to Callbacks
-  	   	- Implementing Closure in Callbacks
-  	   	- Chaining Callbacks
 
-- Adding Work to the Event Queue
-  - Implementing Timers
-  > A useful feature of Node.js and JavaScript is the ability to delay execution
-  > of code for the period of time. 
-  >
-  > This can be useful for cleanup and refresh work that you don't want to always
-  > be running.
-  >
-  > You can implenent three types of timers in Node.js:
-  >	- timeout
-  >	- interval
-  >	- immediate timers
-  
-- Delaying Work with Timeouts
-	- Performing Periodic Work with Intervals
-  	- Performing Immediate Work with an Immediate Timer
-  	- Dereferencing Timers from the Event Loop
-  	- Using nextTick to Schedule Work
-- Implementing Event Emitters and Listeners
-  	- Adding Custom Events to Your JavaScript Objects
-  	- Adding Event Listeners to Objects
-  	- Removing Listeners from Objects
-  	- Implementing Event Listeners and Event Emitters
+	- Implementing Timers
+		- Delaying Work with Timeouts
+		- Performing Periodic Work with Intervals
+		- Performing Immediate Work with an Immediate Timer
+		- Dereferencing Timers from the Event Loop
+		- Using nextTick to Schedule Work
+	
+	- Implementing Event Emitters and Listeners
+	  	- Adding Custom Events to Your JavaScript Objects
+	  	- Adding Event Listeners to Objects
+	  	- Removing Listeners from Objects
+	  	- Implementing Event Listeners and Event Emitters
 		
 - Implementing Callbacks
   	- Adding Additional Parameters to Callbacks
