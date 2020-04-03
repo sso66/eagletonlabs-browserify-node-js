@@ -30,7 +30,7 @@ Using Events, Listeners, Timers, and Callbacks
 	>	- **Event Loop**
 	>	- **Thread Pool**
 	
-	> `In the Node.js event model work is added as a function (TMC) with callback(EHC) to the event queue, 
+	>`In the Node.js event model work is added as a function (TMC) with callback(EHC) to the event queue, 
 	> then picked up on the event loop thread. The function (TMC) is then executed on the event loop
 	> thread in case of non-blocking or on a separate thread in case of blocking`
 
