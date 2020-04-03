@@ -5,10 +5,10 @@ Using Events, Listeners, Timers, and Callbacks
 **Purpose**
 > Node.js provides scablablility and performance through its powerful event-driven model.
 
-> Focus on understanding the model and how ti differs from traditional threaded models
-> used by most applications
+> Focus on understanding the model and how it differs from traditional threaded models
+> used by most applications.
 
-> Understainding the event model is critical because it may force you to change your
+> Understanding the event model is critical because it may force you to change your
 > design thinking for your applications.
 > However, those changes will be well worth the improvements in speed that you get by
 > using Node.js
@@ -24,6 +24,11 @@ Using Events, Listeners, Timers, and Callbacks
 	- A Conversation Example
 	
 - Adding Work to the Event Queue
+> As you create Node.js application and design code, you need to keep in mind the event model described
+>
+> To leverage the scalability and performance of the event model make sure you break up the work into
+> chunks that can be perfored as a series of *callbacks*
+
 	- Implementing Timers
       - Delaying Work with Timeouts
       - Performing Periodic Work with Intervals
