@@ -23,7 +23,6 @@ Using Events, Listeners, Timers, and Callbacks
   - Blocking I/O in Node.js
   - A Conversation Example
 	
-<<<<<<< HEAD
 - *Adding Work to the Event Queue*
 	> As you create Node.js application and design code, you need to keep in mind the event model described:
 	>	- **Node.js Application**
@@ -50,7 +49,7 @@ Using Events, Listeners, Timers, and Callbacks
 	>	- Use timers to schedule work to be done after particular amount of time or at periodic intervals.
 	
 	- Implementing Timers
-<<<<<<< HEAD
+
 	> A useful feature of Node.js and JavaScript is the ability to delay execution
 	> of code for the period of time.
       - Delaying Work with Timeouts
@@ -58,23 +57,22 @@ Using Events, Listeners, Timers, and Callbacks
 	  - Performing Immediate Work with an Immediate Timer
 	  - Dereferencing Timers from the Event Loop
 	  - Using nextTick to Schedule Work
-=======
-		- Delaying Work with Timeouts
-		- Performing Periodic Work with Intervals
-	  	- Performing Immediate Work with an Immediate Timer
-	  	- Dereferencing Timers from the Event Loop
-	  	- Using nextTick to Schedule Work
->>>>>>> 6583378dfaad6833727a7cd278be649dbd8f4186
-	- Implementing Event Emitters and Listeners
-		- Adding Custom Events to Your JavaScript Objects
-		- Adding Event Listeners to Objects
-		- Removing Listeners from Objects
-		- Implementing Event Listeners and Event Emitters
-	- Implementing Callbacks
-  		- Adding Additional Parameters to Callbacks
-  		- Implementing Closure in Callbacks
-  		- Chaining Callbacks
-=======
+	  - Delaying Work with Timeouts
+	  - Performing Periodic Work with Intervals
+	  - Performing Immediate Work with an Immediate Timer
+	  - Dereferencing Timers from the Event Loop
+	  - Using nextTick to Schedule Work
+
+       - Implementing Event Emitters and Listeners
+	 - Adding Custom Events to Your JavaScript Objects
+	 - Adding Event Listeners to Objects
+	 - Removing Listeners from Objects
+	 - Implementing Event Listeners and Event Emitters
+	 - Implementing Callbacks
+  	   - Adding Additional Parameters to Callbacks
+  	   - Implementing Closure in Callbacks
+  	   - Chaining Callbacks
+
 - Adding Work to the Event Queue
   - Implementing Timers
   > A useful feature of Node.js and JavaScript is the ability to delay execution
@@ -103,7 +101,6 @@ Using Events, Listeners, Timers, and Callbacks
   - Adding Additional Parameters to Callbacks
   - Implementing Closure in Callbacks
   - Chaining Callbacks
->>>>>>> 2454fe8aa4f9ae0e4d94cb53ba88ac18cbae8530
 
 - Summary
 > The event-driven model that Node.js uses provides scalability and performance.
