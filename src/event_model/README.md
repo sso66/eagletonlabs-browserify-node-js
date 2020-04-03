@@ -25,6 +25,7 @@ Using Events, Listeners, Timers, and Callbacks
 	
 - *Adding Work to the Event Queue*
 	> As you create Node.js application and design code, you need to keep in mind the event model described:
+	>	- **Node.js Application**
 	>	- **Event Queue**
 	>	- **Event Loop**
 	>	- **Thread Pool**
