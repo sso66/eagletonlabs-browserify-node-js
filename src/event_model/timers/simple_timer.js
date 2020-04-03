@@ -11,11 +11,14 @@ console.info('Mounting simple_timer.js...');
  * You should use timeouts for work that need to be performed only once.
  * 
  * You create the timeout timers using 
+ *
  *   setTimeout(callback, delayMilliSeconds, [args])
+ *
  * method built into Node.js.
  * 
  * When you call the setTimeout(), the callback function is executed after
  * delayMilliSeconds has expired. For example, the following executes
+ *
  * myFunction() after a second:
  *   setTimeout(myFunction, 1000)
  * 
@@ -32,6 +35,7 @@ console.info('Mounting simple_timer.js...');
  * the timeout was scheduled.
  * 
  * Notice that it doesn't matter in which the setTimeout is called.
+ *
  */
 // create a named reusable callback function using console I/O methods
 function simpleTimeout(consoleTimer) {
