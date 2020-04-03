@@ -9,32 +9,36 @@ console.info('Mounting emitter_listener.js...');
  * event listeners that are triggered when the balanceChanged
  * custom event is detected.
  */
-//___ Provider module __
-// Adding Custom Events to JavaScript Objects - [you]
 var events = require('events');
 var util = require('util');
+
+// exposes a function which can be used like a class.
+module.exports = function (firstName, lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.fullName = function () { 
+        return this.firstName + ' ' + this.lastName;
+    };
+};
 
 function Account() {
 	events.EventEmitter.call(this);
 	this.balance = 0;
-  BALANCE_EVENT = 'balanceChanged';
   
 	this.deposit = function(amount) {
 		this.balance += amount;
-		//this.emit('balanceChanged');
-		this.emit(BALANCE_EVENT);
+		this.emit('balanceChanged');
 	};
 	
 	this.withdraw = function(amount) {
 		this.balance -= amount;
-		//this.emit("balanceChanged");
-    this.emit(BALANCE_EVENT);
+		this.emit("balanceChanged");
 	};	
 }
 
-//Account.prototype.__proto__ = events.EventEmitter.prototype;
-util.inherits(Account, events.EventEmitter);
-// Add Event Listener (Handler) to JavaScript Object - Event Queue - [ioc] 
+// Account.prototype.__proto__ = events.EventEmitter.prototype; // prototype design pattern
+util.inherits(Account, events.EventEmitter); // factory method design pattern
+
 function displayBalance() {
 	console.log("Account balance: $%d", this.balance);
 }
@@ -51,18 +55,15 @@ function checkGoal(account, goal) {
 	}
 }
 
-// exports.Account = Account
-
-//___ Consumer module ___
-// var account = require('./emitter_listener');
-
 var account = new Account();
+
 // Event binding
-account.on(BALANCE_EVENT, displayBalance);
-account.on(BALANCE_EVENT, checkOverdraw);
-account.on(BALANCE_EVENT, function () {
+account.on("balanceChanged", displayBalance);
+account.on("balanceChanged", checkOverdraw);
+account.on("balanceChanged", function () {
 	checkGoal(this, 1009);
 });
+
 // Property binding
 account.deposit(220);
 account.deposit(320);
