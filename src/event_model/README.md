@@ -24,10 +24,10 @@ Using Events, Listeners, Timers, and Callbacks
 	- A Conversation Example
 	
 - Adding Work to the Event Queue
-> As you create Node.js application and design code, you need to keep in mind the event model described
->
-> To leverage the scalability and performance of the event model make sure you break up the work into
-> chunks that can be perfored as a series of *callbacks*
+	> As you create Node.js application and design code, you need to keep in mind the event model described
+	>
+	> To leverage the scalability and performance of the event model make sure you break up the work into
+	> chunks that can be perfored as a series of *callbacks*
 
 	- Implementing Timers
       - Delaying Work with Timeouts
