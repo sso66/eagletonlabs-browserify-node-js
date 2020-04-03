@@ -48,10 +48,16 @@ Using Events, Listeners, Timers, and Callbacks
 	>	- Using the `process.nextTick` option to schedule work to be picked up on the next cycle of the the event loop.
 	>	- Use timers to schedule work to be done after particular amount of time or at periodic intervals.
 	
-  - Implementing Timers
-
+- Implementing Timers
 	> A useful feature of Node.js and JavaScript is the ability to delay execution
 	> of code for the period of time.
+	>
+	> This cn be useful for cleanup and refresh work that you do not want to always
+	> be running.
+	> 
+	> There are three types of timers in Node.js: the timeout, interval and intermediate
+	> timers. 
+	
 	- Delaying Work with Timeouts
 	- Performing Periodic Work with Intervals
 	- Performing Immediate Work with an Immediate Timer
