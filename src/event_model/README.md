@@ -36,7 +36,7 @@ Using Events, Listeners, Timers, and Callbacks
 	>	- Add an event listener to a build-in event such as an `http.request` or `server.connection`.
 	>	- Create your own event emitters and add customer listeners to them.
 	>	- Using the `process.nextTick` option to schedule work to be picked up on the next cycle of the the event loop.
-	>	- Use timers to schedule to be done after particular amount of time or at periodic intervals.
+	>	- Use timers to schedule work to be done after particular amount of time or at periodic intervals.
 	
 	- Implementing Timers
 		- Delaying Work with Timeouts
