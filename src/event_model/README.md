@@ -48,30 +48,30 @@ Using Events, Listeners, Timers, and Callbacks
 	>	- Using the `process.nextTick` option to schedule work to be picked up on the next cycle of the the event loop.
 	>	- Use timers to schedule work to be done after particular amount of time or at periodic intervals.
 	
-	- Implementing Timers
+  - Implementing Timers
 
 	> A useful feature of Node.js and JavaScript is the ability to delay execution
 	> of code for the period of time.
-      - Delaying Work with Timeouts
-      - Performing Periodic Work with Intervals
-	  - Performing Immediate Work with an Immediate Timer
-	  - Dereferencing Timers from the Event Loop
-	  - Using nextTick to Schedule Work
-	  - Delaying Work with Timeouts
-	  - Performing Periodic Work with Intervals
-	  - Performing Immediate Work with an Immediate Timer
-	  - Dereferencing Timers from the Event Loop
-	  - Using nextTick to Schedule Work
-
-       - Implementing Event Emitters and Listeners
-	 - Adding Custom Events to Your JavaScript Objects
-	 - Adding Event Listeners to Objects
-	 - Removing Listeners from Objects
-	 - Implementing Event Listeners and Event Emitters
-	 - Implementing Callbacks
-  	   - Adding Additional Parameters to Callbacks
-  	   - Implementing Closure in Callbacks
-  	   - Chaining Callbacks
+	- Delaying Work with Timeouts
+	- Performing Periodic Work with Intervals
+	- Performing Immediate Work with an Immediate Timer
+	- Dereferencing Timers from the Event Loop
+	- Using nextTick to Schedule Work
+	- Delaying Work with Timeouts
+	- Performing Periodic Work with Intervals
+	- Performing Immediate Work with an Immediate Timer
+	- Dereferencing Timers from the Event Loop
+	- Using nextTick to Schedule Work
+	
+- Implementing Event Emitters and Listeners
+	- Adding Custom Events to Your JavaScript Objects
+	- Adding Event Listeners to Objects
+	- Removing Listeners from Objects
+	- Implementing Event Listeners and Event Emitters
+	- Implementing Callbacks
+		- Adding Additional Parameters to Callbacks
+  	   	- Implementing Closure in Callbacks
+  	   	- Chaining Callbacks
 
 - Adding Work to the Event Queue
   - Implementing Timers
@@ -87,20 +87,20 @@ Using Events, Listeners, Timers, and Callbacks
   >	- immediate timers
   
 - Delaying Work with Timeouts
-  - Performing Periodic Work with Intervals
-  - Performing Immediate Work with an Immediate Timer
-  - Dereferencing Timers from the Event Loop
-  - Using nextTick to Schedule Work
+	- Performing Periodic Work with Intervals
+  	- Performing Immediate Work with an Immediate Timer
+  	- Dereferencing Timers from the Event Loop
+  	- Using nextTick to Schedule Work
 - Implementing Event Emitters and Listeners
-  - Adding Custom Events to Your JavaScript Objects
-  - Adding Event Listeners to Objects
-  - Removing Listeners from Objects
-  - Implementing Event Listeners and Event Emitters
+  	- Adding Custom Events to Your JavaScript Objects
+  	- Adding Event Listeners to Objects
+  	- Removing Listeners from Objects
+  	- Implementing Event Listeners and Event Emitters
 		
 - Implementing Callbacks
-  - Adding Additional Parameters to Callbacks
-  - Implementing Closure in Callbacks
-  - Chaining Callbacks
+  	- Adding Additional Parameters to Callbacks
+  	- Implementing Closure in Callbacks
+  	- Chaining Callbacks
 
 - Summary
 > The event-driven model that Node.js uses provides scalability and performance.
