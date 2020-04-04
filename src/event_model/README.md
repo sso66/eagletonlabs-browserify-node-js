@@ -18,22 +18,21 @@ Using Events, Listeners, Timers, and Callbacks
 > - You can add work by using event listeners or times or you can schedule work directly
 > - Learn also how to implement events in your own custom modules and objects
 
-- Understanding the Node.js Event Model
+- *Understanding the Node.js Event Model*
   - Comparing Event Callbacks and Threaded Models
   - Blocking I/O in Node.js
   - A Conversation Example
 	
 - *Adding Work to the Event Queue*
 	> As you create Node.js application and design code, you need to keep in mind the event model described:
-	>	- **Node.js Application**
 	>	- **Event Queue**
 	>	- **Event Loop**
 	>	- **Thread Pool**
 	
 	>```
 	> In the Node.js event model work is added as a function (TMC) with callback(EHC) to the event queue, 
-	>then picked up on the event loop thread. The function (TMC) is then executed on the event loop
-	>thread in case of non-blocking or on a separate thread in case of blocking.
+	> then picked up on the event loop thread. The function (TMC) is then executed on the event loop
+	> thread in case of non-blocking or on a separate thread in case of blocking.
 	>```
 
 	> To leverage the scalability and performance of the event model make sure you break up the work into
@@ -49,6 +48,12 @@ Using Events, Listeners, Timers, and Callbacks
 	>	- Use timers to schedule work to be done after particular amount of time or at periodic intervals.
 
 	- Implementing Timers
+		> A useful feature of Node.js and JavaScript is the ability to delay execution of code for the period of time.
+		>
+		> This can be useful for cleanup and refresh work that you do not want to always be running.
+		>
+		> You can implement three types of timers in Node.js: the timeout, interval, immediate timers.
+		
 		- Delaying Work with Timeouts
 		- Performing Periodic Work with Intervals
 		- Performing Immediate Work with an Immediate Timer
@@ -61,7 +66,7 @@ Using Events, Listeners, Timers, and Callbacks
 	  	- Removing Listeners from Objects
 	  	- Implementing Event Listeners and Event Emitters
 		
-- Implementing Callbacks
+- *Implementing Callbacks*
   	- Adding Additional Parameters to Callbacks
   	- Implementing Closure in Callbacks
   	- Chaining Callbacks

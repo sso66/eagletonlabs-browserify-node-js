@@ -1,13 +1,13 @@
 // File: emitter_listener.js
 // Note: Implementing Event Emitters and Listeners
-// Date: 03/01/2020 
+// Date: 04/04/2020 
 //..............................................................................
 console.info('Mounting emitter_listener.js...');
 
 /**
- * Creating a custom EventEmitter class and implementing their
+ * Creating a custom EventEmitter object and implementing three
  * event listeners that are triggered when the balanceChanged
- * custom event is detected.
+ * custom event is triggered.
  */
 var events = require('events');
 var util = require('util');

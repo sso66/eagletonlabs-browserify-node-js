@@ -15,6 +15,8 @@ console.info('Mounting simple_immediate.js...');
  * 
  * You create timers by using the setImmediate(callback, [args]) method that
  * 
+ * Check nextTick(callback) function for different use case for I/O events.
+ * 
  */
 // A timeout timer
 setTimeout(function() {
