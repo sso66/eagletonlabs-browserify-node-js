@@ -10,3 +10,9 @@
 >
 > UDP provides checksums for data integrity, and port numbers for addressing functions at the source
 > and the destination of the datagram.
+>
+> It has no handshaking dialogues, and thus exposes the user's program to any reliability of the underlying
+> network; there is no gurentee of delivery, ordering, or duplicate protection.
+>
+> If error-correction facilities are needt at the network inferface, an application may use the **Transmission
+> Control Protocol(TCP)** or "Stream Control Transmission Protocol (SCTP) which are designed for that purpose.
