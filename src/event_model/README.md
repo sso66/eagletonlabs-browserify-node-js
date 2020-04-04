@@ -10,18 +10,19 @@ Using Events, Listeners, Timers, and Callbacks
 
 > Understanding the event model is critical because it may force you to change your
 > design thinking for your applications.
+>
 > However, those changes will be well worth the improvements in speed that you get by
 > using Node.js
 
 **Reason**
 > Covers the different methods you use to add work to the Node.js event queue:
-> - You can add work by using event listeners or times or you can schedule work directly
+> - You can add work by using event listeners or timers or you can schedule work directly
 > - Learn also how to implement events in your own custom modules and objects
 
 - *Understanding the Node.js Event Model*
   - Comparing Event Callbacks and Threaded Models
   - Blocking I/O in Node.js
-  - A Conversation Example
+  - A Conversation Example: Concurrent Thinking vs Linear Thinking
 	
 - *Adding Work to the Event Queue*
 	> As you create Node.js application and design code, you need to keep in mind the event model described:
@@ -61,7 +62,7 @@ Using Events, Listeners, Timers, and Callbacks
 		- Using nextTick to Schedule Work
 	
 	- Implementing Event Emitters and Listeners
-		> You will have opportunities to implement a lot of events that are build into various Node.js modules.
+		> You will have opportunities to implement a lot of events that are built into various Node.js modules.
 		>
 		> For now, focus on you own custom events as well as implement listener callbacks that are implemented
 		> when an event is emitted (triggered).
