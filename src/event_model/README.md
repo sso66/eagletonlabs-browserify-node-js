@@ -67,7 +67,7 @@ Using Events, Listeners, Timers, and Callbacks
 		> when an event is emitted (triggered).
 		
 	  	- Adding Custom Events to Your JavaScript Objects
-	  		> Events are emitted using an EventEmitter object. This object is included in the `events` module.
+	  		> Events are emitted using an `EventEmitter` object. This object is included in the `events` module.
 	  		> the `emit(eventName, [args])` function triggers `eventName` event and includes any arguments
 	  		> provided
 	  		>
@@ -78,6 +78,23 @@ Using Events, Listeners, Timers, and Callbacks
 	  		emitter.emit("simpleEvent");
 	  		```
 			>
+			> Occasionally, you will want to add events directly to your JavaScript objects. To do that,
+			> you need to inherit the `EventEmitter` functionality in you object by calling `events`.
+			>
+			> `EventEmitter.call(this)` in you object instantiation. You also need to add
+			> `events.EventEmitter.prototype` to you object prototyping - Prototype Design Pattern.
+			```
+			function MyObj() {
+			    events.EventEmitter.call(this);
+			}
+			MyObj.prototype.__proto__ = events.EventEmitter.prototype;
+			```
+			> You can then emit events directly form instances of your object, For example:
+			```
+			var myObj = new MyObj();
+			myObj.emit("someEvent"); // const SOME_EVENT = 'someEvent`;
+			```
+			
 	  	- Adding Event Listeners to Objects
 	  	- Removing Listeners from Objects
 	  	- Implementing Event Listeners and Event Emitters
