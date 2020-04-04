@@ -140,9 +140,9 @@ Using Events, Listeners, Timers, and Callbacks
 	> implementing a basic anonymous function as opposed to named functions.
 	
 	> Here is how to deal with three specific implementations of callbacks:
-		- passing parameters to a callback
-		- handling callback function parameters in a loop (iterator), and
-		- nesting callbacks
+	> - passing parameters to a callback
+	> - handling callback function parameters in a loop (iterator), and
+	> - nesting callbacks
 		
   	- Adding Additional Parameters to Callbacks
   	- Implementing Closure in Callbacks
