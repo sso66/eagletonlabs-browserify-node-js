@@ -23,3 +23,13 @@
 > Time-sensitive Node.js applications often used UDP because dropping packages is perferable to waiting for
 > packages delayed due to retransmission, which may not be an option in a real-time system, such as TCP/IP.
 
+### Attributes
+### Ports
+### UDP datagram structure
+### Checksum computation
+  - IPv4 pseudo header
+  - IPv6 psuedo header
+### Reliability and congestion control solutions
+### Applications
+### Comparison of UDP and TCP
+
