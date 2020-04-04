@@ -10,7 +10,7 @@ console.info('Mounting callback_parameter.js...');
  * err or result buffer (data), e.g. response
  * 
  * A common question when working with callbacks is how to pass
- * additional parameters (re: ...spread and rest...) to them from
+ * additional parameters (re: ...spread and ...rest) to them from
  * the calling function (caller)
  * 
  * The way to do this is to implement the parameter in an anonymous
@@ -37,6 +37,7 @@ function CarShow() {
 // CarShow.prototype.__proto__ = events.EventEmitter.prototype;
 
 var util = require('util');
+// Applied Factory Method Design Pattern
 util.inherits(CarShow, events.EventEmitter);
 
 //___ Subscriber/Consumer module ___

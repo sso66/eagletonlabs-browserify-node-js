@@ -13,7 +13,7 @@ console.info('Mounting callback_chain.js...');
  * 
  * The best way to resolve this is to implement callback chain by having
  * the callback from asynchronous function call the function again until
- * there is no more work to dd.
+ * there is no more work to do.
  * 
  * That way, the asynchronous function is never on the event queue more 
  * than once.
