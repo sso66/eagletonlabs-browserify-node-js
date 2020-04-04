@@ -1,6 +1,5 @@
-var Account = require('./emitter_listener');
-
-var person = new Account('James', 'Bond');
-console.log("Account: " + person.fullName());
+var Person = require('./emitter_listener');
+var person = new Person('James', 'Bond');
+console.log("Person: " + person.fullName());
 
 // eof
