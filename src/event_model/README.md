@@ -144,9 +144,9 @@ Using Events, Listeners, Timers, and Callbacks
 	> - handling callback function parameters in a loop (iterator), and
 	> - nesting callbacks
 		
-  	- Adding Additional Parameters to Callbacks
-  	- Implementing Closure in Callbacks
-  	- Chaining Callbacks
+  	- Adding Additional Parameters to Callbacks - `callback_parameters.js`
+  	- Implementing Closure in Callbacks - `callback_closure.js`
+  	- Chaining Callbacks - `callback_chain.js`
 
 - Summary
 > The event-driven model that Node.js uses provides scalability and performance.
