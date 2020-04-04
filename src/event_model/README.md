@@ -72,11 +72,12 @@ Using Events, Listeners, Timers, and Callbacks
 	  		> provided
 	  		>
 	  		> The following code snippet shows how to implement simple event emitter:
-	  			```
-	  			var events = require('events`);
-	  			var emitter = new events.EventEmitter();
-	  			emitter.emit("simpleEvent");
-	  			```
+	  		```
+	  		var events = require('events`);
+	  		var emitter = new events.EventEmitter();
+	  		emitter.emit("simpleEvent");
+	  		```
+			>
 	  	- Adding Event Listeners to Objects
 	  	- Removing Listeners from Objects
 	  	- Implementing Event Listeners and Event Emitters
