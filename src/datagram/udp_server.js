@@ -17,10 +17,11 @@ console.info('Mounting UDP socket server...');
  * IPv4, the later uses IPv6.
  * 
  */
+var dgram = require('dgram');
+
 var PORT = 33333;
 var HOST = '127.0.0.1';
 
-var dgram = require('dgram');
 var server = dgram.createSocket('udp4');
 
 server.on('listening', function() {

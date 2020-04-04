@@ -2,7 +2,7 @@
 // Note: Implementing full basic UDP socket client
 // Date: 03/24/2020
 //..............................................................................
-console.info('Mounting TCP socket client...');
+console.info('Mounting UDP socket client...');
 
 /*
  * client.send() requires a proper Node.js Buffer object, not a plain string 
@@ -29,18 +29,20 @@ console.info('Mounting TCP socket client...');
  * use, else your packets will not reach the destination.
  * 
  */
+var dgram = require('dgram');
+
 var PORT = 33333;
 var HOST = '127.0.0.1';
 
-var dgram = require('dgram');
+var datagram = 'My KungFu is Good!';
 /*
  * Buffer() is deprecated due to security and usability issues. Please use the 
  * Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
  * 
  */
-var message = Buffer.from('My KungFu is Good!');
-
+var message = Buffer.from(datagram);
 var client = dgram.createSocket('udp4');
+
 client.send(message, 0, message.length, PORT, HOST, function(err, bytes) {
   if (err) throw err;
   console.log('UDP message sent to ' + HOST +':'+ PORT);
