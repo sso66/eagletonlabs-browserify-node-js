@@ -130,7 +130,7 @@ Using Events, Listeners, Timers, and Callbacks
 			> object. The default is 10.
 			
 			> - **.removeListener(eventName, callback):** Removes the `callback` function from the `eventName` event
-			> of the `EventEmitter ` object.
+			> of the `EventEmitter` object.
 			
 	  	- Implementing Event Listeners and Event Emitters - `emitter_listener.js`
 		
