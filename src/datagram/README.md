@@ -15,4 +15,6 @@
 > network; there is no gurentee of delivery, ordering, or duplicate protection.
 >
 > If error-correction facilities are needed at the network inferface, an application may use the **Transmission
-> Control Protocol(TCP)** or "Stream Control Transmission Protocol (SCTP) which are designed for that purpose.
+> Control Protocol(TCP)** or Stream Control Transmission Protocol (SCTP) which are designed for that purpose.
+>
+> UDP is suitable for purposes where error checking and correction are eith
