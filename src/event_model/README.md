@@ -61,7 +61,22 @@ Using Events, Listeners, Timers, and Callbacks
 		- Using nextTick to Schedule Work
 	
 	- Implementing Event Emitters and Listeners
+		> You will have opportunities to implement a lot of events that are build into various Node.js modules.
+		>
+		> For now, focus on you own custom events as well as implement listener callbacks that are implemented
+		> when an event is emitted (triggered).
+		
 	  	- Adding Custom Events to Your JavaScript Objects
+	  		> Events are emitted using an EventEmitter object. This object is included in the `events` module.
+	  		> the `emit(eventName, [args])` function triggers `eventName` event and includes any arguments
+	  		> provided
+	  		>
+	  		> The following code snippet shows how to implement simple event emitter:
+	  			```
+	  			var events = require('events`);
+	  			var emitter = new events.EventEmitter();
+	  			emitter.emit("simpleEvent");
+	  			```
 	  	- Adding Event Listeners to Objects
 	  	- Removing Listeners from Objects
 	  	- Implementing Event Listeners and Event Emitters
