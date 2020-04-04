@@ -126,7 +126,7 @@ Using Events, Listeners, Timers, and Callbacks
 			> - **.listener(eventName):** Returns and array of listeners functions attatched to the `eventName`
 			> event. 
 				  
-			> - **setMaxListeners(n:** Triggers a warning if more than `n` listeners are added to an `EventEmitter`
+			> - **setMaxListeners(n):** Triggers a warning if more than `n` listeners are added to an `EventEmitter`
 			> object. The default is 10.
 			
 			> - **.removeListener(eventName, callback):** Removes the `callback` function from the `eventName` event
@@ -135,6 +135,7 @@ Using Events, Listeners, Timers, and Callbacks
 	  	- Implementing Event Listeners and Event Emitters - `emitter_listener.js`
 		
 - *Implementing Callbacks*
+
   	- Adding Additional Parameters to Callbacks
   	- Implementing Closure in Callbacks
   	- Chaining Callbacks
