@@ -135,7 +135,15 @@ Using Events, Listeners, Timers, and Callbacks
 	  	- Implementing Event Listeners and Event Emitters - `emitter_listener.js`
 		
 - *Implementing Callbacks*
-
+	> The Node.js event-driven model relies heavily on the callback functions. 
+	> Callback functions can be difficult to understand at first, especially if you want to depart from
+	> implementing a basic anonymous function as opposed to named functions.
+	
+	> Here is how to deal with three specific implementations of callbacks:
+		- passing parameters to a callback
+		- handling callback function parameters in a loop (iterator), and
+		- nesting callbacks
+		
   	- Adding Additional Parameters to Callbacks
   	- Implementing Closure in Callbacks
   	- Chaining Callbacks
