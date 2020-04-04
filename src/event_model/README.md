@@ -96,6 +96,15 @@ Using Events, Listeners, Timers, and Callbacks
 			```
 			
 	  	- Adding Event Listeners to Objects
+			> Once you have an instance of an object that you will emit events, you can add listeners for the
+			> events that you care about. You can add listeners to an `EventEmitter` object by using one of the
+			> following functions:
+				- **.addListener(eventName, callback):** Attaches the `callback` function to the object's
+				  listeners. Every time the `eventName` event is triggered, the `callback` function is placed
+				  in the event queue to be executed.
+				  
+				- **on(eventName, callback):**
+				
 	  	- Removing Listeners from Objects
 	  	- Implementing Event Listeners and Event Emitters
 		
