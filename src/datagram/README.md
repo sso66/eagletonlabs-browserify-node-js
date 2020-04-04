@@ -20,7 +20,7 @@
 > UDP is suitable for purposes where error checking and correction are not either necessary or performed in
 > the Node.js application; UDP avoides the overhead of such processing the protocal stack.
 >
-> Time-sensitive Node.js applications often used UDP because dropping packages is perferable to waiting for
+> *Time-sensitive* Node.js applications often used UDP because dropping packages is perferable to waiting for
 > packages delayed due to retransmission, which may not be an option in a real-time system, such as TCP/IP.
 
 #### Attributes
