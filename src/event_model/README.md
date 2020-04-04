@@ -117,11 +117,22 @@ Using Events, Listeners, Timers, and Callbacks
 			}
 			var myObject = new MyObject;
 			myObject.on("someEvent", myCallback);
-			```
-			
-				
+			```						
 	  	- Removing Listeners from Objects
-	  	- Implementing Event Listeners and Event Emitters
+			> Listeners are very useful and a vital part of Node.js programming. However, they cause overhead, 
+			> and you should use them only when necessary. Node.js provides several helper functions on the
+			> `EventEmitter` object that allow you to manage the listeners that are included:
+			
+			> - **.listener(eventName):** Returns and array of listeners functions attatched to the `eventName`
+			> event. 
+				  
+			> - **setMaxListeners(n:** Triggers a warning if more than `n` listeners are added to an `EventEmitter`
+			> object. The default is 10.
+			
+			> - **.removeListener(eventName, callback):** Removes the `callback` function from the `eventName` event
+			> of the `EventEmitter ` object.
+			
+	  	- Implementing Event Listeners and Event Emitters - `emitter_listener.js`
 		
 - *Implementing Callbacks*
   	- Adding Additional Parameters to Callbacks
