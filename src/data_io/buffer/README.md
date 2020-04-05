@@ -1,4 +1,4 @@
-### Using the Buffer Module to Buffer Data
+## Using the Buffer Module to Buffer Data
 
 > While JavaScript may be extremely Unicode friendly it 
 > is not ver good at managing binary data. However the
@@ -8,7 +8,7 @@
   - Generating dynamic images
   - Sending serialized binary data
   
-#### Understanding Buffer Data
+### Understanding Buffer Data
 > Buffered data is made up of a series of octects in big-endian or little-endian format.
 > That means they take up considerable less space than text data.
 > Therefore, Node.js provides the *Buffer* module which allows to create, read, write and
@@ -40,4 +40,12 @@
 >
 > For example, 0x0A 0x0B 0x9C 0x0D would store in buffer as [0x0A, 0x0B, 0x9C, 0x0D]
 > in bit endian but as [0x0D, 0x0C, 0x9B, 0x0D] in little endian.
->
+
+### Creating Buffers
+### Writing to Buffers
+### Reading from Buffers
+### Determining Buffer Length
+### Copying Buffers
+### Slicing Buffers
+### Contatenating BUffers
+
