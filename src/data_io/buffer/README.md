@@ -28,7 +28,7 @@
 >	- base64
 >	- hex
 
-**Big Endian and Little Endian**
+*Big Endian and Little Endian*
 > Binary data in buffers is stored as a series of octects or a sequences of eight 0s
 > and 1s that can be a hexadecimal value 0x00 to 0xFF.
 >
@@ -41,11 +41,11 @@
 > For example, 0x0A 0x0B 0x9C 0x0D would store in buffer as [0x0A, 0x0B, 0x9C, 0x0D]
 > in bit endian but as [0x0D, 0x0C, 0x9B, 0x0D] in little endian.
 
-### Creating Buffers
-### Writing to Buffers
-### Reading from Buffers
-### Determining Buffer Length
-### Copying Buffers
-### Slicing Buffers
-### Contatenating Buffers
+#### Creating Buffers
+#### Writing to Buffers
+#### Reading from Buffers
+#### Determining Buffer Length
+#### Copying Buffers
+#### Slicing Buffers
+#### Contatenating Buffers
 
