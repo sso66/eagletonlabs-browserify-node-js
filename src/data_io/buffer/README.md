@@ -47,5 +47,5 @@
 ### Determining Buffer Length
 ### Copying Buffers
 ### Slicing Buffers
-### Contatenating BUffers
+### Contatenating Buffers
 
