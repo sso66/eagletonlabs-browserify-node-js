@@ -3,7 +3,6 @@
 // Date: 03/27/2020
 //..............................................................................
 console.log("Mounting buffer_slice.js...");
-
 /* 
  * Another important aspects of working with buffers is the ability to divide
  * them into slices (chunks). 

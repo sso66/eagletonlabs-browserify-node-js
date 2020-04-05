@@ -8,7 +8,7 @@
 > from one location to another. They also expose events such as 'data' when
 > data is available to be read, 'error' when error occurs, and so forth so
 > that you can register listeners (handlers) to handle the data when it 
-> becomes availabile in a stream or is readyy to be written to.
+> becomes availabile in a stream or is ready to be written to.
 >
 > Steams are commonly used for HTTP data and files. You can open a file as
 > readable stream or access the data from HTTP (Websocket) requests as 

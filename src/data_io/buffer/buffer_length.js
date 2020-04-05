@@ -1,9 +1,8 @@
-// File: buffer_check.js
+// File: buffer_length.js
 // Note: Determining the Buffer's length of the data
 // Date: 03/26/2020
 //..............................................................................
-console.log("Mounting buffer_check.js...");
-
+console.log("Mounting buffer_length.js...");
 /*
  * A common taks when dealing with buffers is determining the length, 
  * especially when you create a buffer dynamically from a string.

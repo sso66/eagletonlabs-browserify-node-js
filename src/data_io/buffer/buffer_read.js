@@ -1,9 +1,8 @@
 // File: buffer_write.js
-// Note: Reading from binary buffers
-// Date: 03/26/2020
+// Note: Reading from B uffers
+// Date: 04/05/2020
 //..............................................................................
 console.log("Mounting buffer_read.js...");
-
 /* 
  * There are several methods for reading buffers. The simplest is to use the
  * toString() method to convert all or part of a buffer to string. However, you
@@ -12,10 +11,10 @@ console.log("Mounting buffer_read.js...");
  * Also, Node.js provides a StringDecoder object that has a write(buffer) 
  * method that decodes and writes buffered data using specified encoding.
  * 
- * Buffer() is deprecated due to security and usability issues. Use the 
- * Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+ * The following code illustrates reading from Node.js Buffer object:
+ * 
  */
-// defines a buffer with UTF8 with encoded characters
+// defines a buffer with UTF8 with encoded character data
 bufUTF8 = new Buffer.from("Some UTF8 Text \u00b6 \u30c6 \u20ac", 'utf8');
 
 // and then uses toString() without parameters to read all buffer
@@ -27,7 +26,7 @@ console.log(bufUTF8.toString('utf8', 5, 9));
 // creates StringDecoder with UTF8 coding 
 var StringDecoder = require('string_decoder').StringDecoder;
 
-// and uses it to write the content of the buffer out to the console
+// and uses it to write the content of the buffer out to the console log
 var decoder = new StringDecoder('utf8');
 console.log(decoder.write(bufUTF8));
 

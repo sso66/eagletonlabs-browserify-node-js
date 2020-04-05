@@ -3,7 +3,6 @@
 // Date: 03/27/2020
 //..............................................................................
 console.log("Mounting buffer_copy.js...");
-
 /* 
  * An important part of working with buffers is the ability to copy data from
  * one buffer to another buffer.
@@ -57,7 +56,7 @@ console.log("Dots: " + dots.toString());
 
 // eof 
 
-// outputq
+// output
 // Mounting buffer_read.js...
 // abcdefghijklmnopqrstuvwxyz
 // Blank:
