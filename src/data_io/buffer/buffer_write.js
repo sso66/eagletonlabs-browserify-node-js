@@ -28,12 +28,13 @@ buf256.fill(0);
 buf256.write("add some text");
 console.log(buf256.toString());
 
-// adds some additional text that alters part of the exting buffer via
+// adds some additional text that alters part of the existing buffer via
 // write(string, offset, length) to the middle of the buffer
 buf256.write("more text", 9, 9);
 console.log(buf256.toString());
 
 // adds a + sign to the end by directly setting the value of an index
+// set changes to a single byte
 buf256[18] = 43;
 console.log(buf256.toString());
 
