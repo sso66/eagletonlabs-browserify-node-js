@@ -30,6 +30,7 @@
    >  - `process.stdin `
    >  - `websocket` streams
    
+   > `Readable` streams provide
     
   - Writable, 
   - Duplex
