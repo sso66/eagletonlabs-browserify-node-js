@@ -33,7 +33,7 @@ console.log(buf256.toString());
 buf256.write("more text", 9, 9);
 console.log(buf256.toString());
 
-// adds a + sign to by directly the value of an index changes a single byte
+// adds a + sign to the end by directly setting the value of an index
 buf256[18] = 43;
 console.log(buf256.toString());
 
