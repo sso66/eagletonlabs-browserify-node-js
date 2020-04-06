@@ -1,6 +1,6 @@
 // File: buffer_slice.js
-// Note: Creating and manipulating slices of a Buffer object
-// Date: 03/27/2020
+// Note: Slicing Buffers
+// Date: 04/06/2020
 //..............................................................................
 console.log("Mounting buffer_slice.js...");
 /* 
@@ -12,8 +12,13 @@ console.log("Mounting buffer_slice.js...");
  * 
  * Slicing a buffer allows you to manipulate a specific chunk.
  * 
- * Buffer() is deprecated due to security and usability issues. Use the 
- * Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
+ * You create slices by using slice([start], [end]), which returs a Buffer
+ * object that points to the start index of the original buffer and has a
+ * length of end-start.
+ * 
+ * Keep in mind that a slice different from a copy ("pie"). If you edit
+ * a copy ("pie"), the original does not change. However, if you edit a
+ * slice, the original does change.
  * 
  */
 var numbers = new Buffer.from("123456789");
