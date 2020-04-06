@@ -1,5 +1,5 @@
 // File: buffer_concat.js
-// Note: Concatenating binary buffer objects
+// Note: Concatenating Buffers
 // Date: 03/27/2020
 //..............................................................................
 console.log("Mounting buffer_concat.js...");
