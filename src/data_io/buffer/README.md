@@ -18,7 +18,7 @@
 > normal V8 heap in raw memory allocations - RAM. Therefore, a buffer cannot be resized.
 
 > When converting buffers to and from strings, you need to specify the explicit enconding - 
-> **Character Encoding** to be used. string <->number<->binary
+> **Character Encodings** to be used. 
 
 > Method of encoding between strings and binary buffers:
 >	- utf8
