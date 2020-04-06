@@ -12,11 +12,11 @@ console.log("Mounting buffer_slice.js...");
  * 
  * Slicing a buffer allows you to manipulate a specific chunk.
  * 
- * You create slices by using slice([start], [end]), which returs a Buffer
+ * You create slices by using slice([start], [end]), which returns a Buffer
  * object that points to the start index of the original buffer and has a
- * length of end-start.
+ * length of end-start (end minus start).
  * 
- * Keep in mind that a slice different from a copy ("pie"). If you edit
+ * Keep in mind that a slice is different from a copy ("pie"). If you edit
  * a copy ("pie"), the original does not change. However, if you edit a
  * slice, the original does change.
  * 
