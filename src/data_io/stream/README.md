@@ -45,7 +45,7 @@
    >
    >    - **err**: Emitted when an error occurs in receiving data.
    
-   > *Methods available on `Readable` stream objects
+   > *Methods available on `Readable` stream objects*
    
 
          
