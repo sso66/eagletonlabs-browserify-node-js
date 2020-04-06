@@ -11,9 +11,9 @@ console.log("Mounting buffer_read.js...");
  * Also, Node.js provides a StringDecoder object that has a write(buffer) 
  * method that decodes and writes buffered data using specified encoding.
  *
- * Methods of writing to Buffer objects:
+ * Methods of reading to Buffer objects:
  * ----------------------------------------------------
- * buffer.write(string, [offset], [length], [encoding]
+ * buffer.toString(string, [encoding]
  * buffer[offset] = value
  * buffer.fill(value, [offset], [end]
  *
