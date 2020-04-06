@@ -44,10 +44,10 @@
 - Summary
 > At the heart of most intense web applications and services is a lot of data streaming from 
 > one system to another.
-> You have learned how to use functionality build into Node.js to work with JSON data, manipulated
+> You have learned how to use functionality build into Node.js to work with JSON data, manipulate
 > binary buffer data and utilize data streams.
-> Also had a chance to play around with compression in compressing buffered data as well as 
-> running data streams through compression/decompressions.
+> Also had a chance to play around with data compression in compressing buffered data as well as 
+> running data streams through compression/decompression.
 
 > Note to file
 > - Persistent data denotes information that is infrequently accessed and not likely to be modified. 
