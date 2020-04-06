@@ -19,7 +19,9 @@ console.log("Mounting buffer_copy.js...");
  * resulting buffer.
  * 
  * You can also copy data from one buffer to the other by indexing them 
- * directly.
+ * directly, as in this example:
+ *
+ *  sourceBuffer[index] = destinationBuffer[index]
  * 
  * Buffer() is deprecated due to security and usability issues. Use the 
  * Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead.
@@ -47,7 +49,7 @@ var dots = new Buffer.from('--------------------------');
 dots.fill();
 /*
  * iterate through the source buffer and copies only
- * every other byte in the buffer
+ * every other byte in the buffer to destination buffer
  */
 for (var i = 0; i < dots.length; i++) {
 	if (i % 2) { dots[i] = alphabet[i]; }
