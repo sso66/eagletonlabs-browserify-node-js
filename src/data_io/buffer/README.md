@@ -21,7 +21,7 @@
 > When converting buffers to and from strings, you need to specify the explicit enconding - 
 > **Character Encodings** to be used. 
 
-*Method of encoding between strings and binary buffers:*
+*Methods of encoding between strings and binary buffers:*
 - utf8 `Multi-byte encoded Unicode characters; the standard in most documents and webpages.`
 -	utf16le  `Little-endian encoded Unicode characters of 2 or 4 bytes.`
 -	ucs2 `Little-endian encoded Unicode characters of 2 or 4 bytes.`
