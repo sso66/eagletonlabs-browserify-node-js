@@ -4,10 +4,10 @@
 > of text, JSON strings, binary buffers and data streams.
 
 **Reason**
-> Therefore, Node.js has lot of mechanisms built into it to support handline the data  I/O from 
+> Therefore, Node.js has lot of mechanisms built into it to support handling the data I/O from 
 > system to system.
 >
-> It is important to understand the mechanisms that Node.js provides to implement  effective and 
+> It is important to understand the mechanisms that Node.js provides to implement effective and 
 > efficient web applications and services.
 >
 > Focus on manipulating JSON data, managint binary data structure - byte arrray, and implementing
