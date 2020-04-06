@@ -19,8 +19,8 @@
   - `Readable` Streams
   > `Readable` streams are designed to provide a mechanism to easily read data coming into and application,
   > from another source. Common readable streams are:
-    - HTTP responses on the client
-    - Http Request on the server
+   >  - HTTP responses on the client
+   >  - Http Request on the server
     
   - Writable, 
   - Duplex
