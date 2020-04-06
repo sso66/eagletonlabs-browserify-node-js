@@ -30,20 +30,20 @@ bufUTF8 = new Buffer.from("Some UTF8 Text \u00b6 \u30c6 \u20ac", 'utf8');
 // and then uses toString() without parameters to read all buffer
 console.log(bufUTF8.toString());
 
-// and then with the encoding, start, and end part of the buffer
+// and then with the encoding, start, and end parameters to read parts of the buffer
 console.log(bufUTF8.toString('utf8', 5, 9));
 
 // creates StringDecoder with UTF8 coding 
 var StringDecoder = require('string_decoder').StringDecoder;
 
-// and uses it to write the content of the buffer out to the console log
+// and uses it to write the contents of the buffer out to the console log
 var decoder = new StringDecoder('utf8');
 console.log(decoder.write(bufUTF8));
 
 // next, a direct access method gets the value of the octet at index 18
 console.log(bufUTF8[18].toString(16));
 
-// and then readUInt32BE reads the 32-bit integer
+// and then readUInt32BE reads a 32-bit integer
 console.log(bufUTF8.readUInt32BE(18).toString(16));
 
 // eof
