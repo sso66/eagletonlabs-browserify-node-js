@@ -9,9 +9,9 @@ console.log("Mounting buffer_write.js...");
  *
  * Methods of writing to Buffer objects:
  * ----------------------------------------------------
- * buffer.write(string, [offset], [length], [encoding]
+ * buffer.write(string, [offset], [length], [encoding])
  * buffer[offset] = value
- * buffer.fill(value, [offset], [end]
+ * buffer.fill(value, [offset], [end])
  *
  * buffer.writeInt8(value, offset, [noAssert])
  * buffer.writeInt16LE(value, offset, [noAssert])
