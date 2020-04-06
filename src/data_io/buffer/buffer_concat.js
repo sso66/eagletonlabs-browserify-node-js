@@ -1,6 +1,6 @@
 // File: buffer_concat.js
 // Note: Concatenating Buffers
-// Date: 03/27/2020
+// Date: 04/06/2020
 //..............................................................................
 console.log("Mounting buffer_concat.js...");
 /*
@@ -24,6 +24,7 @@ var af = new Buffer.from("African Swallow?");
 var eu = new Buffer.from("European Swallow?");
 var question = new Buffer.from("Air Speed Velocity of an ");
 
+// notice the user static method Buffer.concat(list, [totalLength])
 console.log(Buffer.concat([question, af]).toString());
 console.log(Buffer.concat([question, eu]).toString());
 
