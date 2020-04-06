@@ -46,15 +46,15 @@
    >    - **error**: Emitted when an error occurs in receiving data.
    
    > *Methods available on `Readable` stream objects*
-   >  - read[size])
-   >  - setEncoding(encoding)
-   >  - pause()
-   >  - resume()
-   >  - pipe(destination, [options])
-   >  - unpipe([destination])
-   
-
-         
+   >  - `read[size])` Reads data from the stream. The data can be a String, Buffer or null (null means there is no
+   >                  more data left.). If the size argument is read, then the data is limited to that number of bytes.
+   >
+   >  - `setEncoding(encoding)`
+   >  - `pause()`
+   >  - `resume()`
+   >  - `pipe(destination, [options])`
+   >  - `unpipe([destination])`
+            
           
   - Writable, 
   - Duplex
