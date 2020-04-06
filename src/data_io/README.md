@@ -1,7 +1,19 @@
 ## data_io: Handling Data I/O in Node.js
 **Purpose**
+> Most active web applications and services have a lot of data flowing through them - in the form
+> of text, JSON Strings, binary buffer buffers and data streams.
 
 **Reason**
+> Therefore, Node.js has lot of mechanisms built into it to support handline the data  I/O from 
+> system to system.
+>
+> It is important to understand the mechanisms that Node.js provides to implement  effective and 
+> efficient web applications and services.
+>
+> Focus on manipulating JSON data, managint binary data structure - byte arrray, and implementing
+> readable and writable streams and data compression / decompression.
+> 
+> Learn how to leverage the Node.js functionality to work with different I/O requirements.
 
 - Working with JSON
 	- Converting JSON to JavaScript Objects
