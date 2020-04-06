@@ -16,7 +16,12 @@
 >
 > In addition, you can create your own custom streams. Follow up on the 
 > process of creating and using streams such as:
-  - Readable, 
+  - `Readable` Streams
+  > `Readable` streams are designed to provide a mechanism to easily read data coming into and application,
+  > from another source. Common readable streams are:
+    - HTTP responses on the client
+    - Http Request on the server
+    
   - Writable, 
   - Duplex
   - Transform
