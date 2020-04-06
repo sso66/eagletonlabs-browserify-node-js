@@ -1,9 +1,8 @@
 ### Using the Buffer Module to Buffer Data
 
-> While JavaScript may be extremely Unicode friendly it 
-> is not ver good at managing binary data. However the
-> binary data is exremely useful when implementing some
-> web application and services, such as:
+> While JavaScript may be extremely Unicode friendly it is not ver good at managing binary data. 
+> However the binary data is exremely useful when implementing some web application and services, 
+> such as:
   - Transferring compressed files
   - Generating dynamic images
   - Sending serialized binary data
@@ -15,10 +14,10 @@
 > manipulate data in a buffer structure. 
 > The buffer module is global, so you don not need to use require() function to access it.
 
-> Buffer data is store in a structure simalr to that an array, but it it store outside the
+> Buffered data is stored in a structure simalr to that an array, but it it store outside the
 > normal V8 heap in raw memory allocations - RAM. Therefore, a buffer cannot be resized.
 
-> When convert buffers to and from strings, you need to specify the explicit enconding - 
+> When converting buffers to and from strings, you need to specify the explicit enconding - 
 > **Character Encoding** to be used. string <->number<->binary
 
 > Method of encoding between strings and binary buffers:
