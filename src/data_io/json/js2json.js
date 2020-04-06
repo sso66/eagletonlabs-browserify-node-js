@@ -1,4 +1,4 @@
-// File: js2json
+// File: js2json.js
 // Note: Converting JavaScript Object to JSON String
 // Date: 04/05/2020
 //..............................................................................
