@@ -30,8 +30,13 @@
    >  - `process.stdin `
    >  - `websocket` streams
    
-   > `Readable` streams provide
-    
+   > `Readable` streams provide the read([size]) method to read data, where size specifies the number of bytes
+   > to read from the stream.read can return a String object, Buffer object or null.
+   
+   > `Readable` streams also expose the following events:
+   >    - **readable**: Emitted when a chunck of data can be read from the stream.
+   >    - **data**: Similar to **readable**, except that when data event handler are attatched, the stream is turned 
+          into flowing mode, and the data handler is called continuously until all data has be drained.
   - Writable, 
   - Duplex
   - Transform
