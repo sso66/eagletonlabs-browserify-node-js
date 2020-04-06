@@ -29,7 +29,7 @@
 
 *Big Endian and Little Endian*
 > Binary data in buffers is stored as a series of octects or a sequences of eight 0s
-> and 1s that can be a hexadecimal value 0x00 to 0xFF.
+> and 1s that can be a hexadecimal value of 0x00 to 0xFF.
 >
 > It can be read as a single byte or as word conaining multiple bytes.
 >
