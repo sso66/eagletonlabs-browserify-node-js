@@ -44,7 +44,7 @@ alphabet.copy(dashes, 10, 10, 15);
 
 // ___ copy to and from direct indexes of buffers ___
 var dots = new Buffer.from('--------------------------');
-dots.fill();
+dots.fill('.');
 /*
  * iterate through the source buffer and copies only
  * every other byte in the buffer
@@ -62,5 +62,5 @@ console.log("Dots: " + dots.toString());
 // Blank:
 // Blank: abcdefghijklmnopqrstuvwxyz
 // Dashes: --------------------------
-// Dots:  b d f h j l n p r t v x z
+// Dots: .b.d.f.h.j.l.n.p.r.t.v.x.z
 
