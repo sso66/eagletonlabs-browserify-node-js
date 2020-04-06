@@ -1,9 +1,24 @@
 // File: js2json
 // Note: Converting JavaScript Object to JSON String
-// Date: 03/01/2020
+// Date: 04/05/2020
 //..............................................................................
 console.log("Mounting js2json.js...");
-
+/*
+ * Node.js allows you to convert JavaScript object into a properly formatted 
+ * JSON string.
+ * 
+ * Thus, you can store the string form in a file or database, send across an
+ * HTTP connection, or write it to a stream or buffer.
+ * 
+ * You use the JSON.stringfy(object) method to parse a JavaScript object and
+ * generate a JSON string.
+ * 
+ * Following code defines a JavaScript object that includes string, numberic,
+ * boolean, and array properties.
+ * 
+ * JSON.string(object) converts it to a JSON string:
+ * 
+ */
 var accountObj = {
   name: "Jedi", 
   members: ['Yoda', 'Obi Wan'],

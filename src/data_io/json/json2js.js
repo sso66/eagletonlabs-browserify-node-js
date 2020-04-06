@@ -4,7 +4,18 @@
 //..............................................................................
 console.log("Mounting json2js.js...");
 
-// ___ A JSON string represents a JavaScript in string form ___
+/*
+ * A JSON string represents a JavaScript in string form. The string syntax is 
+ * very similar to code, so it is easy to understand.
+ * 
+ * You can use the JSON.parse(string) method to convert a string that is 
+ * properly formatted with JSON into JavaScript object.
+ * 
+ * Notice that accStr is defined as formatted JSON string, then
+ * converted to a JavaScript object using JSON.parse() and then
+ * member properties can be accesssed vial dot notation.
+ * 
+ */
 var accountStr = `{
   "name": "Jedi", 
   "members": ["Yoda", "Obi Wan"],
@@ -24,7 +35,6 @@ console.log(accountObj.status);
 console.log(accountObj.event); 
 console.log(accountObj.location); 
 
-
 // ___ A JSON string represents a JavaScript in string form ___
 var defaultStr = `{
 	"majorDivisions": 5,
@@ -40,10 +50,15 @@ var defaultStr = `{
 
 console.info("\nConverting JSON String to JavaScript Object");
 var defaultObj = JSON.parse(defaultStr);
-console.log(defaultObj.majorDivisions);
-console.log(defaultObj.minorDivisions);
-console.log(defaultObj.min);
-console.log(defaultObj.max);
-console.log(defaultObj.ranges);
+console.log("majorDivisions: " + defaultObj.majorDivisions);
+console.log("minorDivisions: " + defaultObj.minorDivisions);
+console.log("min: " + defaultObj.min);
+console.log("max: " + defaultObj.max);
+// console.log(defaultObj.ranges);
+for (let i = 0; i < defaultObj.ranges.length; i++) {
+    console.log("min: " + defaultObj.ranges[i].min);
+    console.log("max: " + defaultObj.ranges[i].max);
+    console.log("color: " + defaultObj.ranges[i].color);
+}
 
 // eof 
