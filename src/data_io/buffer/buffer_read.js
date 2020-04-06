@@ -13,14 +13,14 @@ console.log("Mounting buffer_read.js...");
  *
  * Methods of reading to Buffer objects:
  * ----------------------------------------------------
- * buffer.toString(string, [encoding]
- * buffer[offset] = value
- * buffer.fill(value, [offset], [end]
+ * buffer.toString(string, [encoding], [start], [end])
+ * stringDecoder.write(buffer)
+ * buffer[offset]
  *
- * buffer.writeInt8(value, offset, [noAssert])
- * buffer.writeInt16LE(value, offset, [noAssert])
- * buffer.writeInt16BE(value, offset, [noAssert])* 
- 
+ * buffer.readInt8(offset, [noAssert])
+ * buffer.readInt16LE(offset, [noAssert])
+ * buffer.readInt16BE(offset, [noAssert])
+ * 
  * The following code illustrates reading from Node.js Buffer object:
  * 
  */
