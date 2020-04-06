@@ -9,7 +9,7 @@ console.log("Mounting buffer_create.js...");
  * 
  * Buffer() is deprecated due to security and usability issues. Use the 
  * Buffer.alloc(), Buffer.allocUnsafe(), or Buffer.from() methods instead
- * of new Buffer() constructor.
+ * of new Buffer() constructor to create Buffer objects.
  * 
  */
 
