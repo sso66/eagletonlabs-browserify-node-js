@@ -1,7 +1,7 @@
 ## data_io: Handling Data I/O in Node.js
 **Purpose**
 > Most active web applications and services have a lot of data flowing through them - in the form
-> of text, JSON Strings, binary buffer buffers and data streams.
+> of text, JSON strings, binary buffers and data streams.
 
 **Reason**
 > Therefore, Node.js has lot of mechanisms built into it to support handline the data  I/O from 
