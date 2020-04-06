@@ -5,7 +5,7 @@
 > JSON is a very lightweight method to convert JavaScript objects into a string form and then back again.
 >
 > It works well when you need to serialize data objects when passing them from client to server, process
-> to process, or stream to stream or when you're storing them in a database.
+> to process, or stream to stream or when you're storing them in a database and/or files.
 
 > There are several reasons to use JSON to serialize your JavaScripts instead of XML:
 > - JSON is much more efficient and takes fewer characters.
