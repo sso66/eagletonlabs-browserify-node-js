@@ -11,9 +11,9 @@
 #### Understanding Buffer Data
 > Buffered data is made up of a series of octets (8-bits) in big-endian or little-endian format.
 > That means they take up considerable less space than text data.
-> Therefore, Node.js provides the *Buffer* module which allows to create, read, write and
+> Therefore, Node.js provides the `Buffer` module which allows to create, read, write and
 > manipulate data in a buffer structure. 
-> The buffer module is global, so you do not need to use require() function to access it.
+> The `Buffer` module is global, so you do not need to use require() function to access it.
 
 > Buffered data is stored in a structure similar to that an array, but it is stored outside the
 > normal V8 heap in raw memory allocations - RAM. Therefore, a buffer cannot be resized.
