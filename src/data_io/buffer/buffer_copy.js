@@ -1,6 +1,6 @@
 // File: buffer_copy.js
 // Note: Copying data from on Buffer object to another
-// Date: 03/27/2020
+// Date: 04/06/2020
 //..............................................................................
 console.log("Mounting buffer_copy.js...");
 /* 
