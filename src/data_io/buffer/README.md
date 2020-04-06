@@ -12,7 +12,7 @@
 > That means they take up considerable less space than text data.
 > Therefore, Node.js provides the *Buffer* module which allows to create, read, write and
 > manipulate data in a buffer structure. 
-> The buffer module is global, so you don not need to use require() function to access it.
+> The buffer module is global, so you do not need to use require() function to access it.
 
 > Buffered data is stored in a structure simalr to that an array, but it it store outside the
 > normal V8 heap in raw memory allocations - RAM. Therefore, a buffer cannot be resized.
