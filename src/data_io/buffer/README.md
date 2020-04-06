@@ -9,7 +9,7 @@
   - Sending serialized binary data
   
 #### Understanding Buffer Data
-> Buffered data is made up of a series of octects in big-endian or little-endian format.
+> Buffered data is made up of a series of octects (8-bits) in big-endian or little-endian format.
 > That means they take up considerable less space than text data.
 > Therefore, Node.js provides the *Buffer* module which allows to create, read, write and
 > manipulate data in a buffer structure. 
