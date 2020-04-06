@@ -21,12 +21,13 @@
 > **Character Encodings** to be used. 
 
 > Method of encoding between strings and binary buffers:
-- `utf8 Multi-byte encoded Unicode characters; the standar in most documents and webpages.`
+```
+- utf8 `Multi-byte encoded Unicode characters; the standar in most documents and webpages.`
 -	utf16le  `Little-endian encoded Unicode characters of 2 or 4 bytes.`
 -	ucs2 `Little-endian encoded Unicode characters of 2 or 4 bytes.`
 -	base64 `Base-64 string encoding.`
 -	Hex `Each byte encoded as two hexadecimal characters.`
- 
+```
 *Big Endian and Little Endian*
 > Binary data in buffers is stored as a series of octects or a sequences of eight 0s
 > and 1s that can be a hexadecimal value 0x00 to 0xFF.
