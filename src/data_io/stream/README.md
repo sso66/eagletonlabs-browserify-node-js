@@ -27,7 +27,7 @@
    >  - TCP `net` sockets
    >  - UDP `dgram` sockets
    >  - Child processes `stdout` and `stderr`
-   >  - `process.stdin `
+   >  - `process.stdin`
    >  - `websocket` streams
    
    > `Readable` streams provide the read([size]) method to read data, where size specifies the number of bytes
@@ -60,10 +60,21 @@
    >     by `destination.options` is a JavaScript object. For example, {end: true} ends the `Writable destination
          when 'Readable` ends.
    >
-   >  - `unpipe([destination])` Disconnects this object from the `Writable` destination.
-   
-            
+   >  - `unpipe([destination])` Disconnects this object from the `Writable` destination.  
           
-  - Writable, 
+  - `Writable` 
+   > `Writable` streams are designed to provide a mechanism to easily write data into a form that can
+   > easily be consumed in another area of code. Common writable streams are:
+   >  - `http` request on the client
+   >  - `http` response on the server
+   >  - `fs` write streams
+   >  - `zlib` streams
+   >  - `crypto` streams
+   >  - TCP `net` sockets
+   >  - UDP `dgram` sockets
+   >  - Child process `stdin` 
+   >  - `process.stdout` and `process.stderr`
+   >  - `websocket` streams
+
   - Duplex
   - Transform
