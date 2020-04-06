@@ -19,8 +19,17 @@
   - `Readable` Streams
   > `Readable` streams are designed to provide a mechanism to easily read data coming into and application,
   > from another source. Common readable streams are:
-   >  - HTTP responses on the client
-   >  - Http Request on the server
+   >  - `http` responses on the client
+   >  - `http` request on the server
+   >  - `fs` read streams
+   >  - `zlib` streams
+   >  - `crypto` streams
+   >  - TCP `net` sockets
+   >  - UDP `dgram` sockets
+   >  - Child processes `stdout` and `stderr`
+   >  - `process.stdin `
+   >  - `websocket` streams
+   
     
   - Writable, 
   - Duplex
