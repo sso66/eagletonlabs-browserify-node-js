@@ -43,9 +43,15 @@
    >  
    >    - **close**: Emitted when the underlying resources, such as files, has been closed.
    >
-   >    - **err**: Emitted when an error occurs in receiving data.
+   >    - **error**: Emitted when an error occurs in receiving data.
    
    > *Methods available on `Readable` stream objects*
+   >  - read[size])
+   >  - setEncoding(encoding)
+   >  - pause()
+   >  - resume()
+   >  - pipe(destination, [options])
+   >  - unpipe([destination])
    
 
          
