@@ -35,7 +35,7 @@
 >
 > *Endian* defines the ordering of significant bits when defining the word.
 > Big endian stores the least significant word first, and little endian stores
-> the least significant workd last.
+> the least significant word last.
 >
 > For example, 0x0A 0x0B 0x9C 0x0D would store in buffer as [0x0A, 0x0B, 0x9C, 0x0D]
 > in bit endian but as [0x0D, 0x0C, 0x9B, 0x0D] in little endian.
