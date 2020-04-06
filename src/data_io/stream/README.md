@@ -39,7 +39,15 @@
    >    - **data**: Similar to **readable**, except that when data event handlers are attatched, the stream is turned 
    >    into flowing mode, and the data handler is called continuously until all data has be drained.
    >
-   >    - **end**: Emitted when a chunck of data can be read from the stream.
+   >    - **end**: Emitted by the stream when data will nol longer be provided.
+   >  
+   >    - **close**: Emitted when the underlying resources, such as files, has been closed.
+   >
+   >    - **err**: Emitted when an error occurs in receiving data.
+   
+   > *Methods available on `Readable` stream objects
+   
+
          
           
   - Writable, 
