@@ -25,7 +25,7 @@
 >	- utf16le
 >	- ucs2
 >	- base64
->	- hex
+>	- Hex
 
 *Big Endian and Little Endian*
 > Binary data in buffers is stored as a series of octects or a sequences of eight 0s
