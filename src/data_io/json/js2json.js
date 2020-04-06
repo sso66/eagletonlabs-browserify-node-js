@@ -10,7 +10,7 @@ console.log("Mounting js2json.js...");
  * Thus, you can store the string form in a file or database, send across an
  * HTTP connection, or write it to a stream or buffer.
  * 
- * You use the JSON.stringfy(object) method to parse a JavaScript object and
+ * You use the JSON.stringify(object) method to parse a JavaScript object and
  * generate a JSON string.
  * 
  * Following code defines a JavaScript object that includes string, numberic,
