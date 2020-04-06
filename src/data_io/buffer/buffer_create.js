@@ -12,7 +12,6 @@ console.log("Mounting buffer_create.js...");
  * of new Buffer() constructor to create Buffer objects in Node.js.
  * 
  */
-
 // define buffer using a byte size
 var buf256 = Buffer.alloc(265);
 // define an octet buffer
