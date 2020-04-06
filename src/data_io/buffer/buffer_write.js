@@ -8,7 +8,7 @@ console.log("Mounting buffer_write.js...");
  * can write data to any location in buffer.
  *
  * Methods of writing to Buffer objects:
- *
+ * ----------------------------------------------------
  * buffer.write(string, [offset], [length], [encoding]
  * buffer[offset] = value
  * buffer.fill(value, [offset], [end]
