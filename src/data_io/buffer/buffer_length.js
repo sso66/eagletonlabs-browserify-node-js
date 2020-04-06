@@ -1,5 +1,5 @@
 // File: buffer_length.js
-// Note: Determining the Buffer's length of the data
+// Note: Determining the Buffer Length
 // Date: 03/26/2020
 //..............................................................................
 console.log("Mounting buffer_length.js...");
@@ -10,7 +10,7 @@ console.log("Mounting buffer_length.js...");
  * You can detertime the length of a buffer by calling .length on the Buffer
  * object.
  * 
- * To determine the byte length of the string will tke up in a buffer, you 
+ * To determine the byte length of the string will take up in a buffer, you 
  * cannot use the .length property. Instead, you need to use the
  * Buffer.byteLength(string, [encoding]).
  * 
@@ -32,7 +32,7 @@ console.log(Buffer.from("UTF8 text \u00b6").length);
  * character, the byteLength is 12.
  * 
  * Also note that Butter.from("UTF8 text \u00bc6").length evaluates to 12 also. 
- * This is because .lenght on buffer returns the byte length.
+ * This is because .length on buffer returns the byte length.
  * 
  */
 
