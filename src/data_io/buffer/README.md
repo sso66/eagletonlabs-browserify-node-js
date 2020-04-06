@@ -15,8 +15,8 @@
 > manipulate data in a buffer structure. 
 > The `Buffer` module is global, so you do not need to use require() function to access it.
 
-> Buffered data is stored in a structure similar to that an array, but it is stored outside the
-> normal V8 heap in raw memory allocations - RAM. Therefore, a buffer cannot be resized.
+> Buffered data is stored in a structure similar to that of an array, but it is stored outside
+> the normal V8 heap in raw memory allocations - RAM. Therefore, a buffer cannot be resized.
 
 > When converting buffers to and from strings, you need to specify the explicit enconding - 
 > **Character Encodings** to be used. 
