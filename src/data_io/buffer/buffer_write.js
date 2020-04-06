@@ -12,9 +12,10 @@ console.log("Mounting buffer_write.js...");
  * buffer.write(string, [offset], [length], [encoding]
  * buffer[offset] = value
  * buffer.fill(value, [offset], [end]
- * buffer.writeInt8
- * buffer.writeInt16LE
- * buffer.writeInt16BE
+ *
+ * buffer.writeInt8(value, offset, [noAssert])
+ * buffer.writeInt16LE(value, offset, [noAssert])
+ * buffer.writeInt16BE(value, offset, [noAssert])
  * 
  */
 // defines a buffer
