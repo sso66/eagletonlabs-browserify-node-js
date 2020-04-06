@@ -7,6 +7,7 @@ console.log("Mounting buffer_write.js...");
  * You cannot extend the size of a buffer object after been created, but you 
  * can write data to any location in buffer.
  *
+ * Methods of writing to Buffer objects:
  * buffer.write(string, [offset], [length], [encoding]
  * buffer[offset] = value
  * buffer.fill(value, [offset], [end]
