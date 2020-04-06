@@ -35,8 +35,13 @@
    
    > `Readable` streams also expose the following events:
    >    - **readable**: Emitted when a chunck of data can be read from the stream.
-   >    - **data**: Similar to **readable**, except that when data event handler are attatched, the stream is turned 
-          into flowing mode, and the data handler is called continuously until all data has be drained.
+   >
+   >    - **data**: Similar to **readable**, except that when data event handlers are attatched, the stream is turned 
+   >    into flowing mode, and the data handler is called continuously until all data has be drained.
+   >
+   >    - **end**: Emitted when a chunck of data can be read from the stream.
+         
+          
   - Writable, 
   - Duplex
   - Transform
