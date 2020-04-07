@@ -116,6 +116,18 @@
   > should accept data from write() request, modify it and push out the modified data
   >
   - Piping Readable Streams and Writable Streams
+  > One of the coolest things you can doe with stream objects is chain `Readable` streams to `Writable` streams by using
+  > pipe(writableStream, [options]). function.
+  >
+  > This does exactly what the name implies: It puts the output of `Readable` stream directly into the `Writable` stream.
+  >
+  > The options parameter accepts and object with the end property set to true or false. When end is true, the `Writable
+  > stream ends. This is default behavior. For example:
+  >
+  >   readStream.pipe(writableStream, {end: true})
+  >
+  > You can break the pipe programmatically by using unpipe(destinationStream) option. Re: stream_piped.js
+  
   
   ## Compressing and Decompressing Data with Zlib
   - Compressing and Decompressing Buffers
