@@ -82,9 +82,9 @@
  >
  > The write() function returns ture if the data was written successfully. 
  > `Writable` streams also exposes the following events:
-   >    - **drain**: 
+   >    - **drain**: After write() call returns false, emitte to nodify listeners when it is okay to begin writing more data.
    >
-   >    - **finish**: 
+   >    - **finish**: Emitted when end() is called on the `Writable` object, all data is flushed, and no more data will be accepted.
    >
    >    - **pipe**:
    >  
