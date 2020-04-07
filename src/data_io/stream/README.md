@@ -75,6 +75,22 @@
    >  - Child process `stdin` 
    >  - `process.stdout` and `process.stderr`
    >  - `websocket` streams
+   
+ > `Writable` streams provide the write(chunk, [encoding], [callback]) method to write data into the stream,
+ > where chunk contains the data to write; encoding specifies the string encoding, if necessary; and callback
+ > specifies a callback function to executed when the data has been full flush.
+ >
+ > The write() function returns ture if the data was written successfully. 
+ > `Writable` streams also exposes the following events:
+   >    - **drain**: 
+   >
+   >    - **finish**: 
+   >
+   >    - **pipe**:
+   >  
+   >    - **unpipe**: 
+   >
 
+ 
   - Duplex
   - Transform
