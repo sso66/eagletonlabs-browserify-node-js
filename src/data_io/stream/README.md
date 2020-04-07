@@ -128,8 +128,3 @@
   >
   > You can break the pipe programmatically by using unpipe(destinationStream) option. Re: stream_piped.js
   
-  
-  ## Compressing and Decompressing Data with Zlib
-  - Compressing and Decompressing Buffers
-  - Compressing and Decompressing Streams
-  
