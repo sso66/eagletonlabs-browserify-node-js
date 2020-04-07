@@ -80,17 +80,24 @@
  > where chunk contains the data to write; encoding specifies the string encoding, if necessary; and callback
  > specifies a callback function to executed when the data has been full flush.
  >
- > The write() function returns ture if the data was written successfully. 
+ > The write() function returns true if the data was written successfully. 
  > `Writable` streams also exposes the following events:
-   >    - **drain**: After write() call returns false, emitte to nodify listeners when it is okay to begin writing more data.
+   >    - **drain**: After write() call returns false, emitted to notify listeners when it is okay to begin writing more data.
    >
    >    - **finish**: Emitted when end() is called on the `Writable` object, all data is flushed, and no more data will be accepted.
    >
-   >    - **pipe**:
+   >    - **pipe**: Emitted when the pipe() method is called on a `Readable` stream to add this `Writable` as a destination.
    >  
-   >    - **unpipe**: 
+   >    - **unpipe**: Emitted when the unpipe() method is called on a `Readable` stream to remove this `Writable` as destination.
+   
+   > **Methods available on `Writable` stream objects**
    >
-
- 
+   >  - `write(chunk, [encoding], [callback)` Writes the data chunk to the stream object's data location. The data can be String
+   >     or Buffer. If the encoding is specified, then it us used to encode string data. If the callback is specified, then it is
+   >     called after the data has been flushed.
+   >
+   >  - `end([chunk], [encoding], [callback])` Same as write() expect it puts the `Writable` into a state where it no longer
+   >     accepts data and sends the finished event.
+    
   - Duplex
   - Transform
