@@ -102,8 +102,7 @@
   - Duplex
   > A `Duplex` stream is a stream that combines `Readable` and `Writable` functionality. A good example of `Duplex` steram is
   > a TCP socket connection. You can readd and write from the socket connection after it has been created.
-  
-   
+     
   - Transform
   > A `Transform` stream extends `Duplex` but modifies the data between the `Writable` stream and the `Readable`. This stream
   > can be extremely useful when you need to modify data from one system to another. Somem examples of `Transform streams:
@@ -119,5 +118,6 @@
   - Piping Readable Streams and Writable Streams
   
   ## Compressing and Decompressing Data with Zlib
-  
+  - Compressing and Decompressing Buffers
+  - Compressing and Decompressing Streams
   
