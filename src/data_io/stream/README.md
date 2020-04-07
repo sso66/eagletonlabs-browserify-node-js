@@ -116,5 +116,5 @@
   > Instead, you implement the _ransform(chunk, encoding, callback) and  flush(callback) methods. The _transform() method
   > should accept data from write() request, modify it and push out the modified data
   >
-  
+  - Piping Readable Streams and Writable Streams
   
