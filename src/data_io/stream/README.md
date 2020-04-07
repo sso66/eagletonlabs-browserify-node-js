@@ -100,4 +100,21 @@
    >     accepts data and sends the finished event.
     
   - Duplex
+  > A `Duplex` stream is a stream that combines `Readable` and `Writable` functionality. A good example of `Duplex` steram is
+  > a TCP socket connection. You can readd and write from the socket connection after it has been created.
+  
+   
   - Transform
+  > A `Transform` stream extends `Duplex` but modifies the data between the `Writable` stream and the `Readable`. This stream
+  > can be extremely useful when you need to modify data from one system to another. Somem examples of `Transform streams:
+  >   - `zlib` streams
+  >   - `cyrpto` streams
+  >
+  > A major differences between `Duplex` and the `Transform` streams is that for `Transform` streams, you do not need to 
+  > implement the _read() and _write prototype methods. These are provided as pass-through functions.
+  >
+  > Instead, you implement the _ransform(chunk, encoding, callback) and  flush(callback) methods. The _transform() method
+  > should accept data from write() request, modify it and push out the modified data
+  >
+  
+  
