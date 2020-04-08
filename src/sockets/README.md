@@ -8,6 +8,11 @@ Implementing Socket Servces in Node.js
 > running on the same server or accessing a service running on a clmpletely different server.
 
 **Reason:**
+> Node.js provides the `net` module which allows you to create both socket server and clients that can connect to 
+> the socket server.
+>
+> For secure connnections Node.js provides the `tls` module that allows you to implement secure TLS socket servers
+> and the clients.
 
 - Understanding Network Sockets
 	
