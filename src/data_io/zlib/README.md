@@ -21,4 +21,12 @@
   > executed after the compression/decompression occurs. Re: zlib_buffers.js
   
   - Compressing and Decompressing Streams
+  > Compression/Decompression *streams* using `zlib` is slightly different from compressing/decompressing *buffers*.
+  >
+  > Instead, you use the pipe() function to pipe the data from one stream through the compression/decompression 
+  > object inot another stream. This can apply to compressing `Readable` streams into `Writable` streams.
+  >
+  > The good example of doing this is compressing the contents of a file by using `fs.Readstream` and 
+  > `fs.WriteSteam. Re: zlib_file.js
+  
   
