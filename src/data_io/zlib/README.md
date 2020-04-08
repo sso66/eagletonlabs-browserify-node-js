@@ -10,8 +10,8 @@
 >
 > `zlib` supports compression methods:
 > - **gzip/gunzip:** Standard *gzip* ompression.
-> -** deflate/inflate:** Standard deflate compression algorithm, based on Huffman coding.
-> -**deflateRaw/inflateRaw:** Deflate compression algorithm on new buffer.
+> - ** deflate/inflate:** Standard deflate compression algorithm, based on Huffman coding.
+> - **deflateRaw/inflateRaw:** Deflate compression algorithm on new buffer.
 
   - Compressing and Decompressing Buffers
   - Compressing and Decompressing Streams
