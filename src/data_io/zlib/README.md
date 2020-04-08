@@ -14,5 +14,11 @@
 > - **deflateRaw/inflateRaw:** Deflate compression algorithm on new buffer.
 
   - Compressing and Decompressing Buffers
+  > The `zlib` module provides several helper functions that make it easy to compress/decompress data buffers.
+  >
+  > The all use the same basic format function(buffer, callback), where function is the compression/decompression
+  > method, buffer is the buffer to be compressed/decompressed, and callback is the callback function that is 
+  > executed after the compression/decompression occurs. Re: zlib_buffers.js
+  
   - Compressing and Decompressing Streams
   
