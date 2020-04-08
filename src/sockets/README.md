@@ -15,6 +15,10 @@ Implementing Socket Servces in Node.js
 > and the clients.
 
 - Understanding Network Sockets
+> Network sockets are endpoints of communications that flow across a computer network. 
+> Sockets live below the HTTP layer and provide the point-to-point communciation between servers.
+> Virtually all Internet communication is based on Internet sockets that flow data between two points on the Internet.
+
 	
 - Understanding TCP Server and the Socket Objects
   - The net.Socket Object
