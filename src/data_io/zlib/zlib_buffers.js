@@ -1,12 +1,14 @@
 // File: zlib_buffers.js
-// Note: Compressing/Decompressing binary buffers
-// Date: 03/01/2020
+// Note: Compressing/Decompressing Buffers
+// Date: 04/07/2020
 //..............................................................................
-console.log("Mounting zlib_buffer.js...");
+console.log( "Mounting zlib_buffer.js..." );
 
 var zlib = require('zlib');
+
 var input = "............text............";
 
+// Standard deflate compression algorithm based on Huffman coding.
 zlib.deflate(input, function(err, buffer) {
 	if (!err) {
 		console.log("deflate (%s): ", buffer.length, buffer.toString('base64'));	
@@ -24,6 +26,7 @@ zlib.deflate(input, function(err, buffer) {
 	}
 });
 
+// Deflate compression algorithm on a raw buffer.
 zlib.deflateRaw(input, function(err, buffer) {
 	if (!err) {
 		console.log("deflateRaw (%s): ", buffer.length, buffer.toString('base64'));
@@ -35,6 +38,7 @@ zlib.deflateRaw(input, function(err, buffer) {
 	}	
 });
 
+// Standard gzip compression
 zlib.gzip(input, function(err, buffer) {
 	if (!err) {
 		console.log("gzip (%s): " , buffer.length, buffer.toString('base64'));	
@@ -50,4 +54,5 @@ zlib.gzip(input, function(err, buffer) {
 		});
 	}
 });
-/* eof */
+
+//eof

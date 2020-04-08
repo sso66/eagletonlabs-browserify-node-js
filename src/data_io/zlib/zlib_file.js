@@ -1,12 +1,21 @@
 // File: zlib_file.js
 // Note: Compressing/Decompressing file data streams
-// Date: 03/01/2020
+// Date: 04/08/2020
 //..............................................................................
 console.log("Mounting zlib_file.js...");
-
+/*
+ * The code shows an example of compressing the contents of one file by using
+ * a zlib.Gzip() object and then decompressing it by using a zlib.Gzip()
+ * object.
+ * 
+ * Notice there is a 3 second time delay before trying to decompress the file
+ * to allow the data to be flush to disk.
+ * 
+ */
 var zlib = require('zlib');
 var gzip = zlib.createGzip();
 var fs = require('fs');
+
 var inFile = fs.createReadStream('zlib_file.js');
 var outFile = fs.createWriteStream('zlib_file.gz');
 
@@ -18,7 +27,7 @@ setTimeout(function() {
     /* A .tar.gz file is always a simple archive of files, very much like a
      * standard WinZip file. In the general UNIX world, a .tgz file is
      * actually the same as a .tar.gz file. You can freely switch the
-     * extensions of these two without affecting the uncompression of the
+     * extensions of these two without affecting the decompression of the
      * file.
      */
 	var inFile = fs.createReadStream('zlib_file.gz');
