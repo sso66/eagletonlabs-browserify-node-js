@@ -15,7 +15,7 @@ console.info('Mounting UDP socket udp.js...');
  * 
  */
 const PORT = 20000;
-const MULTICAST_ADDR = "233.255.255.255";
+const MULTICAST_ADDR = "233.255.255.255";   // HOST
 // how to connect to and send messages to a UDP multicast group.
 // Here, choose the port that we will bind the socket to and the multicast 
 // address we will use. The multicast group address must be within the 
@@ -33,28 +33,27 @@ socket.bind(PORT);
 // The socket is an instance of EventEmitter, so we can listen to a couple events:
 // The ‘listening’ event is the first event that is fired after binding to 
 // the port. 
-//
-// We catch this event and add ourselves to the multicast group. Then, we call 
-// sendMessage every 2.5 seconds which sends a message to the multicast group.
 socket.on("listening", function() {
-  socket.addMembership(MULTICAST_ADDR);
-  setInterval(sendMessage, 2500);
-  const address = socket.address();
-  console.log(
-    `UDP socket listening on ${address.address}:${address.port} pid: ${
-      process.pid
-    }`
-  );
+    socket.addMembership(MULTICAST_ADDR);
+    setInterval(sendMessage, 2500);
+    const address = socket.address();
+    console.log(
+        `UDP socket listening on ${address.address}:${address.port} pid: ${
+            process.pid
+        }`
+    );
 });
 
+// We catch this event and add ourselves to the multicast group. Then, we call 
+// sendMessage every 2.5 seconds which sends a message to the multicast group.
 function sendMessage() {
-  const message = Buffer.from(`Message from process ${process.pid}`);
-  socket.send(message, 0, message.length, PORT, MULTICAST_ADDR, function() {
-    console.info(`Sending message "${message}"`);
-  });
+    const message = Buffer.from(`Message from process ${process.pid}`);
+    socket.send(message, 0, message.length, PORT, MULTICAST_ADDR, function() {
+        console.info(`Sending message "${message}"`);
+    });
 }
-//Finally, we listen for the message event and print any messages we see 
-// to the console
+
+// Finally, we listen for the message event and print any messages to the console
 socket.on("message", function(message, rinfo) {
   console.info(`Message from: ${rinfo.address}:${rinfo.port} - ${message}`);
 });
