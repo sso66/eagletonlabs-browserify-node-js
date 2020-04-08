@@ -29,4 +29,3 @@
   > The good example of doing this is compressing the contents of a file by using `fs.Readstream` and 
   > `fs.WriteSteam. Re: zlib_file.js
   
-  
