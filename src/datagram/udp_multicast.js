@@ -12,19 +12,20 @@ console.info('Mounting UDP socket udp.js...');
  * its state to multiple subscribers. Examples of these systems are online 
  * game engines that must share state between clients, distributed systems 
  * where components must be discoverable, and a blockchain network.
- * 
+ *
+ * Following is how to connect to and send messages to a UDP multicast group.
+ *
  */
-const PORT = 20000;
-const MULTICAST_ADDR = "233.255.255.255";   // HOST
-// how to connect to and send messages to a UDP multicast group.
+const dgram = require("dgram");
+const process = require("process");
+
 // Here, choose the port that we will bind the socket to and the multicast 
 // address we will use. The multicast group address must be within the 
 // appropriate multicast address space. Much of the space is reserved, but 
 // you can still find some unassigned ad-hoc space such as 
 // 233.252.18.0-233.255.255.255.
-
-const dgram = require("dgram");
-const process = require("process");
+const PORT = 20000;
+const MULTICAST_ADDR = "233.255.255.255";   // Host
 
 const socket = dgram.createSocket({ type: "udp4", reuseAddr: true });
 
@@ -36,7 +37,6 @@ socket.bind(PORT);
 //
 // We catch this event and add ourselves to the multicast group. Then, we call 
 // sendMessage every 2.5 seconds which sends a message to the multicast group.
-
 socket.on("listening", function() {
     socket.addMembership(MULTICAST_ADDR);
     setInterval(sendMessage, 2500);
@@ -47,15 +47,16 @@ socket.on("listening", function() {
         }`
     );
 });
-
+// Send messages to a UDP multicast group.
 function sendMessage() {
     const message = Buffer.from(`Message from process ${process.pid}`);
+    
     socket.send(message, 0, message.length, PORT, MULTICAST_ADDR, function() {
         console.info(`Sending message "${message}"`);
     });
 }
 
-// Finally, we listen for the message event and print any messages to the console
+// Finally, we listen for the message event and print any messages to the console.
 socket.on("message", function(message, address) {
   console.info(`Message from: ${address.address}:${address.port} - ${message}`);
 });
