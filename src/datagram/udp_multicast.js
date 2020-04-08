@@ -1,4 +1,4 @@
-// File: udp_server.js
+// File: udp_multicast.js
 // Note: A naïve peer discovery implementation using UDP multicast.
 // Date: 03/24/2020
 //..............................................................................
