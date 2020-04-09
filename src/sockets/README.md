@@ -56,7 +56,7 @@
   > For example, you can use the `write()` method to stream writes of data to server or client, and a `data` event
   > handler to stream data from the server or client.
   
-  > On the socket client, the `Socket` object is created internally when you call `net.connect()` or `net.createConnection()`.
+  > **On the socket client**, the `Socket` object is created internally when you call `net.connect()` or `net.createConnection()`.
   > This object is intended to represent the socket connection to the server.
   >
   > You use the `Socket` object to monitor the connection, send data to the server, and handle the response from the server.
@@ -64,7 +64,7 @@
   > There is no explicit client object in the Node.js `net` module because the `Socket` object acts as the full client,
   > allowing you to send/receive data and terminate the connection.
   
-  > On the socket server, the `Socket` object is created when a client connects to the server and is passed to the connection
+  > **On the socket server**, the `Socket` object is created when a client connects to the server and is passed to the connection
   > event handler.
   > This object is intended to represent the socket connection to the client.
   > On the server, you use the `Socket` object to monitor the client connection as well as send and receive data to and from
