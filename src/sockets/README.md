@@ -43,7 +43,7 @@
 >
 > Once you understand the events, properties, methods, and behavior of the objects, it will be simple to implement 
 > your own TCP socket servers and clients.
---
+
 > The following sections cover the purposes and behaviors of the `net.Socket` and `.net.Server` objects. You'll learn 
 > about their most important events, properties, and methods.
 
@@ -141,19 +141,24 @@ net.createServer[options], [connectionListener])
 > send a FIN packet when the other end of the socket sends a FIN packet, thus allowing half of the `Duplex stream to remain open. Defaults to false.
 
 > Once the `Server` object is created, if provides several events that are triggered during the life cycle of the server.
-> For example, the `connection event is trigger whe the socket client connects, and `close` event is trigger when the server
+> For example, the `connection` event is trigger when the socket client connects, and `close` event is trigger when the server
 > shuts down.
 >
 > As you implement your socket server, you can register callbacks to be executed when these events are triggered to handle
 > connections, errors and shutdown.
 
 > *Events that can be triggered on a `net.Server` objects*
-> - `listening`
-> - `connection`
-> - `close`
-> - `error`
+> - `listening` Emitted when the server begins listening on a port by calling the `listen()` method. The call function does not accept any parameters.
+>
+> - `connection` Emitted whe a connection is received from a socket client. The callback function muse accept a prrameter that is a `Socket` object representing the connection to the connecting client. For example: `function(client) {}`
+>
+> - `close` Emitted when the server closes either normally or on error. This event is not emitted undil all client connections have ended.
+>
+> - `error` Emitted when an error occurs. The `close` event also triggered on errors.
 
-> *Methods that can be called on on `net.Server` objects*
+> The `Server` object also includes several methods that allow you to do things like read from and write to the socket as well as pause or end data flow.  Many of these are inherited from `Duplex` stream objects. 
+
+> *Methods that can be called on `net.Server` objects*
 > - `listen(port, [host], [backlog], [callback])`	
 > - `listen(port, [path], [callback])`
 > - `listen(port, handle, [callback])`
