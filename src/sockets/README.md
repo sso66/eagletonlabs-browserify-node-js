@@ -38,6 +38,8 @@ Implementing Socket Servces in Node.js
 > you can open up the same socket in each process and read and write data between two process via `Duplex` stream.
 	
 - Understanding TCP Server and the Socket Objects
+> To begin using the `net` module in Node.js application, you first need to understand the TCP `Server` and `Socket`
+> objects. These objects the framework for starting TCP server to handle request and implement TCP sock clients.
   - The net.Socket Object
   - The net.Server Object
 	
