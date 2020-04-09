@@ -185,12 +185,26 @@ net.createServer[options], [connectionListener])
 > system `path` specified.
 
 > - `listen(port, handle, [callback])` Same as above except that a handle to a `Server` or `Socket` object has an underlying `_handle`
-> member points to a file descriptor handle on the server. It assumes that the file descriptor 
-> - `getConnections(callback)`
-> - `close(callback)`
-> - `address()`
-> - `unref`
-> - `ref`
+> member points to a file descriptor handle on the server. It assumes that the file descriptor points to as socket file that has already
+> bound to a port.
+
+> - `getConnections(callback)` Returns the number of connections currently connected to the server. `callback` is executed when the
+> number of connections is caculated and accepts an `error` parameter and a `count` parameter. For example `function(error, count)`
+
+> - `close(callback)` Stops the server form accepting new connections. Current connections are allowed to remain until they are
+> complete. The server does not truly stop until all current connections have been closed.
+
+> - `address()` Returns the bound address, the address family name, and the port of the socket, as reported by the operating system.
+> The return value is an object that contains the `port`, `family`, and `address` properties. For example
+> { port: 8107, family: `IPv4`, address: `127.0.0.1` }
+
+> - `unref` Calling this method allows the Node.js application to terminate if this server is the only event on the event queue.
+
+> - `ref` References this socket so that if this server is the only thing on event queue, the Node.js application does not terminate.
+
+> The `Server` object also provides the `maxConnections` attribute, which allows you to set the maximum number of connections that the
+> server accepts before rejecting them. If the process has been forked to a child for processing using `child_process.fork()`, you 
+> should not use this option.
 
 > *Properties that can be accessed on `net.Socket` objects*
 > `maxConnections` allows t set the maximum numbers of connectons that the server accepts before rejecting them
