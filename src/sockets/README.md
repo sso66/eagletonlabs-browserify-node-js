@@ -100,9 +100,9 @@ net.createConnection(path, [connectionListener]
 > *Options that can be specified when creating a `Socket` object*
 > - `port` The port number the client should connect to. This option is required.
 > - `host` The domain name or IP address of the server that the client should connect.
-> - `localAddress` The locak IP address the client should bind to for network connections.
+> - `localAddress` The local IP address the client should bind to for network connections.
 > - `allowHalfOpen` A Boolean that, when true, indicates that the socket, won't automatically
-> send a FIN packet when the other end of the socket sends a FIN packet, thus allowing half of the `Duplex stream to 			- remain open. Defaults to false.
+> send a FIN packet when the other end of the socket sends a FIN packet, thus allowing half of the `Duplex stream to 			> remain open. Defaults to false.
 
 - **The net.Server Object**
 > You use the `net.Server` object to create a TCP socket server and begun listening for connections to which you will be 
@@ -116,6 +116,20 @@ net.createConnection(path, [connectionListener]
 >
 > Because the `Socket` object implements a `Duplex` stream, you can use the `write()` methode to stream writes data 
 > back to the client and a `data` event handler to stream data from the client.
+
+> To create a `Server` object, you used the `net.createServer() method:
+```
+net.createServer[options], [connectionListener])
+```
+> The `options` parameter is an object that specifies options to use when creating the socket `Server` object.
+>
+> The second parameter is the `connection` event callback function, which is executed when a connection is received.
+> This `connectionListener` call function is passed the `Socket` object for the connection client.
+
+> *Options that can be specified when creating a `net.Server` objects*
+> - `allowHalfOpen` A Boolean that, when true, indicates that the socket, won't automatically
+> send a FIN packet when the other end of the socket sends a FIN packet, thus allowing half of the `Duplex stream to 			> remain open. Defaults to false.
+
 	
 	
 - *Implementing TCP Socket Severs and Clients*
