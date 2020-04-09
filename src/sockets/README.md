@@ -102,7 +102,7 @@ net.createConnection(path, [connectionListener]
 > - `host` The domain name or IP address of the server that the client should connect.
 > - `localAddress` The local IP address the client should bind to for network connections.
 > - `allowHalfOpen` A Boolean that, when true, indicates that the socket, won't automatically
-> send a FIN packet when the other end of the socket sends a FIN packet, thus allowing half of the `Duplex stream to 			> remain open. Defaults to false.
+> send a FIN packet when the other end of the socket sends a FIN packet, thus allowing half of the `Duplex stream to remain open. Defaults to false.
 
 - **The net.Server Object**
 > You use the `net.Server` object to create a TCP socket server and begun listening for connections to which you will be 
@@ -128,7 +128,7 @@ net.createServer[options], [connectionListener])
 
 > *Options that can be specified when creating a `net.Server` objects*
 > - `allowHalfOpen` A Boolean that, when true, indicates that the socket, won't automatically
-> send a FIN packet when the other end of the socket sends a FIN packet, thus allowing half of the `Duplex stream to 			> remain open. Defaults to false.
+> send a FIN packet when the other end of the socket sends a FIN packet, thus allowing half of the `Duplex stream to remain open. Defaults to false.
 
 	
 	
