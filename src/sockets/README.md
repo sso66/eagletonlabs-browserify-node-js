@@ -82,6 +82,22 @@
   net.connect(path, [connectionListener]);
   net.createConnection(path, [connectionListener]
   ```
+  > All the calls return `Socket` object; the only difference is the first parameter they accept.
+  > The final parameter for all of them is a callback function that is executed when a connection
+  > is opened to the server
+  >
+  > Notice that each method, there is a `net.connect()` form and a `net.createConnection()`. These work
+  > exactly same way.
+  >
+  > The first way to create as `Socket` is to pass `options` parameter, which is an object that contains
+  > properties that define the socket connection.
+  >
+  > The second method accepts `port` and `host` values, specified as direct parameters.
+  >
+  > The third method specifices a file system loacation that is a Unix socket to use when creating the 
+  > `Socket` object.
+  
+  *Options that can be specified when creating a `Socket` object
   
   - **The net.Server Object**
 	
