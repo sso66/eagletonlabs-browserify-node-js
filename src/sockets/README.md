@@ -105,8 +105,14 @@ net.createConnection(path, [connectionListener]
 > send a FIN packet when the other end of the socket sends a FIN packet, thus allowing half of the `Duplex stream to remain open. Defaults to false.
 
 > *Events that can be triggered on a `Socket` object*
+- `connect`
+
 > *Methods that can be called on on `Socket` object*
+- `setEncoding([encoding])
+
 > *Properties that can be accessed on creating a `Socket` object*
+- `bufferSize
+
 
 - **The net.Server Object**
 > You use the `net.Server` object to create a TCP socket server and begun listening for connections to which you will be 
@@ -141,15 +147,26 @@ net.createServer[options], [connectionListener])
 > As you implement your socket server, you can register callbacks to be executed when these events are triggered to handle
 > connections, errors and shutdown.
 
-> *Events that can be triggered on a `net.Server` object*
+> *Events that can be triggered on a `net.Server` objects*
 > - `listening`
 > - `connection`
 > - `close`
 > - `error`
 
-> *Methods that can be called on on `net.Server` object*
-	
-	
+> *Methods that can be called on on `net.Server` objects*
+> - `listen(port, [host], [backlog], [callback])`	
+> - `listen(port, [path], [callback])`
+> - `listen(port, handle, [callback])`
+> - `getConnections(callback)
+> - `close(callback)`
+> - `address()`
+> - `unref`
+> - `ref`
+
+> *Properties that can be accessed on `net.Socket` objects*
+> `maxConnections` allows t set the maximum numbers of connectons that the server accepts before rejecting them
+
+ 
 - *Implementing TCP Socket Severs and Clients*
   - Implement a TCP Socket Client
   - Implement a TCP Socket Server
