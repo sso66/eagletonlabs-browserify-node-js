@@ -77,7 +77,7 @@
   net.createConnetion(options, [connectionListener])
   
   net.connect(port, [host], [connectionListener])
-  net.connection(port, [host], [connectionListner])
+  net.createConnection(port, [host], [connectionListner])
   
   net.connect(path, [connectionListener]);
   net.createConnection(path, [connectionListener]
