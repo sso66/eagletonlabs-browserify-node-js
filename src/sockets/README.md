@@ -159,7 +159,8 @@ net.createServer[options], [connectionListener])
 > The `Server` object also includes several methods that allow you to do things like read from and write to the socket as well as pause or end data flow.  Many of these are inherited from `Duplex` stream objects. 
 
 > *Methods that can be called on `net.Server` objects*
-> - `listen(port, [host], [backlog], [callback])`	
+> - `listen(port, [host], [backlog], [callback])` Opens a port on server and begins listining for connections. `port` specifies the listening port. If you specify 0 as the `port` a random port number is selected. `host` is the IP address to listen on; if it is omitted, the server accepts directed to any IPv4 addess. `backlog` specifies the maximum numbers of pending connections the server allows. The default is 511. The `callback` function is called when the server has opened the port and begin listening.
+
 > - `listen(port, [path], [callback])`
 > - `listen(port, handle, [callback])`
 > - `getConnections(callback)`
