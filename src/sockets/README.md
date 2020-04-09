@@ -105,7 +105,17 @@ net.createConnection(path, [connectionListener]
 > send a FIN packet when the other end of the socket sends a FIN packet, thus allowing half of the `Duplex stream to 			- remain open. Defaults to false.
 
 - **The net.Server Object**
-> You use the `net.Server` object
+> You use the `net.Server` object to create a TCP socket server and begun listening for connections to which you will be 
+> able to red and write data.
+>
+> The `Server` object is created internally when you call `net.createServer(). This object is to represent the socket
+> server and handles listening for connections and then sending and receiving data on those connections.
+
+> When the server receives a connection, the server creates a `Socket` object and passes it to any connection event
+> handlers that are listening.
+>
+> Because the `Socket` object implements a `Duplex` stream, you can use the `write()` methode to stream writes data 
+> back to the client and a `data` event handler to stream data from the client.
 	
 	
 - *Implementing TCP Socket Severs and Clients*
