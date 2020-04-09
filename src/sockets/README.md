@@ -1,7 +1,10 @@
 ## sockets: Implementing Socket Services in Node.js
 
 **Purpose:**
-> An import part of backend services is the ability to communicate over sockets. Sockets allow one process to communicate with another process through and IP address and port. This can be useful when you're implementing interprocess communicacation (IPC) for two different processes running on the same server or accessing a service running on a completely different server.
+> An import part of backend services is the ability to communicate over sockets. 
+> Sockets allow one process to communicate with another process through and IP address and port. 
+> This can be useful when you're implementing interprocess communicacation (IPC) for two different processes 
+> running on the same server or accessing a service running on a completely different server.
 
 **Reason:**
 > Node.js provides the `net` module which allows you to create both a socket server and clients that can connect 
