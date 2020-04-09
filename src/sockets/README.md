@@ -1,7 +1,5 @@
 ## sockets: Implementing Socket Services in Node.js
 
-Implementing Socket Servces in Node.js
-
 **Purpose:**
 > An import part of backend services is the ability to communicate over sockets.
 > Sockets allow one process to communicate with another process through and IP address and port.
@@ -15,7 +13,7 @@ Implementing Socket Servces in Node.js
 > For secure connnections Node.js provides the `tls` module that allows you to implement secure TLS socket servers
 > and the clients.
 
-### Understanding Network Sockets
+- *Understanding Network Sockets*
 > Network sockets are endpoints of communications that flow across a computer network. 
 > Sockets live below the HTTP layer and provide the point-to-point communciation between servers.
 > Virtually all Internet communication is based on Internet sockets that flow data between two points on the Internet.
@@ -38,7 +36,7 @@ Implementing Socket Servces in Node.js
 > Process cannot share memory directly, so if you want to access data in one process from another process,
 > you can open up the same socket in each process and read and write data between two process via `Duplex` stream.
 	
-- Understanding TCP Server and the Socket Objects
+- *Understanding TCP Server and the Socket Objects*
 > To begin using the `net` module in Node.js application, you first need to understand the TCP `Server` and `Socket`
 > objects. These objects the framework for starting TCP server to handle requests and implementing TCP socket clients
 > to make requests to the socket servers.
@@ -46,17 +44,14 @@ Implementing Socket Servces in Node.js
 > Once you understand the events, properties, methods, and behavior of the objects, it will be simple to implement 
 > your own TCP socket servers and clients.
 
-
-
-
-  - The net.Socket Object
-  - The net.Server Object
+  - **The net.Socket Object**
+  - **The net.Server Object**
 	
-- Implementing TCP Socket Severs and Clients
+- *Implementing TCP Socket Severs and Clients*
   - Implement a TCP Socket Client
   - Implement a TCP Socket Server
   
-- Implementing TLS Servers and Clients
+- *Implementing TLS Servers and Clients*
   - Creating a TLS Socket Client
   - Creating a TLS Socket Server
   	
