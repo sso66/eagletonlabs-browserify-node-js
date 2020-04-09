@@ -67,6 +67,7 @@
   > *On the socket server*, the `Socket` object is created when a client connects to the server and is passed to the connection
   > event handler.
   > This object is intended to represent the socket connection to the client.
+  >
   > On the server, you use the `Socket` object to monitor the client connection as well as send and receive data to and from
   > the client.
   
