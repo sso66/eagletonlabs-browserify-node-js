@@ -132,14 +132,14 @@ net.createConnection(path, [connectionListener]
 
 > *Methods that can be called on on `Socket` object*
 - `setEncoding([encoding])`
-- `write(data, [encoding], [callback]
-- `end([data], [encoding])
+- `write(data, [encoding], [callback])`
+- `end([data], [encoding])`
 - `destroy()`
 - `pause()`
 - `resume()`
-- `setTimeout(timeout, [callback])
-- `setNoDelay([noDelay])
-- `setKeepAlive([enable], [initialDelay])
+- `setTimeout(timeout, [callback])`
+- `setNoDelay([noDelay])`
+- `setKeepAlive([enable], [initialDelay])`
 - `address()`
 - `unref()`
 - `ref()`
