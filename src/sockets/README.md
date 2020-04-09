@@ -29,6 +29,12 @@ Implementing Socket Servces in Node.js
 > Node.js socket implement `Duplex` stream, which allows you to read and write streamed data between the server
 > and the client.
 
+> Sockets are the underlying structure for the `http` module. If you do not need the functionality for handling
+> web request like GET and POST and you just need to stream data from point to point, then using sockets gives
+> you a lighter-weight solution and a bit more control.
+
+> Sockets are extremely handy when communicating with other processes running on the same computer.
+> Process __cannot shere memory__ directly.
 	
 - Understanding TCP Server and the Socket Objects
   - The net.Socket Object
