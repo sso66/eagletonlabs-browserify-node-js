@@ -98,6 +98,11 @@
   > `Socket` object.
   
   *Options that can be specified when creating a `Socket` object*
+  - `port` The port number the client should connect to. This option is required.
+  - `host` The domain name or IP address of the server that the client should connect.
+  - `localAddress` The locak IP address the client should bind to for network connections.
+  - `allowHalfOpen` A Boolean that, when true, indicates that the socket, won't automatically
+                    send a FIN packet
   
   - **The net.Server Object**
 	
