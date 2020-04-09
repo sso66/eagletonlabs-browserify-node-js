@@ -105,7 +105,7 @@
  		send a FIN packet when the other end of the socket sends a FIN packet, thus allowing half of the `Duplex stream to 			remain open. Defaults to false.
   
   	- **The net.Server Object**
-	
+	 
 - *Implementing TCP Socket Severs and Clients*
   - Implement a TCP Socket Client
   - Implement a TCP Socket Server
