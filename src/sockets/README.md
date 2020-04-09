@@ -141,10 +141,13 @@ net.createServer[options], [connectionListener])
 > As you implement your socket server, you can register callbacks to be executed when these events are triggered to handle
 > connections, errors and shutdown.
 
-> *Events that can be triggered on a `Socket` object*
+> *Events that can be triggered on a `net.Server` object*
+> - `listening`
+> - `connection`
+> - `close`
+> - `error`
 
-
-> *Methods that can be called on on `Server` object*
+> *Methods that can be called on on `net.Server` object*
 	
 	
 - *Implementing TCP Socket Severs and Clients*
