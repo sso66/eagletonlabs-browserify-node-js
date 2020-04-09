@@ -51,7 +51,7 @@
   > `Socket` objects are created on both the socket server and the socket client and allow data to be written and read 
   > back and forth between them.
   > The `Socket` object implements the `Duplex` stream, so it provides all the functionality that `Writable` and 
-  > 'Readable` streams provide.
+  > `Readable` streams provide.
   >
   > For example, you can use the `write()` method to stream writes of data to server or client, and a `data` event
   > handler to stream data from the server or client.
