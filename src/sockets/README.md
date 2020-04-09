@@ -104,6 +104,10 @@ net.createConnection(path, [connectionListener]
 > - `allowHalfOpen` A Boolean that, when true, indicates that the socket, won't automatically
 > send a FIN packet when the other end of the socket sends a FIN packet, thus allowing half of the `Duplex stream to remain open. Defaults to false.
 
+> *Events that can be triggered on a `Socket` object*
+> *Methods that can be called on on `Socket` object*
+> *Properties that can be accessed on creating a `Socket` object*
+
 - **The net.Server Object**
 > You use the `net.Server` object to create a TCP socket server and begun listening for connections to which you will be 
 > able to red and write data.
@@ -130,6 +134,17 @@ net.createServer[options], [connectionListener])
 > - `allowHalfOpen` A Boolean that, when true, indicates that the socket, won't automatically
 > send a FIN packet when the other end of the socket sends a FIN packet, thus allowing half of the `Duplex stream to remain open. Defaults to false.
 
+> Once the `Server` object is created, if provides several events that are triggered during the life cycle of the server.
+> For example, the `connection event is trigger whe the socket client connects, and `close` event is trigger when the server
+> shuts down.
+>
+> As you implement your socket server, you can register callbacks to be executed when these events are triggered to handle
+> connections, errors and shutdown.
+
+> *Events that can be triggered on a `Socket` object*
+
+
+> *Methods that can be called on on `Server` object*
 	
 	
 - *Implementing TCP Socket Severs and Clients*
