@@ -162,7 +162,7 @@ net.createServer[options], [connectionListener])
 > - `listen(port, [host], [backlog], [callback])`	
 > - `listen(port, [path], [callback])`
 > - `listen(port, handle, [callback])`
-> - `getConnections(callback)
+> - `getConnections(callback)`
 > - `close(callback)`
 > - `address()`
 > - `unref`
