@@ -62,7 +62,7 @@
   > You use the `Socket` object to monitor the connection, send data to the server, and handle the response from the server.
   >
   > There is no explicit client object in the Node.js `net` module because the `Socket` object acts as the full client,
-  > allowing you to send/receive data and terminate the connection.
+  > allowing you to send/receive data and terminate (close) the connection.
   
   > *On the socket server*, the `Socket` object is created when a client connects to the server and is passed to the connection
   > event handler.
