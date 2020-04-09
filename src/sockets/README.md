@@ -97,7 +97,7 @@
   > The third method specifices a file system loacation that is a Unix socket to use when creating the 
   > `Socket` object.
   
-  *Options that can be specified when creating a `Socket` object
+  *Options that can be specified when creating a `Socket` object*
   
   - **The net.Server Object**
 	
