@@ -34,7 +34,8 @@ Implementing Socket Servces in Node.js
 > you a lighter-weight solution and a bit more control.
 
 > Sockets are extremely handy when communicating with other processes running on the same computer.
-> Process __cannot shere memory__ directly.
+> Process cannot share memory directly, so if you want to access data in one process from another process,
+> you can open up the same socket in each process and read and write data between two process via `Duplex` stream.
 	
 - Understanding TCP Server and the Socket Objects
   - The net.Socket Object
