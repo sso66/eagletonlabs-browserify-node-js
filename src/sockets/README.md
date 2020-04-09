@@ -74,6 +74,13 @@
   > To create a `Socket` object, you use one of the following methods:
   ```
   net.connect(options, [connectionListener])
+  net.createConnetion(options, [connectionListener])
+  
+  net.connect(port, [host], [connectionListener])
+  net.connection(port, [host], [connectionListner])
+  
+  net.connect(path, [connectionListener]);
+  net.createConnection(path, [connectionListener]
   ```
   
   - **The net.Server Object**
