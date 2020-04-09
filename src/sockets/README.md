@@ -99,8 +99,11 @@ net.createConnection(path, [connectionListener]
 
 > *Options that can be specified when creating a `Socket` object*
 > - `port` The port number the client should connect to. This option is required.
+>
 > - `host` The domain name or IP address of the server that the client should connect.
+>
 > - `localAddress` The local IP address the client should bind to for network connections.
+>
 > - `allowHalfOpen` A Boolean that, when true, indicates that the socket, won't automatically
 > send a FIN packet when the other end of the socket sends a FIN packet, thus allowing half of the `Duplex stream to remain open. Defaults to false.
 
@@ -137,15 +140,11 @@ net.createServer[options], [connectionListener])
 > This `connectionListener` call function is passed the `Socket` object for the connection client.
 
 > *Options that can be specified when creating a `net.Server` objects*
-> - `allowHalfOpen` A Boolean that, when true, indicates that the socket, won't automatically
-> send a FIN packet when the other end of the socket sends a FIN packet, thus allowing half of the `Duplex stream to remain open. Defaults to false.
+> - `allowHalfOpen` A Boolean that, when true, indicates that the socket, won't automatically send a FIN packet when the other end of the socket sends a FIN packet, thus allowing half of the `Duplex stream to remain open. Defaults to false.
 
-> Once the `Server` object is created, if provides several events that are triggered during the life cycle of the server.
-> For example, the `connection` event is trigger when the socket client connects, and `close` event is trigger when the server
-> shuts down.
+> Once the `Server` object is created, if provides several events that are triggered during the life cycle of the server. For example, the `connection` event is trigger when the socket client connects, and `close` event is trigger when the server shuts down.
 >
-> As you implement your socket server, you can register callbacks to be executed when these events are triggered to handle
-> connections, errors and shutdown.
+> As you implement your socket server, you can register callbacks to be executed when these events are triggered to handle connections, errors and shutdown.
 
 > *Events that can be triggered on a `net.Server` objects*
 > - `listening` Emitted when the server begins listening on a port by calling the `listen()` method. The call function does not accept any parameters.
