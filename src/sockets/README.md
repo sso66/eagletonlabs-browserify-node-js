@@ -71,6 +71,10 @@
   > On the server, you use the `Socket` object to monitor the client connection as well as send and receive data to and from
   > the client.
   
+  > To create a `Socket` object, you use one of the following methods:
+  ```
+  net.connect(options, [connectionListener])
+  ```
   
   - **The net.Server Object**
 	
