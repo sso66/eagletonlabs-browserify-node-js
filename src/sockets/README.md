@@ -15,7 +15,7 @@ Implementing Socket Servces in Node.js
 > For secure connnections Node.js provides the `tls` module that allows you to implement secure TLS socket servers
 > and the clients.
 
-- Understanding Network Sockets
+- *Understanding Network Sockets*
 > Network sockets are endpoints of communications that flow across a computer network. 
 > Sockets live below the HTTP layer and provide the point-to-point communciation between servers.
 > Virtually all Internet communication is based on Internet sockets that flow data between two points on the Internet.
