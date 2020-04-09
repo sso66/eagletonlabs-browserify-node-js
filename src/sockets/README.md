@@ -47,7 +47,7 @@
 > The following sections cover the purposes and behaviors of the `net.Socket` and `.net.Server` objects. You'll learn 
 > about their most important events, properties, and methods.
 
-  - **The net.Socket Object**
+  	- **The net.Socket Object**
   	> `Socket` objects are created on both the socket server and the socket client and allow data to be written and read 
   	> back and forth between them.
  	> The `Socket` object implements the `Duplex` stream, so it provides all the functionality that `Writable` and 
