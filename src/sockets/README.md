@@ -123,13 +123,35 @@ net.createConnection(path, [connectionListener]
 
 > *Events that can be triggered on a `Socket` object*
 - `connect`
+- `data`
+- `end`
+- `timeout`
+- `drain`
+- `error`
+- `close`
 
 > *Methods that can be called on on `Socket` object*
-- `setEncoding([encoding])
+- `setEncoding([encoding])`
+- `write(data, [encoding], [callback]
+- `end([data], [encoding])
+- `destroy()`
+- `pause()`
+- `resume()`
+- `setTimeout(timeout, [callback])
+- `setNoDelay([noDelay])
+- `setKeepAlive([enable], [initialDelay])
+- `address()`
+- `unref()`
+- `ref()`
 
 > *Properties that can be accessed on creating a `Socket` object*
-- `bufferSize
-
+- `bufferSize`
+- `removeAddress`
+- `removePort`
+- `localAddress`
+- `locakPort`
+- `byteRead`
+- `bytesWritten`
 
 - **The net.Server Object**
 > You use the `net.Server` object to create a TCP socket server and begun listening for connections to which you will be 
