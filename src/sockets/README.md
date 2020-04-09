@@ -30,13 +30,16 @@
 > Both the server and the client requires a unique IP address-and-port combination.
 
 > The Node.js `net` module sockets communicate by sending **raw data** using Transmission Control Protocol (TCP).
+>
 > This protocol is responsible for packaging data and guaranteeing that it is sent from point to point successfully.
+>
 > Node.js sockets implement `Duplex` stream, which allows you to read and write streamed data between the server
 > and client.
 
-> Sockets are the underlying structure for the `http` module. If you do not need the functionality for handling
-> web request like GET and POST and you just need to stream data from point to point, then using sockets gives
-> you a lighter-weight solution and a bit more control.
+> Sockets are the underlying structure for the `http` module. 
+>
+> If you do not need the functionality for handling web request like GET and POST and you just need to stream data from
+> point to point, then using sockets gives you a lighter-weight solution and a bit more control.
 
 > Sockets are extremely handy when communicating with other processes running on the same computer.
 > Process cannot share memory directly, so if you want to access data in one process from another process,
@@ -44,7 +47,9 @@
 	
 - *Understanding TCP Server and the Socket Objects*
 > To begin using the `net` module in Node.js application, you first need to understand the TCP `Server` and `Socket`
-> objects. These objects the framework for starting TCP server to handle requests and implementing TCP socket clients
+> objects. 
+>
+> These objects the framework for starting TCP server to handle requests and implementing TCP socket clients
 > to make requests to the socket servers.
 >
 > Once you understand the events, properties, methods, and behavior of the objects, it will be simple to implement 
@@ -56,6 +61,7 @@
 - **The net.Socket Object**
 > `Socket` objects are created on both the socket server and the socket client and allow data to be written and read 
 > back and forth between them.
+>
 > The `Socket` object implements the `Duplex` stream, so it provides all the functionality that `Writable` and 
 > `Readable` streams provide.
 >
@@ -72,6 +78,7 @@
 
 > *On the socket server*, the `Socket` object is created when a client connects to the server and is passed to the connection
 > event handler.
+>
 > This object is intended to represent the socket connection to the client.
 >
 > On the server, you use the `Socket` object to monitor the client connection as well as send and receive data to and from
@@ -89,6 +96,7 @@ net.connect(path, [connectionListener]);
 net.createConnection(path, [connectionListener]
 ```
 > All the calls return `Socket` object; the only difference is the first parameter they accept.
+>
 > The final parameter for all of them is a callback function that is executed when a connection
 > is opened to the server
 >
@@ -127,8 +135,9 @@ net.createConnection(path, [connectionListener]
 > You use the `net.Server` object to create a TCP socket server and begun listening for connections to which you will be 
 > able to red and write data.
 >
-> The `Server` object is created internally when you call `net.createServer(). This object is to represent the socket
-> server and handles listening for connections and then sending and receiving data on those connections.
+> The `Server` object is created internally when you call `net.createServer()`. 
+>
+> This object is to represent the socket server and handles listening for connections and then sending and receiving data on those connections.
 
 > When the server receives a connection, the server creates a `Socket` object and passes it to any connection event
 > handlers that are listening.
@@ -143,6 +152,7 @@ net.createServer[options], [connectionListener])
 > The `options` parameter is an object that specifies options to use when creating the socket `Server` object.
 >
 > The second parameter is the `connection` event callback function, which is executed when a connection is received.
+>
 > This `connectionListener` call function is passed the `Socket` object for the connection client.
 
 > *Options that can be specified when creating a `net.Server` objects*
@@ -153,7 +163,8 @@ net.createServer[options], [connectionListener])
 > As you implement your socket server, you can register callbacks to be executed when these events are triggered to handle connections, errors and shutdown.
 
 > *Events that can be triggered on a `net.Server` objects*
-> - `listening` Emitted when the server begins listening on a port by calling the `listen()` method. The call function does not accept any parameters.
+> - `listening` Emitted when the server begins listening on a port by calling the `listen()` method.
+> The call function does not accept any parameters.
 >
 > - `connection` Emitted whe a connection is received from a socket client. The callback function muse accept a prrameter that is a `Socket` object representing the connection to the connecting client. For example: `function(client) {}`
 >
