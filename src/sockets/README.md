@@ -16,13 +16,17 @@
 > and the clients.
 
 - *Understanding Network Sockets*
-> Network sockets are endpoints of communications that flow across a computer network. 
+> Network sockets are endpoints of communications that flow across a computer network.
+>
 > Sockets live below the HTTP layer and provide the point-to-point communciation between servers.
+>
 > Virtually all Internet communication is based on Internet sockets that flow data between two points on the Internet.
 
 > A socket works using a socket address, which is a combination of IP address and port.
+>
 > There are two types of points in a socket connection: a server, which *listens* for connections, and a
 > client, which *opens* a connection to the server.
+>
 > Both the server and the client requires a unique IP address-and-port combination.
 
 > The Node.js `net` module sockets communicate by sending **raw data** using Transmission Control Protocol (TCP).
