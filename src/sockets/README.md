@@ -25,7 +25,7 @@ Implementing Socket Servces in Node.js
 > Both the server and the client requires a unique IP address-and-port combination.
 
 > The Node.js `net` module sockets communicate by sending **raw data** using Transmission Control Protocol (TCP).
-> This protocol is responsible for packaging data and guaranteeing that it is sent form point to point sussfully.
+> This protocol is responsible for packaging data and guaranteeing that it is sent from point to point successfully.
 > Node.js socket implement `Duplex` stream, which allows you to read and write streamed data between the server
 > and the client.
 
