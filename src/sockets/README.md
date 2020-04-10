@@ -55,8 +55,8 @@
 > Once you understand the events, properties, methods, and behavior of the objects, it will be simple to implement 
 > your own TCP socket servers and clients.
 
-> The following sections cover the purposes and behaviors of the `net.Socket` and `.net.Server` objects. You'll learn 
-> about their most important events, properties, and methods.
+> **The following sections cover the purposes and behaviors of the `net.Socket` and `.net.Server` objects. You'll learn 
+> about their most important events, properties, and methods.**
 
 - **The net.Socket Object**
 > `Socket` objects are created on both the socket server and the socket client and allow data to be written and read 
