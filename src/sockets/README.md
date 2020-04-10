@@ -126,7 +126,7 @@ callback function does not accept any parameters.
 
 __Methods__ that can be called on on `Socket` object
 > - `setEncoding([encoding])` When this function is called, data returned for the socket's streams is an encoded `String` instead of
-`Buffer` object. Sets the default encoding that should be used when writing data to and reading from the streams. Using this option handles multibyte characters that might otherwise be mangled when converting a buffer to a string using `buf.toString(encoding). If you want to read the data as strings, always use this method.
+`Buffer` object. Sets the default encoding that should be used when writing data to and reading from the streams. Using this option handles multibyte characters that might otherwise be mangled when converting a buffer to a string using `buf.toString(encoding)`. If you want to read the data as strings, always use this method.
 >
 > - `write(data, [encoding], [callback])` Writes a data buffer or string to the `Writable` stream of the socket, using the encoding if specified. The callback function is executed as soon as the data is written.
 >
