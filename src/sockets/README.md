@@ -91,7 +91,7 @@ net.createConnection(path, [connectionListener]
 >
 > The second method accepts `port` and `host` values, specified as direct parameters.
 >
-> The third method specifices a file system loacation that is a Unix socket to use when creating the `Socket` object.
+> The third method specifices a file system location that is a Unix socket to use when creating the `Socket` object.
 
 __Options__ that can be specified when creating a `Socket` object
 > - `port` The port number the client should connect to. This option is required.
@@ -100,8 +100,7 @@ __Options__ that can be specified when creating a `Socket` object
 >
 > - `localAddress` The local IP address the client should bind to for network connections.
 >
-> - `allowHalfOpen` A Boolean that, when true, indicates that the socket, won't automatically
-> send a FIN packet when the other end of the socket sends a FIN packet, thus allowing half of the `Duplex stream to remain open. Defaults to false.
+> - `allowHalfOpen` A Boolean that, when true, indicates that the socket, won't automatically send a FIN packet when the other end of the socket sends a FIN packet, thus allowing half of the `Duplex stream to remain open. Defaults to false.
 >
 __Events__ that can be triggered on a `Socket` object
 > - `connect` Emitted when a connection is successfully established with the server. The callback function does not accept any parameters.
