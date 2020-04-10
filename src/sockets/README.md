@@ -262,7 +262,7 @@ __Options__ that can be specified when creating a `net.Server` objects*
 > server accepts before rejecting them. If the process has been forked to a child for processing using `child_process.fork()`, you 
 > should not use this option.
 
-> __Properties__ that can be accessed on `net.Socket` objects*
+> __Properties__ that can be accessed on `net.Socket` objects
 > `maxConnections` allows t set the maximum numbers of connectons that the server accepts before rejecting them
 
  
