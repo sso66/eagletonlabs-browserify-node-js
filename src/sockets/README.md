@@ -188,7 +188,7 @@ callback function does not accept any parameters.
 
 - `bytesWritten` The number of bytes written by the socket.
 
-- **The net.Server Object**
+### The net.Server Object**
 > You use the `net.Server` object to create a TCP socket server and begun listening for connections to which you will be 
 > able to red and write data.
 >
