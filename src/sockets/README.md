@@ -223,20 +223,20 @@ __Events__ that can be triggered on a `net.Server` objects
 __Methods__ that can be called on `net.Server` objects
 > - `listen(port, [host], [backlog], [callback])` Opens a port on server and begins listening for connections.
 > `port` specifies the listening port. If you specify 0 as the `port` a random port number is selected.  `host` is the IP address to listen on; if it is omitted, the server accepts connections directed to any IPv4 addess. `backlog` specifies the maximum numbers of pending connections the server allows. The default is 511. The `callback` function is called when the server has opened the port and begin listening.
-
+>
 > - `listen(port, [path], [callback])` Same as above except that a Unix socket server is started, to listen for connections on the file system `path` specified.
-
+>
 > - `listen(port, handle, [callback])` Same as above except that a handle to a `Server` or `Socket` object has an underlying `_handle` member points to a file descriptor handle on the server. It assumes that the file descriptor points to as socket file that has already bound to a port.
-
+>
 > - `getConnections(callback)` Returns the number of connections currently connected to the server. `callback` is executed when the number of connections is caculated and accepts an `error` parameter and a `count` parameter. For example `function(error, count)`
-
+>
 > - `close(callback)` Stops the server form accepting new connections. Current connections are allowed to remain until they are complete. The server does not truly stop until all current connections have been closed.
-
+>
 > - `address()` Returns the bound address, the address family name, and the port of the socket, as reported by the operating system. The return value is an object that contains the `port`, `family`, and `address` properties. For example
 > { port: 8107, family: `IPv4`, address: `127.0.0.1` }
-
+>
 > - `unref` Calling this method allows the Node.js application to terminate if this server is the only event on the event queue.
-
+>
 > - `ref` References this socket so that if this server is the only thing on event queue, the Node.js application does not terminate.
 
 > The `Server` object also provides the `maxConnections` attribute, which allows you to set the maximum number of connections that the server accepts before rejecting them. If the process has been forked to a child for processing using `child_process.fork()`, you should not use this option.
