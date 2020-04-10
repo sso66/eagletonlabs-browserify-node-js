@@ -205,7 +205,7 @@ net.createServer[options], [connectionListener])
 >
 > The second parameter is the `connection` event callback function, which is executed when a connection is received.
 >
-> This `connectionListener` call function is passed the `Socket` object for the connection client.
+> This `connectionListener` callback function is passed the `Socket` object for the connection client.
 
 __Options__ that can be specified when creating a `net.Server` objects
 > - `allowHalfOpen` A Boolean that, when true, indicates that the socket, won't automatically send a FIN packet when the other end of the socket sends a FIN packet, thus allowing half of the `Duplex stream to remain open. Defaults to false.
