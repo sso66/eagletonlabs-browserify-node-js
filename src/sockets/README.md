@@ -58,7 +58,7 @@
 > The following sections cover the purposes and behaviors of the `net.Socket` and `.net.Server` objects. You'll learn 
 > about their most important **events**, **methods** and **properties**.
 
-#### The net.Socket Object
+### The net.Socket Object
 > `Socket` objects are created on both the socket server and the socket client and allow data to be written and read 
 > back and forth between them.
 >
@@ -111,7 +111,7 @@ net.createConnection(path, [connectionListener]
 > The third method specifices a file system loacation that is a Unix socket to use when creating the 
 > `Socket` object.
 
-> __Options__ that can be specified when creating a `Socket` object
+__Options__ that can be specified when creating a `Socket` object
 > - `port` The port number the client should connect to. This option is required.
 >
 > - `host` The domain name or IP address of the server that the client should connect.
@@ -187,7 +187,7 @@ __Properties__ that can be accessed on creating a `Socket` object
 >
 > - `bytesWritten` The number of bytes written by the socket.
 
-#### The net.Server Object
+### The net.Server Object
 > You use the `net.Server` object to create a TCP socket server and begun listening for connections to which you will be 
 > able to red and write data.
 >
