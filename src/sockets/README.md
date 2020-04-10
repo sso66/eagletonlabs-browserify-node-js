@@ -100,7 +100,7 @@ __Options__ that can be specified when creating a `Socket` object
 >
 > - `localAddress` The local IP address the client should bind to for network connections.
 >
-> - `allowHalfOpen` A Boolean that, when true, indicates that the socket, won't automatically send a FIN packet when the other end of the socket sends a FIN packet, thus allowing half of the `Duplex stream to remain open. Defaults to false.
+> - `allowHalfOpen` A Boolean that, when true, indicates that the socket, won't automatically send a FIN packet when the other end of the socket sends a FIN packet, thus allowing half of the `Duplex` stream to remain open. Defaults to false.
 >
 __Events__ that can be triggered on a `Socket` object
 > - `connect` Emitted when a connection is successfully established with the server. The callback function does not accept any parameters.
