@@ -261,6 +261,25 @@ __Methods__ that can be called on `net.Server` objects
 __Properties__ that can be accessed on `net.Socket` objects
 > - `maxConnections` allows t set the maximum numbers of connectons that the server accepts before rejecting them
  
+> The following code shows the basic of implementing the `Server` object:
+```
+var net = require('net');
+var server = net.createServer(function(client) {
+    console.log('Client connected');
+    client.on('data', function(data) {
+        console.log('Client sent ' + data.toString());
+    });
+    client.on('end', function() {
+        console.log('Client disconnected');
+    });
+    client.write("Hello");
+});
+server.listen(8107, function() {
+    console.log('Server listening for connections');
+});
+```
+> Notice that the `net.createServer() method implements a callback that accepts the client `Socket` object. To handle the data coming back form the client, the `on('data') event handler is implemented. To handle the closure of the socket, the on('end') event handler is implement. To begin listening for connections, the `listen()` method is called on port 8107.
+
 - *Implementing TCP Socket Severs and Clients*
 > Now that you understand the `net.Server` and the `net.Socket` objects, you are ready to jump in and implement some Node.js TCP clients and servers. 
 >
@@ -360,7 +379,6 @@ function writeData(socket, data) {
     }
 }
 ```
-
 - *Implementing TLS Servers and Clients*
   - Creating a TLS Socket Client
   - Creating a TLS Socket Server
