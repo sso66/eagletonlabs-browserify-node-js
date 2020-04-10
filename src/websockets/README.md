@@ -35,16 +35,16 @@
 > Giving every `process` a unique PID helps to deal with the problem locally. But such an approach doesn't work over network.
 >
 > To create a unique within a given network, and the protocol and port are unique among we recommed using the TCP/IP - `ip` protocol. With the TCP/IP, the IP addresses of the network layer are unique within a given network, and the protocol and port are unique among host Node.js applications.
-
+>
 > TCP and UDP are two major protocols for communicating between hosts. Explore how your Node.js application connect to TCP and UDP sockets.
 
 ### What WebSockets are
 > The Websocket communication protocol provides a full-duplex communicatiion channel over a single TCP connection.
 >
 > In contrast to HTTPs, WebSockets don't require you to send a request to get a response. They alllow for bidirectional data flows, so you can just wait the server to respond. It will send you a message when it's available.
-
+>
 > WebSockets are a good solution for services require continuous data exchange - for instance, instant messengers, online games, and real-time trading systems. Refer to a complete information about WebSockets protocol in the RFC 6455 specification.
-
+>
 > WebSocket connections are requested by browsers and are responded to by the servers, after which a connection is established.
 >
 > This process is often called a handshake. The special kind of header in WebSockets require only one handshake between a browser (user-agent) and server for establishing a connection that will remain active throughout its lifetime.
@@ -79,4 +79,3 @@
 > Optionally, the party sending the close frame can send a close reason in the payload.
 >
 > If closing is initiated by the client the server should send a corresponding close frame in response.
-
