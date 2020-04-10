@@ -112,8 +112,7 @@ __Events__ that can be triggered on a `Socket` object
 >
 > - `timeout` Emitted when the connection to the server times out due to inactivity.
 >
-> - `drain` Emitted when write buffer becomes empty. You can use this event to throttle back the data stream being written to the socket.
-The callback function does not accept any parameters.
+> - `drain` Emitted when write buffer becomes empty. You can use this event to throttle back the data stream being written to the socket. The callback function does not accept any parameters.
 >
 > - `error` Emitted when an error occurs on the socket connection. The callback function should accept `error` as the only argument.
 For example: `function(error) {}`
@@ -121,32 +120,32 @@ For example: `function(error) {}`
 > - `close` Emitted when the socket has fully closed either because it was closed by `end()` method or because an error occurred. The
 callback function does not accept any parameters.
 
-> The `Socket` object also includes several methods that allow you to do things like read from and write to the socket as welss as pause or end data flow.
+> The `Socket` object also includes several methods that allow you to do things like read from and write to the socket as well as pause or end data flow.
 >
-> Many of these are inherited from the `Duplex` stream objects. 
+> Many of these events are inherited from the `Duplex` stream objects. 
 
 __Methods__ that can be called on on `Socket` object
 > - `setEncoding([encoding])` When this function is called, data returned for the socket's streams is an encoded `String` instead of
-`Buffer` object. Sets the default encoding that should be used when writing data to and reading from the steams. Using this option handles multibyte characters that might otherwise be mangled when converting a buffer to a string using `buf.toString(encoding). If you want to read the data as strings, always use this method.
+`Buffer` object. Sets the default encoding that should be used when writing data to and reading from the streams. Using this option handles multibyte characters that might otherwise be mangled when converting a buffer to a string using `buf.toString(encoding). If you want to read the data as strings, always use this method.
 >
 > - `write(data, [encoding], [callback])` Writes a data buffer or string to the `Writable` stream of the socket, using the encoding if specified. The callback function is executed as soon as the data is written.
 >
 > - `end([data], [encoding])` Writes a data buffer or string to the `Writable` stream of the socket and then flushes the stream and closes the connection.
 >
-> - `destroy()` Forces the socket connection to shut down. You should only need to use thie in case of failures.
+> - `destroy()` Forces the socket connection to shut down. You should only need to use this in case of failures.
 >
-> - `pause()` Pauses the `Readable` stream of a socket from emitting daa events. This allows you to throttle back the upload of data to the stream.
+> - `pause()` Pauses the `Readable` stream of a socket from emitting data events. This allows you to throttle back the upload of data to the stream.
 >
 > - `resume()` Resumes the data event emitting on the `Readable` steam of the socket.
 >
-> - `setTimeout(timeout, [callback])` Specifies a `timeout`, in milliseconds, that the server will wait before emitting a timeout event when the socket is inactie. The `callback` function is triggered as a `once` event listener. If you want the connection to be terminated on timeout, you should do it manuall in the callback function.
+> - `setTimeout(timeout, [callback])` Specifies a `timeout`, in milliseconds, that the server will wait before emitting a timeout event when the socket is inactive. The `callback` function is triggered as a `once` event listener. If you want the connection to be terminated on timeout, you should do it manually in the callback function.
 >
 > - `setNoDelay([noDelay])` Disables/enables the Nagle algorithm, which buffers data before sending it. Setting to false disable data buffering.
 >
-> - `setKeepAlive([enable], [initialDelay])` Enables/disables/ the keep-alive functionality on the connection. The optional `initialDelay` parameter specifies the time, in milliseconds, that the socket is idel before sending the keep-alive packet.
+> - `setKeepAlive([enable], [initialDelay])` Enables/disables the keep-alive functionality on the connection. The optional `initialDelay` parameter specifies the time, in milliseconds, that the socket is idle before sending the keep-alive packet.
 >
 > - `address()` Returns the bound address, the address family name, and the port of the socket, as reported by the operating system. The return value is an object that contains the `port`, `family`, and `address` properties. For example
-{port: 8107, family: 'IPv4', address: '127.0.0.1' }
+{ port: 8107, family: 'IPv4', address: '127.0.0.1' }
 >
 > - `unref()` Allows the Nodes.js application to terminate if this socket is the only event on the event queue.
 >
@@ -161,7 +160,7 @@ __Properties__ that can be accessed on creating a `Socket` object
 >
 > - `localAddress` The local IP addess the remote client is using for the socket connection.
 >
-> - `locakPort` The local port the remote client is using for the socket connection.
+> - `localPort` The local port the remote client is using for the socket connection.
 >
 > - `byteRead` The number of bytes read by the socket.
 >
