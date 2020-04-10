@@ -321,14 +321,20 @@ function writeData(socket, data) {
 > The first step is to create socket server by calling `net.createServer()`. You also need to provide a connection callback handler and then call listen() to begin listening on the port:
 ```
 var server = net.createServer(function(client) {
-    // implement the connection call handler code here
+    // implement the connection callback handler code here
 });
 server.listen(8107, function() {
     // implement the listen callback handler code here
 });
 ```
-> Inside the 'listen' callback handler, you also add handlers to support the'close' and 'error' events of the Server Object. They may just be log statements, or you might want to add additional code that is executed when these events occur.
-
+> Inside the 'listen' callback handler, you also add handlers to support the `close` and `error` events of the `Server` Object. These may just be log statements, or you might want to add additional code that is executed when these events occur.
+```4
+server.on('close', function() {
+    console.log('Server Terminated');
+});
+server.on('error', function(err) {
+});
+```
 > Inside the 'connection' event callback, you set up the connection behavior.  For example, you might want to add timeout or set the encoding.
  
 > You also need to add handlers for the 'data','end', error, 'timeout', and 'close' events that you want to handle on the client connections. For example, to handle the 'data' event so that you can read data coming from the client, you might add the following handler once the connection has been established.
