@@ -21,8 +21,7 @@
 
 > A socket works using a socket address, which is a combination of IP address and port.
 >
-> There are two types of points in a socket connection: a server, which *listens* for connections, and a
-> client, which *opens* a connection to the server.
+> There are two types of points in a socket connection: a server, which *listens* for connections, and a client, which *opens* a connection to the server.
 >
 > Both the server and the client requires a unique IP address-and-port combination.
 
@@ -30,8 +29,7 @@
 >
 > This protocol is responsible for packaging data and guaranteeing that it is sent from point to point successfully.
 >
-> Node.js sockets implement `Duplex` stream, which allows you to read and write streamed data between the server
-> and client.
+> Node.js sockets implement `Duplex` stream, which allows you to read and write streamed data between the server and client.
 
 > Sockets are the underlying structure for the `http` module. 
 >
@@ -43,17 +41,13 @@
 > you can open up the same socket in each process and read and write data between two process via `Duplex` stream.
 	
 - *Understanding TCP Server and the Socket Objects*
-> To begin using the `net` module in Node.js application, you first need to understand the TCP `Server` and `Socket`
-> objects. 
+> To begin using the `net` module in Node.js application, you first need to understand the TCP `Server` and `Socket` objects. 
 >
-> These objects the framework for starting TCP server to handle requests and implementing TCP socket clients
-> to make requests to the socket servers.
+> These objects provide the framework for starting TCP server to handle requests and implementing TCP socket clients to make requests to the socket servers.
 >
-> Once you understand the events, properties, methods, and behavior of the objects, it will be simple to implement 
-> your own TCP socket servers and clients.
+> Once you understand the **events**, **methods**, **properties** and **behavior** of the objects, it will be simple to implement your own TCP socket servers and clients.
 
-> The following sections cover the purposes and behaviors of the `net.Socket` and `.net.Server` objects. You'll learn 
-> about their most important **events**, **methods** and **properties**.
+> The following sections cover the purposes and behaviors of the `net.Socket` and `.net.Server` objects. You'll learn  about their most important **events**, **methods** and **properties**.
 
 ### The net.Socket Object
 > `Socket` objects are created on both the socket server and the socket client and allow data to be written and read 
