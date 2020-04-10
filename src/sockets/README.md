@@ -346,6 +346,7 @@ this.on('data', function(data) {
     console.log("Received from client: " + data.toString());
     // process data
 });
+```
 >
 > To write data to the server, you implement a `write()` command somewhere in your code. If you are writing a lot of data, you may also want to implement a `drain` event handler that will begin writing when the buffer is empty. This can help if `write()` returns failure because the buffer is full or if you want to throttle back writing to the socket.
 > 
