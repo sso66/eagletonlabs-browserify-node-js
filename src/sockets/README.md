@@ -141,6 +141,10 @@ For example: `function(error) {}`
 - `close` Emitted when the socket has fully closed either because it was closed by `end()` method or because an error occurred. The
 callback function does not accept any parameters.
 
+> The `Socket` object also includes several methods that allow you to do things like read from and write to the socket as welss as pause
+> or end data flow.
+>
+> Many of these are inherited from the `Duplex` stream objects. 
 
 > *Methods that can be called on on `Socket` object*
 - `setEncoding([encoding])`
