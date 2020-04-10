@@ -298,7 +298,7 @@ this.setEncoding('utf8')
   ```
 > To write data to the server, you implement `write()` command (event->command->service). If you are writing a lot of data to thw server and the write fails, you might also want to implement a `drain` event handler to begin writing again when the buffer is empty.
 >
-> The following shows and example of implement a `drain` handler because of a write failure. Notice that a **closure** is used to preserve the values of the socket and daa variables once the function has ended.
+> The following shows and example of implement a `drain` handler because of a write failure. Notice that a **closure** is used to preserve the values of the socket and data variables once the function has ended.
 ```
 function writeData(socket, data) {
     var success = !socket.write(data)
@@ -350,7 +350,7 @@ this.on('data', function(data) {
 >
 > To write data to the server, you implement a `write()` command somewhere in your code. If you are writing a lot of data, you may also want to implement a `drain` event handler that will begin writing when the buffer is empty. This can help if `write()` returns failure because the buffer is full or if you want to throttle back writing to the socket.
 > 
-> The following is an example of implementing a 'drain' handler because of the write failure. Notice that a closure is used to preserve the values of the socket and data variables once the function has ended:
+> The following is an example of implementing a `drain` handler because of the write failure. Notice that a **closure** is used to preserve the values of the socket and data variables once the function has ended:
 ```
 function writeData(socket, data) {
     var success = !success.write(data);
