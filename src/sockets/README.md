@@ -122,13 +122,25 @@ net.createConnection(path, [connectionListener]
 > send a FIN packet when the other end of the socket sends a FIN packet, thus allowing half of the `Duplex stream to remain open. Defaults to false.
 
 > *Events that can be triggered on a `Socket` object*
-- `connect`
-- `data`
-- `end`
-- `timeout`
-- `drain`
-- `error`
-- `close`
+- `connect` Emitted when a connection is successfully established with the server. The callback function does not accept any parameters.
+
+- `data` Emitted when data is received on the socket. If no data event handler is attached, data can be lost. The call function must
+accept a parameter that is a `Buffer` object containing the chunk of data that was read from the socket. For example: 
+`function(chunk) {}
+
+- `end` Emitted when server terminates the connection by sending a FIN. The callback function does not accept any parameters.
+
+- `timeout` Emitted when the connection to the server times out due to inactivity.
+
+- `drain` Emitted when write buffer becomes empty. You can use this event to throttle back the data stream being written to the socket.
+The callback function does not accept any parameters.
+
+- `error` Emitted when an error occurs on the socket connection. The callback function should accept `error` as the only argument.
+For example: `function(error) {}`
+
+- `close` Emitted when the socket has fully closed either because it was closed by `end()` method or because an error occurred. The
+callback function does not accept any parameters.
+
 
 > *Methods that can be called on on `Socket` object*
 - `setEncoding([encoding])`
