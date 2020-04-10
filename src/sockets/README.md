@@ -50,30 +50,25 @@
 > The following sections cover the purposes and behaviors of the `net.Socket` and `.net.Server` objects. You'll learn  about their most important **events**, **methods** and **properties**.
 
 ### The net.Socket Object
-> `Socket` objects are created on both the socket server and the socket client and allow data to be written and read 
-> back and forth between them.
+> `Socket` objects are created on both the socket server and the socket client and allow data to be written and read back and forth between them.
 >
-> The `Socket` object implements the `Duplex` stream, so it provides all the functionality that `Writable` and 
-> `Readable` streams provide.
+> The `Socket` object implements the `Duplex` stream, so it provides all the functionality that `Writable` and `Readable` streams provide.
 >
-> For example, you can use the `write()` method to stream writes of data to server or client, and a `data` event
-> handler to stream data from the server or client.
+> For example, you can use the `write()` method to stream writes of data to server or client, and a `data` event handler to stream data from the server or client.
 
 > *On the socket client*, the `Socket` object is created internally when you call `net.connect()` or `net.createConnection()`.
+>
 > This object is intended to represent the socket connection to the server.
 >
 > You use the `Socket` object to monitor the connection, send data to the server, and handle the response from the server.
 >
-> There is no explicit client object in the Node.js `net` module because the `Socket` object acts as the full client,
-> allowing you to send/receive data and terminate (close) the connection.
+> There is no explicit client object in the Node.js `net` module because the `Socket` object acts as the full client, allowing you to send/receive data and terminate (close) the connection.
 
-> *On the socket server*, the `Socket` object is created when a client connects to the server and is passed to the connection
-> event handler.
+> *On the socket server*, the `Socket` object is created when a client connects to the server and is passed to the connection event handler.
 >
 > This object is intended to represent the socket connection to the client.
 >
-> On the server, you use the `Socket` object to monitor the client connection as well as send and receive data to and from
-> the client.
+> On the server, you use the `Socket` object to monitor the client connection as well as send and receive data to and from the client.
 
 > To create a `Socket` object, you use one of the following methods:
 ```
@@ -88,19 +83,15 @@ net.createConnection(path, [connectionListener]
 ```
 > All the calls return `Socket` object; the only difference is the first parameter they accept.
 >
-> The final parameter for all of them is a callback function that is executed when a connection
-> is opened to the server
+> The final parameter for all of them is a callback function that is executed when a connection is opened to the server
 >
-> Notice that each method, there is a `net.connect()` form and a `net.createConnection()`. These work
-> exactly same way.
+> Notice that each method, there is a `net.connect()` form and a `net.createConnection()`. These work exactly same way.
 >
-> The first way to create as `Socket` is to pass `options` parameter, which is an object that contains
-> properties that define the socket connection.
+> The first way to create as `Socket` is to pass `options` parameter, which is an object that contains properties that define the socket connection.
 >
 > The second method accepts `port` and `host` values, specified as direct parameters.
 >
-> The third method specifices a file system loacation that is a Unix socket to use when creating the 
-> `Socket` object.
+> The third method specifices a file system loacation that is a Unix socket to use when creating the `Socket` object.
 
 __Options__ that can be specified when creating a `Socket` object
 > - `port` The port number the client should connect to. This option is required.
