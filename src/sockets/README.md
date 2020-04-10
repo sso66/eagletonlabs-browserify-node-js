@@ -308,6 +308,7 @@ function writeData(socket, data) {
 	        writeData(socket, data);
             });
 	}) (socket, data);
+    }
 }
 ```
   - Implement a TCP Socket Server
