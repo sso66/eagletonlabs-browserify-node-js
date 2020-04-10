@@ -111,7 +111,7 @@ net.createConnection(path, [connectionListener]
 > The third method specifices a file system loacation that is a Unix socket to use when creating the 
 > `Socket` object.
 
-> *Options* that can be specified when creating a `Socket` object
+> **Options** that can be specified when creating a `Socket` object
 > - `port` The port number the client should connect to. This option is required.
 >
 > - `host` The domain name or IP address of the server that the client should connect.
@@ -121,7 +121,7 @@ net.createConnection(path, [connectionListener]
 > - `allowHalfOpen` A Boolean that, when true, indicates that the socket, won't automatically
 > send a FIN packet when the other end of the socket sends a FIN packet, thus allowing half of the `Duplex stream to remain open. Defaults to false.
 
-> *Events* that can be triggered on a `Socket` object
+> **Events** that can be triggered on a `Socket` object
 - `connect` Emitted when a connection is successfully established with the server. The callback function does not accept any parameters.
 
 - `data` Emitted when data is received on the socket. If no data event handler is attached, data can be lost. The callback function must
@@ -146,7 +146,7 @@ callback function does not accept any parameters.
 >
 > Many of these are inherited from the `Duplex` stream objects. 
 
-> *Methods* that can be called on on `Socket` object
+> **Methods** that can be called on on `Socket` object
 - `setEncoding([encoding])` When this function is called, data returned for the socket's streams is an encoded `String` instead of
 `Buffer` object. Sets the default encoding that should be used when writing data to and reading from the steams. Using this option handles multibyte characters that might otherwise be mangled when converting a buffer to a string using `buf.toString(encoding). If you want to read the data as strings, always use this method.
 
@@ -173,7 +173,7 @@ callback function does not accept any parameters.
 
 - `ref()` Re-references a socket so that if this socket is the only thing on the event queue, the Node.js application does not terminate.
 
-> *Properties* that can be accessed on creating a `Socket` object
+> **Properties** that can be accessed on creating a `Socket` object
 - `bufferSize` The number of bytes currently buffered and waiting to be written to the socket's stream.
 
 - `removeAddress` The IP address of the remote server that the socket is connected to.
