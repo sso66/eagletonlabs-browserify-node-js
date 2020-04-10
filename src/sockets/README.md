@@ -317,9 +317,16 @@ function writeData(socket, data) {
 > In addition, the socket server should handle the `close` and `error` events on the `net.Server` object, as well as the events occur in the incoming client connection `net.Socket` object.
 >
 > The steps involved in implementing a socket server using the `net.Server` object as following.
-> 
-> The first step is to create socket server by calling `net.createServer()`. You also need to provide a connection callback handler and then call listen() to begin listening on the port:
 
+> The first step is to create socket server by calling `net.createServer()`. You also need to provide a connection callback handler and then call listen() to begin listening on the port:
+```
+var server = net.createServer(function(client) {
+    // implement the connection call handler code here
+});
+server.listen(8107, function() {
+    // implement the listen callback handler code here
+});
+```
 > Inside the 'listen' callback handler, you also add handlers to support the'close' and 'error' events of the Server Object. They may just be log statements, or you might want to add additional code that is executed when these events occur.
 
 > Inside the 'connection' event callback, you set up the connection behavior.  For example, you might want to add timeout or set the encoding.
