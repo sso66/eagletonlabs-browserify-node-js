@@ -181,7 +181,7 @@ client.on('end', function() {
     console.log("Client disconnected");
 });
 ```
-> Notice the `net.connect()` method is called using an optional object containing a `port` and `host` attribute. The connect callback function logs a message and then writes some data to the server. To handling data coming back from the server, the `on.data()` event handler is implemented. To handle the closure of the socket, the `on.('end')` event handler is implemented.
+> Notice the `net.connect()` method is called using an optional object containing a `port` and `host` attribute. The connect callback function logs a message and then writes some data to the server. To handling data coming back from the server, the `on.(data)` event handler is implemented. To handle the closure of the socket, the `on.('end')` event handler is implemented.
 
 ### The net.Server Object
 > You use the `net.Server` object to create a TCP socket server and begun listening for connections to which you will be 
