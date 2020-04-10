@@ -124,7 +124,7 @@ net.createConnection(path, [connectionListener]
 > *Events that can be triggered on a `Socket` object*
 - `connect` Emitted when a connection is successfully established with the server. The callback function does not accept any parameters.
 
-- `data` Emitted when data is received on the socket. If no data event handler is attached, data can be lost. The call function must
+- `data` Emitted when data is received on the socket. If no data event handler is attached, data can be lost. The callback function must
 accept a parameter that is a `Buffer` object containing the chunk of data that was read from the socket. For example: 
 `function(chunk) {}`
 
@@ -147,8 +147,11 @@ callback function does not accept any parameters.
 > Many of these are inherited from the `Duplex` stream objects. 
 
 > *Methods that can be called on on `Socket` object*
-- `setEncoding([encoding])`
-- `write(data, [encoding], [callback])`
+- `setEncoding([encoding])` When this function is called, data returned for the socket's streams is an encoded `String` instead of
+`Buffer` object. Sets the default encoding that should be used when writing data to and reading from the steams. Using this option handles multibyte characters that might otherwise be mangled when converting a buffer to a string using `buf.toString(encoding). If you want to read the data as strings, always use this method.
+
+- `write(data, [encoding], [callback])` Writes a data buffer or string to the `Writable` stream of the socket, using the encoding if specified. The callback function is executed as soon as the data is written.
+
 - `end([data], [encoding])`
 - `destroy()`
 - `pause()`
