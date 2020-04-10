@@ -271,12 +271,17 @@ __Properties__ that can be accessed on `net.Socket` objects
 >
 > The examples in the following are extremely basic, to make is easy for you to grasp the concepts of starting TCP server listening on a port and then implimiting clients that can connedc. The examples are designed to help you set the interactions (TMC) and event handling (EHC) that need to be implemented.
 >
-> The first step is to create the socket client by calling `net.connect()`, as shown below. Pass in the `port` and `host` that you want to connect to as well and implement a `callback` function to handle the connect event:
+> The first step is to create the **socket client** by calling `net.connect()`, as shown below. Pass in the `port` and `host` that you want to connect to as well and implement a `callback` function to handle the connect event:
 >
 ```
   net.connect({port: 8107, host: 'localhost', function() {
-    // handle connection
+      // handle connection
   });
+```
+> Then inside the callback, you set up the connection behavior. For example, you might want to add a timeout or set encoding as shown below:
+```
+this.setTimeout(500);
+this.setEncoding('utf8')
 ```
 
   - Implement a TCP Socket Client
