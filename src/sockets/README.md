@@ -271,7 +271,7 @@ __Properties__ that can be accessed on `net.Socket` objects
 >
 > The examples in the following are extremely basic, to make is easy for you to grasp the concepts of starting TCP server listening on a port and then implimiting clients that can connedc. The examples are designed to help you set the interactions (TMC) and event handling (EHC) that need to be implemented.
 
- - Implement a TCP Socket Client
+- Implement a TCP Socket Client
  > At the most basic level, implementing a TCP socket client involes creating a net.Socket object that connects to the server and then writing data to the server and handling the data that comes back. In addition you should build  the socket so that it can handle errors, the buffer being full, and timeouts.
  > 
  > Steps involved in implementing a socket client using the net.Socket object:
