@@ -184,18 +184,15 @@ client.on('end', function() {
 > Notice the `net.connect()` method is called using an optional object containing a `port` and `host` attribute. The connect callback function logs a message and then writes some data to the server. To handling data coming back from the server, the `on.(data)` event handler is implemented. To handle the closure of the socket, the `on.('end')` event handler is implemented.
 
 ### The net.Server Object
-> You use the `net.Server` object to create a TCP socket server and begun listening for connections to which you will be 
-> able to red and write data.
+> You use the `net.Server` object to create a TCP socket server and begun listening for connections to which you will be able to read and write data.
 >
 > The `Server` object is created internally when you call `net.createServer()`. 
 >
 > This object is to represent the socket server and handles listening for connections and then sending and receiving data on those connections.
 
-> When the server receives a connection, the server creates a `Socket` object and passes it to any connection event
-> handlers that are listening.
+> When the server receives a connection, the server creates a `Socket` object and passes it to any connection event handlers that are listening.
 >
-> Because the `Socket` object implements a `Duplex` stream, you can use the `write()` methode to stream writes data 
-> back to the client and a `data` event handler to stream data from the client.
+> Because the `Socket` object implements a `Duplex` stream, you can use the `write()` methode to stream writes data back to the client and a `data` event handler to stream data from the client.
 
 > To create a `Server` object, you used the `net.createServer() method:
 ```
@@ -215,10 +212,7 @@ __Options__ that can be specified when creating a `net.Server` objects
 > As you implement your socket server, you can register callbacks to be executed when these events are triggered to handle connections, errors and shutdown.
 
 __Events__ that can be triggered on a `net.Server` objects
-> - `listening` Emitted when the server begins listening on a port by calling the `listen()` method.
-> The call function does not accept any parameters. `connection` Emitted whe a connection is received from a socket client. 
-> The callback function muse accept a prrameter that is a `Socket` object representing the connection to the connecting client. 
-> For example: `function(client) {}`
+> - `listening` Emitted when the server begins listening on a port by calling the `listen()` method. The call function does not accept any parameters. `connection` Emitted whe a connection is received from a socket client. The callback function muse accept a prrameter that is a `Socket` object representing the connection to the connecting client. For example: `function(client) {}`
 >
 > - `close` Emitted when the server closes either normally or on error. This event is not emitted undil all client connections have ended.
 >
@@ -228,35 +222,24 @@ __Events__ that can be triggered on a `net.Server` objects
 
 __Methods__ that can be called on `net.Server` objects
 > - `listen(port, [host], [backlog], [callback])` Opens a port on server and begins listening for connections.
-> `port` specifies the listening port. If you specify 0 as the `port` a random port number is selected.  `host` is the IP address to
-> listen on; if it is omitted, the server accepts connections directed to any IPv4 addess. `backlog` specifies the maximum numbers of
-> pending connections the server allows. The default is 511. The `callback` function is called when the server has opened the port and
-> begin listening.
+> `port` specifies the listening port. If you specify 0 as the `port` a random port number is selected.  `host` is the IP address to listen on; if it is omitted, the server accepts connections directed to any IPv4 addess. `backlog` specifies the maximum numbers of pending connections the server allows. The default is 511. The `callback` function is called when the server has opened the port and begin listening.
 
-> - `listen(port, [path], [callback])` Same as above except that a Unix socket server is started, to listen for connections on the file
-> system `path` specified.
+> - `listen(port, [path], [callback])` Same as above except that a Unix socket server is started, to listen for connections on the file system `path` specified.
 
-> - `listen(port, handle, [callback])` Same as above except that a handle to a `Server` or `Socket` object has an underlying `_handle`
-> member points to a file descriptor handle on the server. It assumes that the file descriptor points to as socket file that has already
-> bound to a port.
+> - `listen(port, handle, [callback])` Same as above except that a handle to a `Server` or `Socket` object has an underlying `_handle` member points to a file descriptor handle on the server. It assumes that the file descriptor points to as socket file that has already bound to a port.
 
-> - `getConnections(callback)` Returns the number of connections currently connected to the server. `callback` is executed when the
-> number of connections is caculated and accepts an `error` parameter and a `count` parameter. For example `function(error, count)`
+> - `getConnections(callback)` Returns the number of connections currently connected to the server. `callback` is executed when the number of connections is caculated and accepts an `error` parameter and a `count` parameter. For example `function(error, count)`
 
-> - `close(callback)` Stops the server form accepting new connections. Current connections are allowed to remain until they are
-> complete. The server does not truly stop until all current connections have been closed.
+> - `close(callback)` Stops the server form accepting new connections. Current connections are allowed to remain until they are complete. The server does not truly stop until all current connections have been closed.
 
-> - `address()` Returns the bound address, the address family name, and the port of the socket, as reported by the operating system.
-> The return value is an object that contains the `port`, `family`, and `address` properties. For example
+> - `address()` Returns the bound address, the address family name, and the port of the socket, as reported by the operating system. The return value is an object that contains the `port`, `family`, and `address` properties. For example
 > { port: 8107, family: `IPv4`, address: `127.0.0.1` }
 
 > - `unref` Calling this method allows the Node.js application to terminate if this server is the only event on the event queue.
 
 > - `ref` References this socket so that if this server is the only thing on event queue, the Node.js application does not terminate.
 
-> The `Server` object also provides the `maxConnections` attribute, which allows you to set the maximum number of connections that the
-> server accepts before rejecting them. If the process has been forked to a child for processing using `child_process.fork()`, you 
-> should not use this option.
+> The `Server` object also provides the `maxConnections` attribute, which allows you to set the maximum number of connections that the server accepts before rejecting them. If the process has been forked to a child for processing using `child_process.fork()`, you should not use this option.
 
 __Properties__ that can be accessed on `net.Socket` objects
 > - `maxConnections` allows t set the maximum numbers of connectons that the server accepts before rejecting them
@@ -288,9 +271,9 @@ server.listen(8107, function() {
 > The examples in the following are extremely basic, to make is easy for you to grasp the concepts of starting TCP server listening on a port and then implimiting clients that can connedc. The examples are designed to help you set the interactions (TMC) and event handling (EHC) that need to be implemented.
 
 - Implement a TCP Socket Client
- > At the most basic level, implementing a TCP socket client involes creating a net.Socket object that connects to the server and then writing data to the server and handling the data that comes back. In addition you should build  the socket so that it can handle errors, the buffer being full, and timeouts.
+ > At the most basic level, implementing a TCP socket client involes creating a `net.Socket` object that connects to the server and then writing data to the server and handling the data that comes back. In addition you should build  the socket so that it can handle errors, the buffer being full, and timeouts.
  > 
- > Steps involved in implementing a socket client using the net.Socket object:
+ > Steps involved in implementing a socket client using the `net.Socket` object:
 
   > The first step is to create the **socket client** by calling `net.connect()`, as shown below. Pass in the `port` and `host` that you want to connect to as well and implement a `callback` function to handle the connect event:
 >
@@ -343,7 +326,7 @@ server.listen(8107, function() {
     // implement the listen callback handler code here
 });
 ```
-> Inside the `listen` callback handler, you also add handlers to support the `close` and `error` events of the `Server` Object. These may just be log statements, or you might want to add additional code that is executed when these events occur.
+> Inside the `listen` callback handler, you also add handlers to support the `close` and `error` events of the `Server` object. These may just be log statements, or you might want to add additional code that is executed when these events occur.
 ```
 server.on('close', function() {
     console.log('Server Terminated');
