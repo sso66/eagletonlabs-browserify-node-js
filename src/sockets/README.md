@@ -271,41 +271,45 @@ __Properties__ that can be accessed on `net.Socket` objects
 >
 > The examples in the following are extremely basic, to make is easy for you to grasp the concepts of starting TCP server listening on a port and then implimiting clients that can connedc. The examples are designed to help you set the interactions (TMC) and event handling (EHC) that need to be implemented.
 
-> The first step is to create the **socket client** by calling `net.connect()`, as shown below. Pass in the `port` and `host` that you want to connect to as well and implement a `callback` function to handle the connect event:
->
-```
-  net.connect({port: 8107, host: 'localhost', function() {
-      // handle connection
+  - Implement a TCP Socket Client
+    > At the most basic level, implementing a TCP socket client involes creating a net.Socket object that connects to the server and then writing data to the server and handling the data that comes back. In addition you should build  the socket so that it can handle errors, the buffer being full, and timeouts.
+   > 
+   > Steps involved in implementing a socket client using the net.Socket object:
+
+    > The first step is to create the **socket client** by calling `net.connect()`, as shown below. Pass in the `port` and `host` that you want to connect to as well and implement a `callback` function to handle the connect event:
+  >
+  ```
+    net.connect({port: 8107, host: 'localhost', function() {
+        // handle connection
+    });
+  ```
+  > Then inside the callback, you set up the connection behavior. For example, you might want to add a timeout or set encoding as shown   below:
+  ```
+  this.setTimeout(500);
+  this.setEncoding('utf8')
+  ```
+  > You also need to add handlers for the `data`, `end`, `error`, `timeout`, and `close` events that you want to handle. For example, to handle the `data` event, so that you read data coming back from the server, you might want to add the handler once the connection has been established:
+  ```
+  this.on('data', function(data) {
+      console.log("Read form server: ' + data.toString());
+      // process data
+      this.end();
   });
-```
-> Then inside the callback, you set up the connection behavior. For example, you might want to add a timeout or set encoding as shown below:
-```
-this.setTimeout(500);
-this.setEncoding('utf8')
-```
-> You also need to add handlers for the `data`, `end`, `error`, `timeout`, and `close` events that you want to handle. For example, to handle the `data` event, so that you read data coming back from the server, you might want to add the handler once the connection has been established:
-```
-this.on('data', function(data) {
-    console.log("Read form server: ' + data.toString());
-    // process data
-    this.end();
-});
-```
-> To write data to the server, you implement `write()` command (event->command->service). If you are writing a lot of data to thw server and the write fails, you might also want to implement a `drain` event handler to begin writing again when the buffer is empty.
->
-> The following shows and example of implement a `drain` handler because of a write failure. Notice that a **closure** is used to preserve the values of the socket and daa variables once the function has ended.
-```
-function writeData(socket, data) {
-    var success = !socket.write(data);
-    if (!success) {
-        (function(socket, data) {
-	    socket.once('drain', function() {
-	        writeData(socket, data);
-            });
-	}) (socket, data);
-}
-```
-  - Implement a TCP Socket Client - socket_client.js
+  ```
+  > To write data to the server, you implement `write()` command (event->command->service). If you are writing a lot of data to thw server and the write fails, you might also want to implement a `drain` event handler to begin writing again when the buffer is empty.
+  >
+  > The following shows and example of implement a `drain` handler because of a write failure. Notice that a **closure** is used to preserve the values of the socket and daa variables once the function has ended.
+  ```
+  function writeData(socket, data) {
+      var success = !socket.write(data);
+      if (!success) {
+          (function(socket, data) {
+	      socket.once('drain', function() {
+	          writeData(socket, data);
+              });
+	  }) (socket, data);
+  }
+  ```
   - Implement a TCP Socket Server
   
 - *Implementing TLS Servers and Clients*
