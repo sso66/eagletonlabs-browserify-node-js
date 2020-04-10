@@ -56,7 +56,7 @@
 > your own TCP socket servers and clients.
 
 > The following sections cover the purposes and behaviors of the `net.Socket` and `.net.Server` objects. You'll learn 
-> about their most important **events**, **methods. and **properties**.
+> about their most important **events**, **methods** and **properties**.
 
 - **The net.Socket Object**
 > `Socket` objects are created on both the socket server and the socket client and allow data to be written and read 
