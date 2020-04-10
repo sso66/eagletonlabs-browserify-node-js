@@ -1,40 +1,27 @@
 // File: socket_server.js
 // Note: Implementing full basic TCP socket server
-// Date: 03/24/2020
+// Date: 04/10/2020
 //..............................................................................
 console.info('Mounting TCP socket server...');
-
-var net = require('net');
 /*
- * At the most basic level, implementing a TCP server client involves creating
- * a net.Server object, listening on a port, and handling incoming connections, 
- * including reading and writing data to and from the connections.
+ * The full implementation of a basic TCP socket client:
  * 
- * In addition, the socket server should handle the 'close' and 'error' events
- * on the net.Server object, as well as the events occur in the incoming client
- * connection net.Socket object.
+ * The socket server accepts connection on port 8107, reads the data in, and
+ * then writes a string back to the client.
  * 
- * The steps involved in implementing a socket server using the net.Server 
- * object as following.
+ * Although the implementation is basic, it illustrates handling the events
+ * as well as reading and writing data in the client connection.
  * 
- * The first step is to create socket server by calling net.createServer(). You
- * also need to provide a connection callback handler and then call listen() to
- * begin listening on the port.
+ * Notice the client parameter in creating net.Server object; that is the client
+ * connection object net.Socket object.
  * 
- * Inside the 'listen' callback handler, you also add handlers to support the
- * 'close' and 'error' events of the Server Object. They may just be log 
- * statements, or you might want to add additional code that is executed when 
- * these events occur.
- * 
- * Inside the 'connection' event callback, you set up the connection behavior. 
- * For example, you might want to add timeout or set the encoding.
- * 
- * You also need to add handlers for the 'data','end', error, 'timeout', and 
- * 'close' events that you want to handle on the client connections. For example,
- * to handle the 'data' event so that you can read data coming from the client,
- * you might add the following handler once the connection has been established.
- * 
+ * It's just like working with Event Source, Event Object and the Event Listener 
+ * as well as EventEmitter Class, Event Loop, Event Queue and the Thread Pool 
+ * scenarios.
+ *  
  */
+var net = require('net');
+
 var server = net.createServer(function(client) {
     console.log('Client connection: ');
     console.log( ' local = %s:%s', this.localAddress, client.localPort);
@@ -73,21 +60,7 @@ server.listen(8107, function() {
        console.log("Server Error: " + JSON.stringify(err));
    }); 
 });
-/*
- * To write data to the server, you implement a write() command somewhere
- * in your code. 
- * 
- * If you are writing a lot of data, you may also want to implement a 'drain' 
- * event handler that will begin writing when the buffer is empty. This can 
- * help if write() returns filure because the buffer is full or if you want 
- * to throttle back writing to the socket.
- * 
- * The following is an example of implementing a 'drain' handler because of
- * the write failure.
- * 
- * Notice that a closure is used to preserve the values of the socket and
- * data variables once the function has ended:
- */
+
 function writeData(socket, data) {
     var success = !socket.write(data);
     if (!success) {
@@ -98,24 +71,5 @@ function writeData(socket, data) {
         })(socket, data);
     }
 }
-/*
- * The full implementation of a basic TCP socket client:
- * 
- * The socket server accepts connection on port 8107, reads the data in, and
- * then writes a string back to the client.
- * 
- * Although the implementation is basic, it illustrates handling the events
- * as well as reading and writing data in the client connection.
- * 
- * Notice the client parameter in creating net.Server object; that is the client
- * connection object net.Socket object.
- * 
- * It's just like working with Event Source, Event Object and the Event Listener 
- * as well as EventEmitter Class, Event Loop, Event Queue and the Thread Pool 
- * scenarios.
- *  
- */
-// expose module methods
-module.exports.writeData = writeData;
 
 // eof
