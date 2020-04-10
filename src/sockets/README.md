@@ -283,8 +283,29 @@ __Properties__ that can be accessed on `net.Socket` objects
 this.setTimeout(500);
 this.setEncoding('utf8')
 ```
-
-  - Implement a TCP Socket Client
+> You also need to add handlers for the `data`, `end`, `error`, `timeout`, and `close` events that you want to handle. For example, to handle the `data` event, so that you read data coming back from the server, you might want to add the handler once the connection has been established:
+```
+this.on('data', function(data) {
+    console.log("Read form server: ' + data.toString());
+    // process data
+    this.end();
+});
+```
+> To write data to the server, you implement `write()` command (event->command->service). If you are writing a lot of data to thw server and the write fails, you might also want to implement a `drain` event handler to begin writing again when the buffer is empty.
+>
+> The following shows and example of implement a `drain` handler because of a write failure. Notice that a **closure** is used to preserve the values of the socket and daa variables once the function has ended.
+```
+function writeData(socket, data) {
+    var success = !socket.write(data);
+    if (!success) {
+        (function(socket, data) {
+	    socket.once('drain', function() {
+	        writeData(socket, data);
+            });
+	}) (socket, data);
+}
+```
+  - Implement a TCP Socket Client - socket_client.js
   - Implement a TCP Socket Server
   
 - *Implementing TLS Servers and Clients*
