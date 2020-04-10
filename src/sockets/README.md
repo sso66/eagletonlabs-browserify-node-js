@@ -120,73 +120,72 @@ net.createConnection(path, [connectionListener]
 >
 > - `allowHalfOpen` A Boolean that, when true, indicates that the socket, won't automatically
 > send a FIN packet when the other end of the socket sends a FIN packet, thus allowing half of the `Duplex stream to remain open. Defaults to false.
-
+>
 > __Events__ that can be triggered on a `Socket` object
-- `connect` Emitted when a connection is successfully established with the server. The callback function does not accept any parameters.
-
-- `data` Emitted when data is received on the socket. If no data event handler is attached, data can be lost. The callback function must
-accept a parameter that is a `Buffer` object containing the chunk of data that was read from the socket. For example: 
+> - `connect` Emitted when a connection is successfully established with the server. The callback function does not accept any parameters.
+>
+> - `data` Emitted when data is received on the socket. If no data event handler is attached, data can be lost. The callback function must accept a parameter that is a `Buffer` object containing the chunk of data that was read from the socket. For example: 
 `function(chunk) {}`
-
-- `end` Emitted when server terminates the connection by sending a FIN. The callback function does not accept any parameters.
-
-- `timeout` Emitted when the connection to the server times out due to inactivity.
-
-- `drain` Emitted when write buffer becomes empty. You can use this event to throttle back the data stream being written to the socket.
+>
+> - `end` Emitted when server terminates the connection by sending a FIN. The callback function does not accept any parameters.
+>
+> - `timeout` Emitted when the connection to the server times out due to inactivity.
+>
+> - `drain` Emitted when write buffer becomes empty. You can use this event to throttle back the data stream being written to the socket.
 The callback function does not accept any parameters.
-
-- `error` Emitted when an error occurs on the socket connection. The callback function should accept `error` as the only argument.
+>
+> - `error` Emitted when an error occurs on the socket connection. The callback function should accept `error` as the only argument.
 For example: `function(error) {}`
-
-- `close` Emitted when the socket has fully closed either because it was closed by `end()` method or because an error occurred. The
+>
+> - `close` Emitted when the socket has fully closed either because it was closed by `end()` method or because an error occurred. The
 callback function does not accept any parameters.
-
+>
 > The `Socket` object also includes several methods that allow you to do things like read from and write to the socket as welss as pause
 > or end data flow.
 >
 > Many of these are inherited from the `Duplex` stream objects. 
 
 > __Methods__ that can be called on on `Socket` object
-- `setEncoding([encoding])` When this function is called, data returned for the socket's streams is an encoded `String` instead of
+> - `setEncoding([encoding])` When this function is called, data returned for the socket's streams is an encoded `String` instead of
 `Buffer` object. Sets the default encoding that should be used when writing data to and reading from the steams. Using this option handles multibyte characters that might otherwise be mangled when converting a buffer to a string using `buf.toString(encoding). If you want to read the data as strings, always use this method.
-
-- `write(data, [encoding], [callback])` Writes a data buffer or string to the `Writable` stream of the socket, using the encoding if specified. The callback function is executed as soon as the data is written.
-
-- `end([data], [encoding])` Writes a data buffer or string to the `Writable` stream of the socket and then flushes the stream and closes the connection.
-
-- `destroy()` Forces the socket connection to shut down. You should only need to use thie in case of failures.
-
-- `pause()` Pauses the `Readable` stream of a socket from emitting daa events. This allows you to throttle back the upload of data to the stream.
-
-- `resume()` Resumes the data event emitting on the `Readable` steam of the socket.
-
-- `setTimeout(timeout, [callback])` Specifies a `timeout`, in milliseconds, that the server will wait before emitting a timeout event when the socket is inactie. The `callback` function is triggered as a `once` event listener. If you want the connection to be terminated on timeout, you should do it manuall in the callback function.
-
-- `setNoDelay([noDelay])` Disables/enables the Nagle algorithm, which buffers data before sending it. Setting to false disable data buffering.
-
-- `setKeepAlive([enable], [initialDelay])` Enables/disables/ the keep-alive functionality on the connection. The optional `initialDelay` parameter specifies the time, in milliseconds, that the socket is idel before sending the keep-alive packet.
-
-- `address()` Returns the bound address, the address family name, and the port of the socket, as reported by the operating system. The return value is an object that contains the `port`, `family`, and `address` properties. For example
+>
+> - `write(data, [encoding], [callback])` Writes a data buffer or string to the `Writable` stream of the socket, using the encoding if specified. The callback function is executed as soon as the data is written.
+>
+> - `end([data], [encoding])` Writes a data buffer or string to the `Writable` stream of the socket and then flushes the stream and closes the connection.
+>
+> - `destroy()` Forces the socket connection to shut down. You should only need to use thie in case of failures.
+>
+> - `pause()` Pauses the `Readable` stream of a socket from emitting daa events. This allows you to throttle back the upload of data to the stream.
+>
+> - `resume()` Resumes the data event emitting on the `Readable` steam of the socket.
+>
+> - `setTimeout(timeout, [callback])` Specifies a `timeout`, in milliseconds, that the server will wait before emitting a timeout event when the socket is inactie. The `callback` function is triggered as a `once` event listener. If you want the connection to be terminated on timeout, you should do it manuall in the callback function.
+>
+> - `setNoDelay([noDelay])` Disables/enables the Nagle algorithm, which buffers data before sending it. Setting to false disable data buffering.
+>
+> - `setKeepAlive([enable], [initialDelay])` Enables/disables/ the keep-alive functionality on the connection. The optional `initialDelay` parameter specifies the time, in milliseconds, that the socket is idel before sending the keep-alive packet.
+>
+> - `address()` Returns the bound address, the address family name, and the port of the socket, as reported by the operating system. The return value is an object that contains the `port`, `family`, and `address` properties. For example
 {port: 8107, family: 'IPv4', address: '127.0.0.1' }
+>
+> - `unref()` Allows the Nodes.js application to terminate if this socket is the only event on the event queue.
+>
+> - `ref()` Re-references a socket so that if this socket is the only thing on the event queue, the Node.js application does not terminate.
 
-- `unref()` Allows the Nodes.js application to terminate if this socket is the only event on the event queue.
-
-- `ref()` Re-references a socket so that if this socket is the only thing on the event queue, the Node.js application does not terminate.
-
-> __Properties__ that can be accessed on creating a `Socket` object
-- `bufferSize` The number of bytes currently buffered and waiting to be written to the socket's stream.
-
-- `removeAddress` The IP address of the remote server that the socket is connected to.
-
-- `removePort` The port of the remote server that the socket is connected to.
-
-- `localAddress` The local IP addess the remote client is using for the socket connection.
-
-- `locakPort` The local port the remote client is using for the socket connection.
-
-- `byteRead` The number of bytes read by the socket.
-
-- `bytesWritten` The number of bytes written by the socket.
+__Properties__ that can be accessed on creating a `Socket` object
+> - `bufferSize` The number of bytes currently buffered and waiting to be written to the socket's stream.
+>
+> - `removeAddress` The IP address of the remote server that the socket is connected to.
+>
+> - `removePort` The port of the remote server that the socket is connected to.
+>
+> - `localAddress` The local IP addess the remote client is using for the socket connection.
+>
+> - `locakPort` The local port the remote client is using for the socket connection.
+>
+> - `byteRead` The number of bytes read by the socket.
+>
+> - `bytesWritten` The number of bytes written by the socket.
 
 #### The net.Server Object
 > You use the `net.Server` object to create a TCP socket server and begun listening for connections to which you will be 
@@ -212,9 +211,9 @@ net.createServer[options], [connectionListener])
 >
 > This `connectionListener` call function is passed the `Socket` object for the connection client.
 
-> __Options__ that can be specified when creating a `net.Server` objects*
+__Options__ that can be specified when creating a `net.Server` objects*
 > - `allowHalfOpen` A Boolean that, when true, indicates that the socket, won't automatically send a FIN packet when the other end of the socket sends a FIN packet, thus allowing half of the `Duplex stream to remain open. Defaults to false.
-
+>
 > Once the `Server` object is created, if provides several events that are triggered during the life cycle of the server. For example, the `connection` event is trigger when the socket client connects, and `close` event is trigger when the server shuts down.
 >
 > As you implement your socket server, you can register callbacks to be executed when these events are triggered to handle connections, errors and shutdown.
