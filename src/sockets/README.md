@@ -144,8 +144,8 @@ __Methods__ that can be called on on `Socket` object
 >
 > - `setKeepAlive([enable], [initialDelay])` Enables/disables the keep-alive functionality on the connection. The optional `initialDelay` parameter specifies the time, in milliseconds, that the socket is idle before sending the keep-alive packet.
 >
-> - `address()` Returns the bound address, the address family name, and the port of the socket, as reported by the operating system. The return value is an object that contains the `port`, `family`, and `address` properties. For example
-{ port: 8107, family: 'IPv4', address: '127.0.0.1' }
+> - `address()` Returns the bound address, the address family name, and the port of the socket, as reported by the operating system. The return value is an object that contains the `port`, `family`, and `address` properties. 
+> For example: { port: 8107, family: 'IPv4', address: '127.0.0.1' }
 >
 > - `unref()` Allows the Nodes.js application to terminate if this socket is the only event on the event queue.
 >
