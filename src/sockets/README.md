@@ -166,6 +166,22 @@ __Properties__ that can be accessed on creating a `Socket` object
 >
 > - `bytesWritten` The number of bytes written by the socket.
 
+To illustrate flowing data (header and payload) across a `Socket` (connection) object, the following code shows the basics of implementing the `Socket` object on a TCP client:
+```
+var net = require('net');
+var client = net.connect({ port: 8107, host: 'localhost', function() {
+    console.log("Client connected");
+    client.write("some Data\n");
+});
+client.on('data', function(data) {
+    console.log(data.toString());
+    client.end()
+});
+client.on('end', function() {
+    console.log("Client disconnected");
+});
+Notice the `net.connect() method is called using an optional object containing a `port` and `host` attribute. The connect callback function logs a message and then writes some data to the server. To handling data coming back from the server, the 'on.data()` event handler is implemented. To handle the closure of the socket, the `on.('end') event handler is implemented.
+```
 ### The net.Server Object
 > You use the `net.Server` object to create a TCP socket server and begun listening for connections to which you will be 
 > able to red and write data.
