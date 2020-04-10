@@ -111,7 +111,7 @@ net.createConnection(path, [connectionListener]
 > The third method specifices a file system loacation that is a Unix socket to use when creating the 
 > `Socket` object.
 
-> **Options** that can be specified when creating a `Socket` object
+> __Options__ that can be specified when creating a `Socket` object
 > - `port` The port number the client should connect to. This option is required.
 >
 > - `host` The domain name or IP address of the server that the client should connect.
