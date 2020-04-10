@@ -327,7 +327,7 @@ server.listen(8107, function() {
     // implement the listen callback handler code here
 });
 ```
-> Inside the 'listen' callback handler, you also add handlers to support the `close` and `error` events of the `Server` Object. These may just be log statements, or you might want to add additional code that is executed when these events occur.
+> Inside the `listen` callback handler, you also add handlers to support the `close` and `error` events of the `Server` Object. These may just be log statements, or you might want to add additional code that is executed when these events occur.
 ```4
 server.on('close', function() {
     console.log('Server Terminated');
@@ -335,17 +335,33 @@ server.on('close', function() {
 server.on('error', function(err) {
 });
 ```
-> Inside the 'connection' event callback, you set up the connection behavior.  For example, you might want to add timeout or set the encoding.
- 
-> You also need to add handlers for the 'data','end', error, 'timeout', and 'close' events that you want to handle on the client connections. For example, to handle the 'data' event so that you can read data coming from the client, you might add the following handler once the connection has been established.
-
+> Inside the 'connection' event callback, you set up the connection behavior.  For example, you might want to add timeout or set the encoding:
+```
+this.setTimeout(500);
+this.encoding('utf8');
+```
+> You also need to add handlers for the `data`,`end`, `error`, `timeout`, and `close` events that you want to handle on the client connections. For example, to handle the `data` event so that you can read data coming from the client, you might add the following handler `once` the connection has been established.
+```
+this.on('data', function(data) {
+    console.log("Received from client: " + data.toString());
+    // process data
+});
 >
-> To write data to the server, you implement a write() command somewhere in your code. 
->
-> If you are writing a lot of data, you may also want to implement a 'drain' event handler that will begin writing when the buffer is empty. This can help if write() returns filure because the buffer is full or if you want to throttle back writing to the socket.
+> To write data to the server, you implement a `write()` command somewhere in your code. If you are writing a lot of data, you may also want to implement a `drain` event handler that will begin writing when the buffer is empty. This can help if `write()` returns failure because the buffer is full or if you want to throttle back writing to the socket.
 > 
 > The following is an example of implementing a 'drain' handler because of the write failure. Notice that a closure is used to preserve the values of the socket and data variables once the function has ended:
-
+```
+function writeData(socket, data) {
+    var success = !success.write(data);
+    if (!success) {
+        (function(socket, data) {
+	    socket.once('drain', function() {
+	        writeData(socket, data);
+	    });
+        }) (socket, data)	
+    }
+}
+```
 - *Implementing TLS Servers and Clients*
   - Creating a TLS Socket Client
   - Creating a TLS Socket Server
