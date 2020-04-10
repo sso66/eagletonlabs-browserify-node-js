@@ -58,7 +58,7 @@
 > The following sections cover the purposes and behaviors of the `net.Socket` and `.net.Server` objects. You'll learn 
 > about their most important **events**, **methods** and **properties**.
 
-- **The net.Socket Object**
+#### The net.Socket Object
 > `Socket` objects are created on both the socket server and the socket client and allow data to be written and read 
 > back and forth between them.
 >
@@ -188,7 +188,7 @@ callback function does not accept any parameters.
 
 - `bytesWritten` The number of bytes written by the socket.
 
-### The net.Server Object**
+#### The net.Server Object
 > You use the `net.Server` object to create a TCP socket server and begun listening for connections to which you will be 
 > able to red and write data.
 >
