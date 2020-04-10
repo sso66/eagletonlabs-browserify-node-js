@@ -263,7 +263,7 @@ __Options__ that can be specified when creating a `net.Server` objects*
 > should not use this option.
 
 > __Properties__ that can be accessed on `net.Socket` objects
-> `maxConnections` allows t set the maximum numbers of connectons that the server accepts before rejecting them
+> - `maxConnections` allows t set the maximum numbers of connectons that the server accepts before rejecting them
 
  
 - *Implementing TCP Socket Severs and Clients*
