@@ -212,14 +212,14 @@ net.createServer[options], [connectionListener])
 >
 > This `connectionListener` call function is passed the `Socket` object for the connection client.
 
-> *Options that can be specified when creating a `net.Server` objects*
+> _Options_ that can be specified when creating a `net.Server` objects*
 > - `allowHalfOpen` A Boolean that, when true, indicates that the socket, won't automatically send a FIN packet when the other end of the socket sends a FIN packet, thus allowing half of the `Duplex stream to remain open. Defaults to false.
 
 > Once the `Server` object is created, if provides several events that are triggered during the life cycle of the server. For example, the `connection` event is trigger when the socket client connects, and `close` event is trigger when the server shuts down.
 >
 > As you implement your socket server, you can register callbacks to be executed when these events are triggered to handle connections, errors and shutdown.
 
-> *Events that can be triggered on a `net.Server` objects*
+> _Events_ that can be triggered on a `net.Server` objects*
 > - `listening` Emitted when the server begins listening on a port by calling the `listen()` method.
 > The call function does not accept any parameters. `connection` Emitted whe a connection is received from a socket client. 
 > The callback function muse accept a prrameter that is a `Socket` object representing the connection to the connecting client. 
