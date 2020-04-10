@@ -296,7 +296,7 @@ this.setEncoding('utf8')
       this.end();
   });
   ```
-  > To write data to the server, you implement `write()` command (event->command->service). If you are writing a lot of data to thw server and the write fails, you might also want to implement a `drain` event handler to begin writing again when the buffer is empty.
+> To write data to the server, you implement `write()` command (event->command->service). If you are writing a lot of data to thw server and the write fails, you might also want to implement a `drain` event handler to begin writing again when the buffer is empty.
 >
 > The following shows and example of implement a `drain` handler because of a write failure. Notice that a **closure** is used to preserve the values of the socket and daa variables once the function has ended.
 ```
