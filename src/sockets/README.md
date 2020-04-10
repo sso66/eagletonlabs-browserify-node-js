@@ -152,19 +152,29 @@ callback function does not accept any parameters.
 
 - `write(data, [encoding], [callback])` Writes a data buffer or string to the `Writable` stream of the socket, using the encoding if specified. The callback function is executed as soon as the data is written.
 
-- `end([data], [encoding])`
-- `destroy()`
-- `pause()`
-- `resume()`
-- `setTimeout(timeout, [callback])`
-- `setNoDelay([noDelay])`
-- `setKeepAlive([enable], [initialDelay])`
-- `address()`
-- `unref()`
-- `ref()`
+- `end([data], [encoding])` Writes a data buffer or string to the `Writable` stream of the socket and then flushes the stream and closes the connection.
+
+- `destroy()` Forces the socket connection to shut down. You should only need to use thie in case of failures.
+
+- `pause()` Pauses the `Readable` stream of a socket from emitting daa events. This allows you to throttle back the upload of data to the stream.
+
+- `resume()` Resumes the data event emitting on the `Readable` steam of the socket.
+
+- `setTimeout(timeout, [callback])` Specifies a `timeout`, in milliseconds, that the server will wait before emitting a timeout event when the socket is inactie. The `callback` function is triggered as a `once` event listener. If you want the connection to be terminated on timeout, you should do it manuall in the callback function.
+
+- `setNoDelay([noDelay])` Disables/enables the Nagle algorithm, which buffers data before sending it. Setting to false disable data buffering.
+
+- `setKeepAlive([enable], [initialDelay])` Enables/disables/ the keep-alive functionality on the connection. The optional `initialDelay` parameter specifies the time, in milliseconds, that the socket is idel before sending the keep-alive packet.
+
+- `address()` Returns the bound address, the address family name, and the port of the socket, as reported by the operating system. The return value is an object that contains the `port`, `family`, and `address` properties. For example
+{port: 8107, family: 'IPv4', address: '127.0.0.1' }
+
+- `unref()` Allows the Nodes.js application to terminate if this socket is the only event on the event queue.
+
+- `ref()` Re-references a socket so that if this socket is the only thing on the event queue, the Node.js application does not terminate.
 
 > *Properties that can be accessed on creating a `Socket` object*
-- `bufferSize`
+- `bufferSize`: The number of bytes currently buffered and waiting to be written to the socket's stream.
 - `removeAddress`
 - `removePort`
 - `localAddress`
