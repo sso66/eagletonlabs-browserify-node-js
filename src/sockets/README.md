@@ -174,13 +174,19 @@ callback function does not accept any parameters.
 - `ref()` Re-references a socket so that if this socket is the only thing on the event queue, the Node.js application does not terminate.
 
 > *Properties that can be accessed on creating a `Socket` object*
-- `bufferSize`: The number of bytes currently buffered and waiting to be written to the socket's stream.
-- `removeAddress`
-- `removePort`
-- `localAddress`
-- `locakPort`
-- `byteRead`
-- `bytesWritten`
+- `bufferSize` The number of bytes currently buffered and waiting to be written to the socket's stream.
+
+- `removeAddress` The IP address of the remote server that the socket is connected to.
+
+- `removePort` The port of the remote server that the socket is connected to.
+
+- `localAddress` The local IP addess the remote client is using for the socket connection.
+
+- `locakPort` The local port the remote client is using for the socket connection.
+
+- `byteRead` The number of bytes read by the socket.
+
+- `bytesWritten` The number of bytes written by the socket.
 
 - **The net.Server Object**
 > You use the `net.Server` object to create a TCP socket server and begun listening for connections to which you will be 
