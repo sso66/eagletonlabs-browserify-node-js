@@ -126,7 +126,7 @@ net.createConnection(path, [connectionListener]
 
 - `data` Emitted when data is received on the socket. If no data event handler is attached, data can be lost. The call function must
 accept a parameter that is a `Buffer` object containing the chunk of data that was read from the socket. For example: 
-`function(chunk) {}
+`function(chunk) {}`
 
 - `end` Emitted when server terminates the connection by sending a FIN. The callback function does not accept any parameters.
 
