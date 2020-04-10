@@ -265,6 +265,18 @@ __Properties__ that can be accessed on `net.Socket` objects
 > - `maxConnections` allows t set the maximum numbers of connectons that the server accepts before rejecting them
  
 - *Implementing TCP Socket Severs and Clients*
+> Now that you understand the `net.Server` and the `net.Socket` objects, you are ready to jump in and implement some Node.js TCP clients and servers. 
+>
+> This guides you through the process of implement basic TCP cients and servers in Node.js.
+>
+> The examples in the following are extremely basic, to make is easy for you to grasp the concepts of starting TCP server listening on a port and then implimiting clients that can connedc. The examples are designed to help you set the interactions (TMC) and event handling (EHC) that need to be implemented.
+>
+> The first step is to create the socket client by calling `net.connect()`, as shown below. Pass in the `port` and `host` that you want to connect to as well and implement a `callback` function to handle the connect event:
+```net.connect({port: 8107, host: 'localhost', function() {
+	// handle connection
+});
+```
+
   - Implement a TCP Socket Client
   - Implement a TCP Socket Server
   
