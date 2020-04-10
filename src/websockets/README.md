@@ -27,7 +27,7 @@
   
 - **Stream sockets** also know as connection-oriented sockets, use the Tramission Control Protocoo (TCP) - npm 'net', Stream Control Transmission Protocol (SCTP), Datagram Congestion Control Protocol (DCCP). These sockets provide a bidirectional, reliable, sequenced, and unduplicated flow of data with no record boundaries.
   
-- **Raw socket** (or raw **IP sockets**) are typically available in routers and other networking equipment (e.g. IPG100 device). These sockets are nomally datagram-oriented, although their exact characteristics depend on the interface provided by the protocol. Raw sockets are not use by most applications. They're provided *to support the *development of the new protocols* and *to provide access to more esoteric facilities of existing protocols.* 
+- **Raw socket** (or raw **IP sockets**) are typically available in routers and other networking equipment (e.g. IPG100 device). These sockets are nomally datagram-oriented, although their exact characteristics depend on the interface provided by the protocol. Raw sockets are not use by most applications. They're provided *to support the development of the new protocols* and *to provide access to more esoteric facilities of existing protocols.* 
 
 ##### Socket communications
 > First, let's figure out how to ensure that every socket is unique. If they're not, you can't establish a reliable communication channel.
@@ -63,9 +63,9 @@
 
 #### Transfering the data frame
 > When the handshake has been successfully completed, your app can read and write data from the client.
-
+>
 > Explore the WebSocket specification that defines a specific frame format that's used between a client and server. 
-
+>
 > Observe the bit pattern on formulating messages:
   - Usage of code to decode the client payload
     - function to receive data and returns a Frame   
