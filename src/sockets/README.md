@@ -328,7 +328,7 @@ server.listen(8107, function() {
 });
 ```
 > Inside the `listen` callback handler, you also add handlers to support the `close` and `error` events of the `Server` Object. These may just be log statements, or you might want to add additional code that is executed when these events occur.
-```4
+```
 server.on('close', function() {
     console.log('Server Terminated');
 });
