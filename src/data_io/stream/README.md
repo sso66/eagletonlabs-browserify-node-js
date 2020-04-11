@@ -4,6 +4,7 @@
 > Data streams are memory structures that are readable, writable or both. 
 >
 > Streams are used all over in Node.js, when accessing files, when reading data from HTTP (Websocket) requests, and in several areas.
+>
 > This section covers using the `Stream` module to create streams as well as to read and write data from them
 
 > The purpose of streams is to provide a common mechanism to transfer data
