@@ -1,4 +1,5 @@
 ## Using the `Stream` Module to Stream Data
+** Reason**
 > An important module in Node.js is the `Stream` module. 
 >
 > Data streams are memory structures that are readable, writable or both. 
@@ -7,11 +8,11 @@
 >
 > This section covers using the `Stream` module to create streams as well as to read and write data from them
 
-> The purpose of streams is to provide a common mechanism to transfer data
-> from one location to another. They also expose events such as `data` when
-> data is available to be read, `error` when error occurs, and so forth so
-> that you can register listeners (handlers) to handle the data when it 
-> becomes availabile in a stream or is ready to be written to.
+**Purpose**
+> The purpose of streams is to provide a common mechanism to transfer data from one location to another. 
+
+> They also expose events such as `data` when data is available to be read, `error` when error occurs, and so forth so
+> that you can register listeners (handlers) to handle the data when it becomes availabile in a stream or is ready to be written to.
 >
 > Streams are commonly used for HTTP data and files. You can open a file as
 > readable stream or access the data from HTTP (Websocket) requests as 
