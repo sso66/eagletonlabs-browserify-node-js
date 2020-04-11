@@ -2,7 +2,7 @@
 
 > While JavaScript may be extremely Unicode friendly, it is not very good at managing binary data. 
 >
-> However the binary data is exremely useful when implementing some web application and services, such as:
+> However the binary data is exremely useful when implementing some web applications and services, such as:
   - Transferring compressed files
   - Generating dynamic images
   - Sending serialized binary data
@@ -11,7 +11,7 @@
 > Buffered data is made up of a series of octets (8-bits) in big-endian or little-endian format.
 > That means they take up considerable less space than text data.
 > Therefore, Node.js provides the `Buffer` module which allows to create, read, write and manipulate data in a buffer structure. 
-> The `Buffer` module is global, so you do not need to use require() function to access it.
+> The `Buffer` module is global, so you do not need to use `require()` function to access it.
 
 > Buffered data is stored in a structure similar to that of an array, but it is stored outside the normal V8 heap in raw memory allocations - RAM. Therefore, a buffer cannot be resized.
 
