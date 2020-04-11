@@ -10,16 +10,13 @@
 
 **Purpose**
 > The purpose of streams is to provide a common mechanism to transfer data from one location to another. 
-
+>
 > They also expose events such as `data` when data is available to be read, `error` when error occurs, and so forth so
 > that you can register listeners (handlers) to handle the data when it becomes availabile in a stream or is ready to be written to.
 >
-> Streams are commonly used for HTTP data and files. You can open a file as
-> readable stream or access the data from HTTP (Websocket) requests as 
-> readable stream and read bytes out of as needed.
+> Streams are commonly used for HTTP data and files. You can open a file as readable stream or access the data from HTTP (Websocket) requests as readable stream and read bytes out of as needed.
 >
-> In addition, you can create your own custom streams. Follow up on the 
-> process of creating and using streams such as:
+> In addition, you can create your own custom streams. Follow up on the process of creating and using streams such as:
   - `Readable` Streams
   > `Readable` streams are designed to provide a mechanism to easily read data coming into and application,
   > from another source. Common readable streams are:
