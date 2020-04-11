@@ -19,11 +19,11 @@
 > **Character Encodings** to be used. 
 
 *Methods of encoding between strings and binary buffers:*
-- utf8 `Multi-byte encoded Unicode characters; the standard in most documents and webpages.`
--	utf16le  `Little-endian encoded Unicode characters of 2 or 4 bytes.`
--	ucs2 `Little-endian encoded Unicode characters of 2 or 4 bytes.`
--	base64 `Base-64 string encoding.`
--	hex `Each byte encoded as two hexadecimal characters.`
+- `utf8` Multi-byte encoded Unicode characters; the standard in most documents and webpages.
+-	`utf16le` Little-endian encoded Unicode characters of 2 or 4 bytes.
+-	`ucs2` Little-endian encoded Unicode characters of 2 or 4 bytes.
+-	`base64` Base-64 string encoding.
+-	`hex` Each byte encoded as two hexadecimal characters.
 
 *Big Endian and Little Endian*
 > Binary data in buffers is stored as a series of octects or a sequences of eight 0s and 1s that can be a hexadecimal value of 0x00 to 0xFF.
@@ -33,8 +33,7 @@
 > *Endian* defines the ordering of significant bits when defining the word.
 > Big endian stores the least significant word first, and little endian stores the least significant word last.
 >
-> For example, 0x0A 0x0B 0x9C 0x0D would stored in buffer as [0x0A, 0x0B, 0x9C, 0x0D]
-> in big endian but as [0x0D, 0x0C, 0x9B, 0x0D] in little endian.
+> For example, 0x0A 0x0B 0x9C 0x0D would stored in buffer as [0x0A, 0x0B, 0x9C, 0x0D] in big endian but as [0x0D, 0x0C, 0x9B, 0x0D] in little endian.
 
 #### Creating Buffers
 #### Writing to Buffers
