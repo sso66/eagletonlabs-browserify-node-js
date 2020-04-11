@@ -1,0 +1,11 @@
+{
+    "majorDivisions":5,
+    "minorDivision":4,
+    "min":10,
+    "max":50,
+    "ranges":[
+        {"min":10,"max":50,"color":"#F00"},
+        {"min":20,"max":75,"color":"#0F0"},
+        {"min":30,"max":90,"color":"#00F"}
+    ]
+}
