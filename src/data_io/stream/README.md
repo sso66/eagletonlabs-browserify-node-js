@@ -1,5 +1,5 @@
 ## Using the `Stream` Module to Stream Data
-** Reason**
+**Reason**
 > An important module in Node.js is the `Stream` module. 
 >
 > Data streams are memory structures that are readable, writable or both. 
