@@ -1,8 +1,8 @@
-// File: wsserver.js
-// Note: List all connected sessions & Communicating with a specific session only
-// Date: 3/31/2020
+// File: websocket_server.js
+// Note: List all connected sessions & communicate with a specific session only
+// Date: 04/12/2020
 //..............................................................................
-console.log("Mounting wsserver.js...\n");
+console.log("Mounting websocket_server.js...\n");
 
 var WebSocketServer = require('websocket').server;
 var http = require('http');
