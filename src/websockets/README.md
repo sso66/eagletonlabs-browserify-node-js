@@ -41,8 +41,8 @@
 > With TCP/IP, the IP addresses of the network layer are unique within a given network, and the protocol and port are unique among the host applications.
 >
 > TCP and UDP are two major protocols for communicating between hosts. Explore how your Node.js application can connect to TCP and UDP sockets:
-  - **Connecting to a TCP Socket**: socket_client.js / socket_server.js
-  - **Connecting to a UDP Socket**: udp_client.js / udp_server.js
+  - **Connecting to a [TCP Socket]**: socket_client.js / socket_server.js
+  - **Connecting to a [UDP Socket]**: udp_client.js / udp_server.js
 
 ### What WebSockets are
 > The Websocket communication protocol provides a full-duplex communicatiion channel over a single TCP connection.
