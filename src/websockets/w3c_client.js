@@ -1,8 +1,9 @@
-// File: wsclient.js
-// Note: A simple WebSocket URL client connecting to  echo.websocket.org server
+// File: w3c_client.js
+// Note: A simple WebSocket URL client connecting to echo.websocket.org server
 // Date: 3/31/2020
 //..............................................................................
-console.log("Mounting wsserver.js...\n");
+console.log("Mounting w3c_client.js...\n");
+
 var webSocket   = null;
 var ws_protocol = null;
 var ws_hostname = null;
