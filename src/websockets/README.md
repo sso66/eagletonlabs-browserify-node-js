@@ -20,7 +20,7 @@
 #### Network socket
 > A network socket or simply socket serves as an internal endpoint for exchanging data between single-threaded Node.js applications running on the same computer or on different computers on the same network.
 >
-> Sockets are a key part of Unix and Windows-based operating systems, and they make it easier for developers to create network-enable software. Instead of constructing from scratch, app developers can include sockets in their programs. Since network sockets are used for a number of different network protocols (HTTP, FTP, Telnet etc.), several sockets can be used simultaneously.
+> Sockets are a key part of Unix and Windows-based operating systems, and they make it easier for developers to create network-enabled software. Instead of constructing from scratch, app developers can include sockets in their programs. Since network sockets are used for a number of different network protocols (HTTP, FTP, Telnet etc.), several sockets can be used simultaneously.
 >
 > Sockets are created and used with a set function calls, which are sometimes referred to as socket's application programming interface (API). Thanks to function calls, socket can be opened just like regular files.
 
