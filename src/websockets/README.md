@@ -45,7 +45,7 @@
   - **Connecting to a [UDP socket]**: udp_client.js / udp_server.js
 
 ### What WebSockets are
-> The Websocket communication protocol provides a full-duplex communicatiion channel over a single TCP connection.
+> The WebSocket communication protocol provides a full-duplex communication channel over a single TCP connection.
 >
 > In contrast to HTTPs, WebSockets don't require you to send a request to get a response. They alllow for bidirectional data flows, so you can just wait the server to respond. It will send you a message when it's available.
 >
