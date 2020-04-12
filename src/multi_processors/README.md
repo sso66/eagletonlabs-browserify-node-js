@@ -1,6 +1,6 @@
 ## multi_processors: Scaling Applications Using Multiple Processors in Node.js
 
-Scaling Applications Using Multiple Processors in Node.js
+Scaling Applications Using Multiple Processors in Node.js: Peer-to-Peer Message Passing
 
 - Understanding the **process** Module
 	- Understanding Process I/O Pipes
