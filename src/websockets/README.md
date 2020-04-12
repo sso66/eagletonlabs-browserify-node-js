@@ -27,16 +27,16 @@
 > There are several types of network sockets:
 - **Datagram Sockets** also known as connection-less sockets, use the User Datagram Prototol (UDP) - npm `dgram`.
   
-- **Stream sockets** also know as connection-oriented sockets, use the Tramission Control Protocoo (TCP) - npm 'net', Stream Control Transmission Protocol (SCTP), Datagram Congestion Control Protocol (DCCP). These sockets provide a bidirectional, reliable, sequenced, and unduplicated flow of data with *no record boundaries*.
+- **Stream sockets** also know as connection-oriented sockets, use the Tramission Control Protocoo (TCP) - npm `net`, Stream Control Transmission Protocol (SCTP), Datagram Congestion Control Protocol (DCCP). These sockets provide a bidirectional, reliable, sequenced, and unduplicated flow of data with *no record boundaries*.
   
-- **Raw socket** (or raw **IP sockets**) are typically available in routers and other networking equipment (e.g. IPG100 device). These sockets are nomally datagram-oriented, although their exact characteristics depend on the interface provided by the protocol. Raw sockets are not use by most applications. They're provided *to support the development of the new protocols* and *to provide access to more esoteric facilities of existing protocols.* 
+- **Raw socket** (or raw **IP sockets**) - npm `ip` are typically available in routers and other networking equipment (e.g. IPG100 device). These sockets are nomally datagram-oriented, although their exact characteristics depend on the interface provided by the protocol. Raw sockets are not use by most applications. They're provided *to support the development of the new protocols* and *to provide access to more esoteric facilities of existing protocols.* 
 
 ##### Socket communications
 > First, let's figure out how to ensure that every socket is unique. If they're not, you can't establish a reliable communication channel.
 >
 > Giving every `process` a unique PID helps to deal with the problem locally. But such an approach doesn't work over network.
 >
-> To create a unique within a given network, and the protocol and port are unique among we recommed using the TCP/IP - `ip` protocol. With the TCP/IP, the IP addresses of the network layer are unique within a given network, and the protocol and port are unique among host Node.js applications.
+> To create a unique within a given network, and the protocol and port are unique among we recommed using the TCP/IP protocol. With the TCP/IP, the IP addresses of the network layer are unique within a given network, and the protocol and port are unique among host Node.js applications.
 >
 > TCP and UDP are two major protocols for communicating between hosts. Explore how your Node.js application connect to TCP and UDP sockets.
 
