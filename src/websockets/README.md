@@ -27,7 +27,7 @@
 > There are several types of network sockets:
 - **Datagram Sockets** also known as connection-less sockets, use the User Datagram Prototol (UDP) - npm `dgram`.
   
-- **Stream sockets** also know as connection-oriented sockets, use the Tramission Control Protocoo (TCP) - npm 'net', Stream Control Transmission Protocol (SCTP), Datagram Congestion Control Protocol (DCCP). These sockets provide a bidirectional, reliable, sequenced, and unduplicated flow of data with no record boundaries.
+- **Stream sockets** also know as connection-oriented sockets, use the Tramission Control Protocoo (TCP) - npm 'net', Stream Control Transmission Protocol (SCTP), Datagram Congestion Control Protocol (DCCP). These sockets provide a bidirectional, reliable, sequenced, and unduplicated flow of data with *no record boundaries*.
   
 - **Raw socket** (or raw **IP sockets**) are typically available in routers and other networking equipment (e.g. IPG100 device). These sockets are nomally datagram-oriented, although their exact characteristics depend on the interface provided by the protocol. Raw sockets are not use by most applications. They're provided *to support the development of the new protocols* and *to provide access to more esoteric facilities of existing protocols.* 
 
