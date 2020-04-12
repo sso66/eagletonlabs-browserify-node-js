@@ -60,7 +60,7 @@
   - Only one TCP connection is required for a single web client.
   - WebSocket servers can push data to web clients.
 
-> The WebSocket protocol is relatively simple to implement. It uses the HTTP protocol for initial handshake. After a successful handshake, a connection is established and the WebSocket essential user raw TCP - `ip` to read/write data.
+> The WebSocket protocol is relatively simple to implement. It uses the HTTP protocol for initial handshake. After a successful handshake, a connection is established and the WebSocket essential user raw TCP to read/write data via `Duplex` steam. [WebSocket]
 
 #### Explore how to create WebSocket app lifecycle in Node.js and plain JavaScirpt or React.jsx
   - To write a simple WebSocket *URL* client connecting to echo.websocket.org server  based on the `http`/`net` libraries
