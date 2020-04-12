@@ -1,9 +1,11 @@
 ## websockets: Implementing WebSockets in Node.js
 #### Purpose:
-> Sending a message and getting an instance response without refreshing the page is something we take for granted. But in the past, enabling real-time functionality was  a real challenge for developers. 
+> Sending a message and getting an instant response without refreshing the page is something we take for granted. 
+>
+> But in the past, enabling real-time functionality was a real challenge for developers. 
 
 #### Reason:
-> The developer community has come a long from HTTP long polling and AJAX (Asynchronous JavaScript And XML - eXtensible Markup Language) and has finally found a solution for building truly real-time applications in Node.js.
+> The developer community has come a long way from HTTP long polling and AJAX (Asynchronous JavaScript And XML - eXtensible Markup Language) and has finally found a solution for building truly real-time applications in Node.js.
 >
 > This solution comes in the form of WebSockets, which make it possible to open an interactive session between a user's browser and a server. 
 >
