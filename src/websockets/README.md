@@ -36,9 +36,11 @@
 >
 > Giving every `process` a unique PID helps to deal with the problem locally. But such an approach doesn't work over network.
 >
-> To create a unique within a given network, and the protocol and port are unique among we recommed using the TCP/IP protocol. With the TCP/IP, the IP addresses of the network layer are unique within a given network, and the protocol and port are unique among host Node.js applications.
+> To create a unique socket, we recommet using TCP/IP protocol
 >
-> TCP and UDP are two major protocols for communicating between hosts. Explore how your Node.js application connect to TCP and UDP sockets.
+> With TCP/IP, the IP addresses of the network layer are unique within a given network, and the protocol and port are unique among the host applications.
+>
+> TCP and UDP are two major protocols for communicating between hosts. Explore how your Node.js application can connect to TCP and UDP sockets.
 
 ### What WebSockets are
 > The Websocket communication protocol provides a full-duplex communicatiion channel over a single TCP connection.
