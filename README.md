@@ -1,5 +1,4 @@
 # webpack-node.js
-Applying of Node.js
 - Getting Started With Node.js
 - Using Events, Listeners, and Callbacks in Node.js
 - Handling Data I/O in Node.js
@@ -10,5 +9,5 @@ Applying of Node.js
 - Using Additional Nodes.js Modules
 - Implementing UDP Services in Nodes.
 - Implementing raw IP Services in Node.js
-- Implementing Websocket in Node.js
+- Implementing WebSockets in Node.js
 - Implementing React.jsx in Node.js
