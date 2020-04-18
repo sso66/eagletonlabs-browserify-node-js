@@ -67,7 +67,7 @@ request.end();
  * - auth
  * - agent
  * 
- * Event available on http.ClientRequest object
+ * Events available on http.ClientRequest object
  * - response
  * - socket
  * - upgrade
