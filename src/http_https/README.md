@@ -42,7 +42,7 @@
 - Processing Query Strings and Form Parameters
 
 - Understanding Request, Response, and Server Objects
-  > To use the `http` module in Node.js application, you first need to 
+  > To use the `http` module in Node.js applications, you first need to 
   > understand the request and response objects. They provide the 
   > information and much of the functionality that comes into and out of 
   > HTTP clients and servers.
