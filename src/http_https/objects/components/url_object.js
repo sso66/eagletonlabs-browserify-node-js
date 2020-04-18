@@ -15,6 +15,7 @@ console.log("Mounting url_object.js...\n");
  * 
  * Following lists the basice structure of a URL and the components that may be
  * included. Not all of these components will be included in every HTTP request.
+ *
  * For example, most requests do not include the auth component, and many
  * do not include a query (URL) string or hash location.
  *
@@ -62,8 +63,8 @@ console.log("Mounting url_object.js...\n");
  *                 the query string parameter=values if the parseQueryString is set to true.
  * 11. hash -     The hash portion of the URL, including pound sign (#). 
  * 
- * The implementation of parsing the URLstring into and an object then 
- * converting back into string.
+ * The implementation of parsing the URL string into an object then converting back into string.
+ *
  */
 var url = require('url');
 var qs = require('querystring');
@@ -71,9 +72,11 @@ var qs = require('querystring');
 var urlStr = 'http://user:pass@host.com:80/resource/path?query=string#hash';
 console.log('From: URL String');
 console.log(urlStr);
+
 var urlObj = url.parse(urlStr, true, false);
 console.info('To: URL Object');
 console.log(urlObj);
+
 console.info('To: URL String');
 console.log(url.format(urlObj));
 
