@@ -30,7 +30,7 @@
 > WebSocket: `websocket`, TCP: `net`, UDP: `dgram` and IP: `ip` 
 > modules.
 >
-> Focus on the objects you use when implementing *clients* and
+> Focus on the Objects you use when implementing *clients* and
 > *servers* using `http` module.
 
 ### Implementing HTTP Services in Node.js 
