@@ -48,18 +48,18 @@ console.log("Mounting url_object.js...\n");
  * 
  * url.format(urlObj)
  * 
- * Following is the list of URL objects created by url.parse():
+ * Following is the list of propeties of URL object created and returned by url.parse():
  * 
  *  1. href -     This is the full URL string that was originally parsed. <a href='#'>Link/Anchor</a>.
  *  2. protocol - The request protocal. HTTP/HTTPS.
- *  3. post -     The full Host portion (hostname.domain) of the URL including port.
+ *  3. post -     The full host portion (hostname.domain) of the URL including port.
  *  4. auth -     The authentication information portion of a URL.
- *  5. hostname - The hostname portion of the Host.
- *  6. port -     The port number portion of the Host.
- *  7. pathname - The Path portion of the URL, including the initial slash ('route')
- *  8. search -   The Query String portion of the URL, including the leading question mark
+ *  5. hostname - The hostname portion of the host.
+ *  6. port -     The port number portion of the host.
+ *  7. pathname - The path portion of the URL, including the initial slash ('route')
+ *  8. search -   The query String portion of the URL, including the leading question mark
  *  9. path -     The full Path, including pathname and search.
- * 10; query -    This either parameter potion of the Query String or parsed object containing
+ * 10; query -    This either parameter potion of the query string or parsed object containing
  *                 the query string parameter=values if the parseQueryString is set to true.
  * 11. hash -     The hash portion of the URL, including pound sign (#). 
  * 
