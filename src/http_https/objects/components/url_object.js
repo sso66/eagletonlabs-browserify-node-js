@@ -67,7 +67,6 @@ console.log("Mounting url_object.js...\n");
  *
  */
 var url = require('url');
-var qs = require('querystring');
 
 var urlStr = 'http://user:pass@host.com:80/resource/path?query=string#hash';
 console.log('From: URL String');
