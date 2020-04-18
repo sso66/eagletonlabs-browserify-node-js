@@ -1,11 +1,11 @@
 // File: url_object.js
 // Note: Processing URLs
-// Date: 3/28/2020
+// Date: 04/18/2020
 //..............................................................................
 console.log("Mounting url_object.js...\n");
 /*
  * A uniform resource locator (URL) acts as an address label that an HTTP
- * server uses to handle requests form the client. It provides all the 
+ * server uses to handle requests from the client. It provides all the 
  * information needed to get a request to the correct server on a specific
  * port and to access the proper data.
  * 
@@ -25,7 +25,7 @@ console.log("Mounting url_object.js...\n");
  * URL string - http://user:pass@host.com:80/resource/path/?query=string#hash
  *  
  * To be able to use the URL information more effectively, Node.js provides 
- * the 'url' module, which provides fuctionality to convert a URL string into
+ * the 'url' module, which provides functionality to convert a URL string into
  * URL object
  * 
  * To create a URL object from URL string, pass the URL string as the first
@@ -38,7 +38,7 @@ console.log("Mounting url_object.js...\n");
  * The parseQueryString is a Boolean that when true also parses the query string
  * portion of the URL into object literal. The default is false.
  * 
- * The slashesDenoteHost is also a Boolean that when true parses a ULR with the 
+ * The slashesDenoteHost is also a Boolean that when true parses a URL with the 
  * format //host/path to {host: 'host', pathname: '/path'} instead of
  * {pathname: '/host/path'}. The default is false.
  * 
