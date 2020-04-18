@@ -69,7 +69,7 @@ var url = require('url');
 var qs = require('querystring');
 
 var urlStr = 'http://user:pass@host.com:80/resource/path?query=string#hash';
-console.log('From: URL Stirng');
+console.log('From: URL String');
 console.log(urlStr);
 var urlObj = url.parse(urlStr, true, false);
 console.info('To: URL Object');
@@ -82,7 +82,7 @@ console.log(url.format(urlObj));
 // output 
 // Mounting url_object.js...
 // 
-// From: URL Stirng
+// From: URL String
 // http://user:pass@host.com:80/resource/path?query=string#hash
 // To: URL Object
 // Url {
