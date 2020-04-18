@@ -6,29 +6,18 @@
 **Reason**
 > Node.js provides the `http` and `https` modues out of the box, and they give you a basic framework to do just about anything you might need to do from an HTTP and HTTPS standpoint.
 >
-> In fact, it is not difficult to implement a full webserver using
-> just the `http` module. However, the `http` module is pretty 
-> low level.
+> In fact, it is not difficult to implement a full webserver using just the `http` module. However, the `http` module is pretty low level.
 >
-> You will likely to use different module to handle routing, 
-> cookies, caching, etc. Explore `express` module to see the 
-> advantages of this module provides.
+> You will likely to use different module to handle routing, cookies, caching, etc. Explore `express` module to see the  advantages of this module provides.
 >
-> What you will more likely be using the `http` module for is 
-> implementing backend web services for your applications.
+> What you will more likely be using the `http` module for is implementing backend web services for your applications.
 
 **Impact**
-> This is where the `http` module is an invaluable tool in your
-> arsenal.
+> This is where the `http` module is an invaluable tool in your arsenal.
 >
-> You can create basic HTTP **servers** that provide and interface 
-> for communications behind your firewall, and then create basic
-> HTTP **clients** that interact with those services, for example,
-> WebSocket: `websocket`, TCP: `net`, UDP: `dgram` and IP: `ip` 
-> modules.
+> You can create basic HTTP **servers** that provide and interface for communications behind your firewall, and then create basic HTTP **clients** that interact with those services, for example, WebSocket: `websocket`, TCP: `net`, UDP: `dgram` and IP: `ip`  modules.
 >
-> Focus on the Objects you use when implementing *clients* and
-> *servers* using `http` module.
+> Focus on the Objects you use when implementing *clients* and *servers* using `http` module.
 
 ### Implementing HTTP Services in Node.js 
 
@@ -39,14 +28,10 @@
 - Processing Query Strings and Form Parameters
 
 - Understanding Request, Response, and Server Objects
-  > To use the `http` module in Node.js applications, you first need to 
-  > understand the request and response objects. They provide the 
-  > information and much of the functionality that comes into and out of 
-  > HTTP clients and servers.
+  > To use the `http` module in Node.js applications, you first need to understand the request and response objects. They provide the 
+  > information and much of the functionality that comes into and out of HTTP clients and servers.
   >
-  > Once you see the makeup of these **objects** - including the 
-  > **properties**, **methods** and **events** they provide - it will be simple 
-  > to implement your own HTTP servers and clients.
+  > Once you see the makeup of these **objects** - including the **properties**, **methods** and **events** they provide - it will be simple to implement your own HTTP servers and clients.
   
   - The http.ClientRequest Object
   - The http.ServerResponse Object
