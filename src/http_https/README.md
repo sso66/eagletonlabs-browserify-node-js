@@ -34,8 +34,6 @@
   > Once you see the makeup of these **objects** - including the **properties**, **methods** and **events** they provide - it will be simple to implement your own HTTP servers and clients.
   
   - The http.ClientRequest Object
-    |header | payload |
-    |-------|---------|
   - The http.ServerResponse Object
   - The http.IncomingMessage Object
   - The HTTP Server Object
