@@ -39,23 +39,16 @@
   - The HTTP Server Object
 	
 - Implementing HTTP Clients and Servers in Node.js
-	> Now that you understand the http.ClientRequest, http.ServerResponse, and
-	> http.IncomingMessage object, you are ready to jump in and implement some
+	> Now that you understand the http.ClientRequest, http.ServerResponse, and http.IncomingMessage object, you are ready to jump in and implement some
 	> Node.js HTTP clients and the servers.
 	>
-	> Follow the guidelines through the process of implementing basic HTTP 
-	> clients and servers in Node.js.
+	> Follow the guidelines through the process of implementing basic HTTP clients and servers in Node.js.
 	>
-	> You implement a client and server in each section to see how the two 
-	> interacts.
+	> You implement a client and server in each section to see how the two interacts.
 	>
-	> These sections are extremely basic to make it easy for you to grasp the
-	> concepts of starting the client/server and then handling the different
-	> types of request and responses.
+	> These sections are extremely basic to make it easy for you to grasp the concepts of starting the client/server and then handling the different types of request and responses.
 	>
-	> Notice there are no error handling, no protection against attack, and
-	> not much other functionality. However, they provide a variety of basic
-	> flow and structure required to handle HTTP request using `http` module.
+	> Notice there are no error handling, no protection against attack, and not much other functionality. However, they provide a variety of basic flow and structure required to handle HTTP request using `http` module.
 	
   - Serving Static Files
   - Implementing GET Servers
@@ -67,22 +60,14 @@
   - Creating a HTTPS Server
 
 - Summary
-> An important aspects of Node.js is the ability to implement HTTP and HTTPS servers and the
-> services quickly.
+> An important aspects of Node.js is the ability to implement HTTP and HTTPS servers and the services quickly.
 
-> The `http` and `https` modules provide everything you need to implement webserver basics.
-> For your full webserver, you are still going to want to use a more extended library, such
-> as `express`. 
+> The `http` and `https` modules provide everything you need to implement webserver basics. For your full webserver, you are still going to want to use a more extended library, such  as `express`. 
 
-> However, the `http` and `https` modules work well for some basics web services and are 
-> super simple to implement.
+> However, the `http` and `https` modules work well for some basics web services and are super simple to implement.
 
-> Here it covers enough HTTP basics to give you a good start on implementing your own
-> services. You also got a chance to seed how to use the `url` and `querystring` modules
-> to parse URLs and query strings into object and back.
+> Here it covers enough HTTP basics to give you a good start on implementing your own services. You also got a chance to seed how to use the `url` and `querystring` modules to parse URLs and query strings into object and back.
 
 - Up Next
-> You'll get a chance to go a little bit deeper and learn about the 'net` module. You
-> will also learn how to implement your own socket services, using TCP clients and
-> servers.
+> You'll get a chance to go a little bit deeper and learn about the 'net` module. You will also learn how to implement your own socket services, using TCP clients and servers.
 
