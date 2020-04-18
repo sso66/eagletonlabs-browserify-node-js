@@ -42,7 +42,7 @@ http.createServer(function(request, response) {
 	fs.readFile(ROOT_DIR + urlObj.pathname, function (err, data) {
 		if (err) {
 			response.writeHead(404);
-            		response.end(JSON.stringify(err));
+			response.end(JSON.stringify(err));
 			return;
 		}
 		response.writeHead(200);
