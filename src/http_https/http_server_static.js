@@ -1,9 +1,8 @@
 // File: http_server_static.js
 // Note: Serving Static Files
-// Date: 3/30/2020
+// Date: 04/18/2020
 //..............................................................................
 console.log("Mounting http_server_static.js...\n");
-
 /*
  * The most basic type of HTTP server is one that serves static files.
  * 
@@ -14,7 +13,7 @@ console.log("Mounting http_server_static.js...\n");
  * `fs` module, and then write the file contents to the response - 
  * http.ServerResponse object.
  * 
- * Following is the basic implemention of a static file server.
+ * Following is the basic implementation of a static file server.
  * 
  * Notice that it creates the server using createServer() and also defines the
  * request event handler; and, the server is listening on the port 8080 by 

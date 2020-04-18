@@ -17,7 +17,7 @@ console.log("Mounting http_client_get.js...\n");
  * the headers from the response are also logged. Then the full response from 
  * the server is logged.
  * 
- * It shows the output of the HTTP client as well as the dynamic GETT server 
+ * It shows the output of the HTTP client as well as the dynamic GET server 
  * being access from the web browser.
  * 
  */
@@ -26,6 +26,7 @@ var http = require('http');
 var options = {
 	hostname: 'localhost',
 	port: '8080',
+	path: '/'
 };
 
 function handleResponse(response) {

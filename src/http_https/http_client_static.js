@@ -32,6 +32,9 @@ function handleResponse(response) {
 		serverData += chunk;
 	});
 	response.on('end', function() {
+	    console.log("Response Status", response.statusCode);
+        console.log("Response Headers", response.headers);      
+
 		console.log(serverData);
 	});
 }
