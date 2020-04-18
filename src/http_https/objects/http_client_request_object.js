@@ -13,7 +13,7 @@ console.log("Mounting http_client_request_object.js...\n");
  * You use the http.ClientRequest object to initiate, monitor and handle the 
  * response from the server.
  * 
- * The http.ClientRequest object implements a << Writeble >> stream, so it 
+ * The http.ClientRequest object implements a << Writable >> stream, so it 
  * provides all the functionality of a Writable stram object. For example, you
  * can use the write() method to write to the http.ClientRequest object as well
  * as pipe a << Readable >> stream into it.
@@ -54,4 +54,31 @@ var request = http.request(options, function(response) {
 });
 request.end();
 
+/* 
+ * Options than can be specified when creating a http.ClientRequest object:
+ * - host
+ * - hostname
+ * - port
+ * - localAddress
+ * - socketPath
+ * - method
+ * - path
+ * - headers
+ * - auth
+ * - agent
+ * 
+ * Event available on http.ClientRequest object
+ * - response
+ * - socket
+ * - upgrade
+ * - continue
+ * 
+ * Methods available on http.ClientRequest object
+ * - write(chunk, [encoding])
+ * - end([data], encoding)
+ * - abort()
+ * - setTimeout(timeout, [callback])
+ * - setNoDelay([noDelay]
+ * - setSocketKeepAlive([enable], [initialDelay])
+ */
 // eof
