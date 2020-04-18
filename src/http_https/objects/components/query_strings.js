@@ -51,5 +51,8 @@ console.log('params: ' + querystring.stringify(params, sep, eq));
 // output
 // Mounting query_strings.js...
 // 
+
+// To query object
 // [Object: null prototype] { name: 'Stephen', color: [ 'red', 'blue' ] }
+// To query string
 // params: name==,===Stephen*,#color==,===red*,#color==,===blue
