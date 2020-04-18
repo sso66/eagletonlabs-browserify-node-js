@@ -22,7 +22,7 @@ var http = require('http');
 var options = {
 	hostname: 'localhost',
 	port: '8080',
-	path: '/homepage.html'
+	path: '/index.html'
 };
 
 function handleResponse(response) {
