@@ -1,11 +1,11 @@
-// File: url_object.js
+// File: url_components.js
 // Note: Resolving the URL Components
-// Date: 3/28/2020
+// Date: 04/18/2020
 //..............................................................................
 console.log("Mounting url_components.js...\n");
 /*
- * A useful feature of the 'url' module is the ability to resolve URL 
- * components in the same manner as a browser would.
+ * A useful feature of the 'url' module is the ability to resolve URL components
+ * in the same manner as a browser would.
  * 
  * This allows you to manipulate URL strings on the server side to make
  * adjustments in a URL. 
@@ -24,8 +24,9 @@ console.log("Mounting url_components.js...\n");
  * 
  */
 var url = require('url');
+
 var originalUrl = 'http://user:pass@host.com:80/resources/path?query=string#hash';
-var newResource = '/another/path?querynew';
+var newResource = '/another/path?querynew'; // pathname property of url object
 console.log(url.resolve(originalUrl, newResource));
 
 // eof
