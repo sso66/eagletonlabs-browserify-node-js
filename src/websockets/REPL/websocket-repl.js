@@ -1,13 +1,14 @@
 // File: websocket-repl.js
-// Note: JavaScript code for the remote control.
 // Date: 04/14/2020
+// Note: JavaScript code for the remote control.
 //..............................................................................
 console.log("Mounting websocket-repl.js...\n");
 
 var websocket = require("./websocket-example");
-var repl = require("repl");
+var repl = require("repl"); //  Read--evaluate--print loop
 
 var connections = Object.create(null);
+
 var remoteMultiEval = function(cmd, context, filename, callback) {
     for (var c in connections) {
         connections[c].send(cmd);
@@ -28,6 +29,7 @@ websocket.listen(9999, "localhost", function(conn) {
         delete connections[conn.id];
     });
 });
+
 repl.start({"eval": remoteMultiEval});
 
 // eof

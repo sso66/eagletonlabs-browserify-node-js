@@ -1,6 +1,6 @@
 // File: echo.js
-// Note: Building an Echo Server Using Your New Server API
-// Date: 04/14/2020
+// Date: 8/22/2020
+// Note: Building an Echo Server using official WebSocket API
 //..............................................................................
 console.log("Mounting echo.js...\n");
 

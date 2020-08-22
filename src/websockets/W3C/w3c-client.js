@@ -1,6 +1,6 @@
-// File: w3c_client.js
+// File: w3c-client.js
+// Date: 8/22/2020
 // Note: A simple WebSocket URL client connecting to echo.websocket.org server
-// Date: 3/31/2020
 //..............................................................................
 console.log("Mounting w3c_client.js...\n");
 
@@ -30,7 +30,10 @@ function onDisconnectClick() {
  */
 function openWSConnection(protocol, hostname, port, endpoint) {
     var webSocketURL = null;
-    // use hostname: echo.websocket.org for HTML5 WebSocket test against the echo server.
+    /* 
+     * use hostname: echo.websocket.org for HTML5 WebSocket test 
+     * against the echo server.
+     */
     webSocketURL = protocol + "://" + hostname + ":" + port + endpoint;
     console.log("openWSConnection::Connecting to: " + webSocketURL);
     try {
@@ -74,3 +77,5 @@ function onSendClick() {
     var msg = document.getElementById("message").value;
     webSocket.send(msg);
 }
+
+// eof
