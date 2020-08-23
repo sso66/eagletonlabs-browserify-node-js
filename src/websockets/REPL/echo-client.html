@@ -1,16 +1,16 @@
 <!doctype html>
 <html>
 <head>
-<title>WebSocket REPL Client</title>
+<title>WebSocket ECHO Client</title>
 <meta charset="utf-8">
 <style>
-    .repl-client { background: orange; }
+    .echo-client { background: lightblue; }
 </style>
 </head>
 
 <script>
     // URL = PROTOCOL://HOST:PORT/URI
-    var url = "ws://localhost:9999/repl";
+    var url = "ws://localhost:9999/echo";
     var ws = new WebSocket(url);
 
     ws.onmessage = function(e) {
@@ -24,6 +24,6 @@
     };
 </script>
 <body>
-    <div class='repl-client'>Remote Control</div>
+    <div class='echo-client'>Remote Control</div>
 </body>
 </html>

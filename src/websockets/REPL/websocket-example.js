@@ -1,11 +1,8 @@
 // File: websocket_server.js
 // Note: WebSocket Server API Written in JavaScript with Node.js
-// Date: 04/14/2020
+// Date: 08/23/2020
 //..............................................................................
-console.log("Mounting websocket-example.js...\n");
-
-// See The WebSocket Protocol for the official specification
-// http://tools.ietf.org/html/rfc6455
+console.log("Requiring websocket-example.js...\n");
 
 // See The WebSocket Protocol for the official specification
 // http://tools.ietf.org/html/rfc6455
@@ -15,22 +12,24 @@ var http = require("http");
 var crypto = require("crypto");
 var util = require("util");
 
-// opcodes for WebSocket frames
+// opcodes for WebSocket data frames
 // http://tools.ietf.org/html/rfc6455#section-5.2
 var opcodes = { 
-    TEXT    : 1,
-    BINARY  : 2, 
-    CLOSE   : 8,
-    PING    : 9, 
-    PONG    : 10
+    TEXT    : 1,    // 0x1
+    BINARY  : 2,    // 0x2
+    CLOSE   : 8,    // 0x8
+    PING    : 9,    // 0x9
+    PONG    : 10    // 0xA
 };
 
+// Create and open the WebSocket connection
 var WebSocketConnection = function(req, socket, upgradeHead) {
     var self = this;
+
     var key = hashWebSocketKey(req.headers["sec-websocket-key"]);
+
     // handshake response
     // http://tools.ietf.org/html/rfc6455#section-4.2.2
-
     socket.write('HTTP/1.1 101 Web Socket Protocol Handshake\r\n' + 
         'Upgrade: WebSocket\r\n' +
         'Connection: Upgrade\r\n' +
@@ -38,22 +37,22 @@ var WebSocketConnection = function(req, socket, upgradeHead) {
         '\r\n\r\n'
     );
     
-    socket.on("data", function(buf) {
-        self.buffer = Buffer.concat([self.buffer, buf]);
+    socket.on("data", function(dataEvent) {
+        self.buffer = Buffer.concat([self.buffer, dataEvent]);
     
         while(self._processBuffer()) {
-            // process buffer while it contains complete frames
+            // process buffer while it contains complete data frames
         }
     });
 
-    socket.on("close", function(had_error) {
+    socket.on("close", function(closeEvent) {
         if (!self.closed) {
             self.emit("close", 1006);
             self.closed = true;
         }
     });
 
-    // initialize connection state
+    // initialize connection state for the instance of WebSocket class object
     this.socket = socket;
     this.buffer = new Buffer.alloc(0);
     this.closed = false;
@@ -65,6 +64,7 @@ util.inherits(WebSocketConnection, events.EventEmitter);
 WebSocketConnection.prototype.send = function(obj) {
     var opcode;
     var payload;
+
     if (Buffer.isBuffer(obj)) {
         opcode = opcodes.BINARY;
         payload = obj;
@@ -75,6 +75,7 @@ WebSocketConnection.prototype.send = function(obj) {
     } else {
         throw new Error("Cannot send object. Must be String or Buffer");
     }
+
     this._doSend(opcode, payload);
 };
 
@@ -82,6 +83,7 @@ WebSocketConnection.prototype.send = function(obj) {
 WebSocketConnection.prototype.close = function(code, reason) {
     var opcode = opcodes.CLOSE;
     var buffer;
+
     // Encode close and reason
     if (code) {
         buffer = Buffer.from(Buffer.byteLength(reason) + 2);
@@ -97,22 +99,28 @@ WebSocketConnection.prototype.close = function(code, reason) {
 // Process incoming bytes
 WebSocketConnection.prototype._processBuffer = function() {
     var buf = this.buffer;
+
     if (buf.length < 2) {
         // insufficient data read
         return;
     }
+
+    // Data Frame format:
     var idx = 2;
+
     var b1 = buf.readUInt8(0);
     var fin = b1 & 0x80;
     var opcode = b1 & 0x0f; // low four bits
     var b2 = buf.readUInt8(1);
     var mask = b2 & 0x80;
     var length = b2 & 0x7f; // low 7 bits
+
     if (length > 125) {
         if (buf.length < 8) {
             // insufficient data read
             return;
         }
+
         if (length == 126) {
             length = buf.readUInt16BE(2);
             idx += 2;
@@ -126,21 +134,25 @@ WebSocketConnection.prototype._processBuffer = function() {
             idx += 8;
         }
     }
+
     if (buf.length < idx + 4 + length) {
         // insufficient data read
         return;
     }
+
     maskBytes = buf.slice(idx, idx+4);
     idx += 4;
     var payload = buf.slice(idx, idx+length);
     payload = unmask(maskBytes, payload);
     this._handleFrame(opcode, payload);
+
     this.buffer = buf.slice(idx+length);    
     return true;
 };
 
 WebSocketConnection.prototype._handleFrame = function(opcode, buffer) {
     var payload;
+
     switch (opcode) {
         case opcodes.TEXT:
             payload = buffer.toString("utf8");
@@ -184,7 +196,6 @@ WebSocketConnection.prototype._doSend = function(opcode, payload) {
 };
 
 var KEY_SUFFIX = "258EAFA5-E914-47DA-95CA-C5AB0DC85B11";
-
 var hashWebSocketKey = function(key) {
     var sha1 = crypto.createHash("sha1");
     sha1.update(key+KEY_SUFFIX, "ascii");
@@ -192,12 +203,13 @@ var hashWebSocketKey = function(key) {
 };
 
 var unmask = function(maskBytes, data) {
-    var payload = new Buffer(data.length);
+    var payload = Buffer.alloc(data.length);
     for (var i=0; i<data.length; i++) {
         payload[i] = maskBytes[i%4] ^ data[i];
     }
     return payload;
 };
+
 var encodeMessage = function(opcode, payload) {
     var buf;
     // first byte: fin and opcode
@@ -208,14 +220,20 @@ var encodeMessage = function(opcode, payload) {
     var b2 = 0; // server does not mask frames
     var length = payload.length;
     if (length<126) {
-        buf = new Buffer(payload.length + 2 + 0);
+        // The Buffer() and new Buffer() constructors are not recommended 
+        // for use due to security and usability concerns. 
+        // Please use the new Buffer.alloc(), Buffer.allocUnsafe(), or 
+        // Buffer.from() construction methods instead.
+        // buf = new Buffer(payload.length + 2 + 0);
+        buf = Buffer.alloc(payload.length + 2 + 0);
         // zero extra bytes
         b2 |= length;
         buf.writeUInt8(b1, 0);
         buf.writeUInt8(b2, 1);
         payload.copy(buf, 2);
     } else if (length<(1<<16)) {
-        buf = new Buffer(payload.length + 2 + 2);
+        // buf = new Buffer(payload.length + 2 + 2);
+        buf = Buffer.alloc(payload.length + 2 + 2);
         // two bytes extra
         b2 |= 126;
         buf.writeUInt8(b1, 0);
@@ -224,7 +242,8 @@ var encodeMessage = function(opcode, payload) {
         buf.writeUInt16BE(length, 2);
         payload.copy(buf, 4);
     } else {
-        buf = new Buffer(payload.length + 2 + 8);
+        // buf = new Buffer(payload.length + 2 + 8);
+        buf = Buffer.alloc(payload.length + 2 + 8);
         // eight bytes extra
         b2 |= 127;
         buf.writeUInt8(b1, 0);
@@ -241,15 +260,17 @@ var encodeMessage = function(opcode, payload) {
 
 exports.listen = function(port, host, connectionHandler) {
     var srv = http.createServer(function(req, res) {
+        console.log('req: ' + 'res: ' + res);
     });
 
     srv.on('upgrade', function(req, socket, upgradeHead) {
         var ws = new WebSocketConnection(req, socket, upgradeHead);
         connectionHandler(ws);
     });
+    
     srv.listen(port, host);
 };  
 
-// eof
 
+// eof
      

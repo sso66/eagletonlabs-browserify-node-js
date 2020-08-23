@@ -34,7 +34,7 @@ function openWSConnection(protocol, hostname, port, endpoint) {
      * use hostname: echo.websocket.org for HTML5 WebSocket test 
      * against the echo server.
      */
-    webSocketURL = protocol + "://" + hostname + ":" + port + endpoint;
+    webSocketURL = protocol + "://" + hostname + ":" + port + "/" + endpoint;
     console.log("openWSConnection::Connecting to: " + webSocketURL);
     try {
         webSocket = new WebSocket(webSocketURL);
