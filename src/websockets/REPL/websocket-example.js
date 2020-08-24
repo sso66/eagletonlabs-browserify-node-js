@@ -71,7 +71,7 @@ WebSocketConnection.prototype.send = function(obj) {
     } else if (typeof obj == "string") {
         opcode = opcodes.TEXT;
         // create a new buffer containing the UTF-8 encoded string
-        payload = new Buffer(obj, "utf8");
+        payload = Buffer.from(obj);
     } else {
         throw new Error("Cannot send object. Must be String or Buffer");
     }
@@ -90,7 +90,7 @@ WebSocketConnection.prototype.close = function(code, reason) {
         buffer.writeUInt16BE(code, 0);
         buffer.write(reason, 2);
     } else {
-        buffer = new Buffer.alloc(0);
+        buffer = Buffer.alloc(0);
     }
     this._doSend(opcode, buffer);
     this.closed = true;
