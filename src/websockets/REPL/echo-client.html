@@ -13,10 +13,10 @@
     var url = "ws://localhost:9999/echo";
     var ws = new WebSocket(url);
 
-    ws.onmessage = function(e) {
-        console.log("command: ", event.data);
+    ws.onmessage = function(messageEvent) {
+        console.log("command: ", messageEvent.data);
         try {
-            var result = eval(event.data);
+            var result = eval(messageEvent.data);
             ws.send(result.toString());
         } catch (error) {
             ws.send(error.toString());
@@ -24,6 +24,9 @@
     };
 </script>
 <body>
-    <div class='echo-client'>Remote Control</div>
+    <div class='echo-client'>
+        <h2>Remote Control</h2>
+        <p>Understanding WebSocket Real-Time Communications and Messaging</p>
+    </div>
 </body>
 </html>
