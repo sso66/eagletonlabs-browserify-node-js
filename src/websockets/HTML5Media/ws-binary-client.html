@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Upload Files</title>
+    </head>
+    <body>
+        <h2>File Upload</h2>
+        Select file
+        <form>
+            <input type="file" id="filename" />
+            <br />
+            <input type="button" value="Connect" onclick="connectServer()" />
+            <br />
+            <input type="button" value="Upload" onclick="sendFile()" />
+        </form>
+        <script>
+            var ws;
+
+            function connectServer() {
+                ws = new WebSocket("ws://echo.websocket.org/echo");
+                ws.binaryType = "arraybuffer";
+                ws.binaryType = "blob";
+
+                ws.onopen = function(openEvent) {
+                    alert("Connected.");
+                };
+
+                ws.onmessage = function(messageEvent) {
+                    alert(messageEvent.msg);
+                };
+
+                ws.onclose = function(closeEvent) {
+                    alert("Connection is closed...");
+                };
+
+                ws.onerror = function(errorEvent) {
+                    alert(errorEvent.msg);
+                }
+            }
+
+            function sendFile() {
+                var file = document.getElementById('filename').files[0];
+                var reader = new FileReader();
+                var buffer = new ArrayBuffer();  
+
+                reader.loadend = function() {
+                    // to do...
+                }
+                
+                reader.onload = function(e) {
+                    buffer = e.target.result;
+                    ws.send(buffer);
+                    alert("the File has been transferred.")
+                }
+                // reader.readAsArrayBuffer(file);
+                reader.readAsBinaryString(file);
+            }
+        </script>
+    </body>
+</html>

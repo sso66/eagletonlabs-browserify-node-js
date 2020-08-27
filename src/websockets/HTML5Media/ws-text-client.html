@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WebSocket Text Client</title>
+        <style>
+            body {
+			    display: flex;
+			    flex-flow: column nowrap;
+                width: 50%;                
+                margin: auto;
+                background: black;
+                color: white; 
+            }
+
+            #output { 
+			    background: darkorange; 
+                border: 5px solid white; 
+                padding: 5px;
+                color: black !important;
+			}
+		</style>
+    </head>
+    <body>
+        <h2>Websocket Text Client</h2>
+        <h3>Connection Lifecycle & Message Transmission</h3>
+        <div id="output"></div>
+
+        <script>
+            // Check for WebSocket support.
+            if (window.WebSocket){
+                console.log("This browser supports WebSocket!");
+            } else {
+                console.log("This browser does not support WebSocket.");
+            }    
+
+            // Construct a msg object containing the data the server need to process
+            // from the client
+            let msg = "Hello WebSocket";
+
+            // Initialize WebSocket connection and event handlers.
+            function setup() {
+                var output = document.getElementById("output");
+
+                // Create an instance of WebSocket object.
+                ws = new WebSocket("ws://echo.websocket.org/echo");
+            
+                // Listen for the connection open event then call the sendMessage function.
+                ws.onopen = function(openEvent) {
+                    log("Connected");
+                    sendMessage(msg)
+                }
+            
+                // Listen for the close connection event.
+                ws.onclose = function(closeEvent) {
+                    log("Disconnected: " + closeEvent.code + " : " + closeEvent.reason);
+                }
+            
+                // Listen for connection errors.
+                ws.onerror = function(errorEvent) {
+                    log("Error: ");
+                }
+                
+                // Listen for new messages arriving at the client from server.
+                ws.onmessage = function(messageEvent) {
+                    if (typeof messageEvent.data === "string") {
+                        log("Message received: " +  messageEvent.data);
+                    } else {
+                        log("Other type of message received: " + messageEvent.data);
+                    }
+          
+                    // Close the socket once one message has arrived.
+                    ws.close(1000, "Closing normally");	// code, reason
+                }
+            }
+            
+            // Send a message on the WebSocket instance.
+            function sendMessage(msg){
+                ws.send("Hello WebSocket!");
+                log("Message sent");
+            }
+
+            // Display logging information in the document.
+            function log(s) {
+                var p = document.createElement("p");
+                p.style.wordWrap = "word-break";
+                p.textContent = s;
+                output.appendChild(p);
+                // Also log information on the javascript console object.
+                console.log(s);
+            }
+
+            // Start running the example WebSocket application client.
+            setup();
+        </script>
+    </body>
+</html>
