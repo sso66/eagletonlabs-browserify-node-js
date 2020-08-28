@@ -2,7 +2,7 @@
 // Note: Converting JSON String to JavaScript Object
 // Date: 04/06/2020
 //..............................................................................
-console.log("Mounting json2js.js...");
+console.log("Mounting json2js.js...JSON.parse(text[, reviver])");
 /*
  * A JSON string represents a JavaScript Object in string form. The string 
  * syntax is very similar to code, so it is easy to understand.
