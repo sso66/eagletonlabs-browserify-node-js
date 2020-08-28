@@ -1,6 +1,6 @@
 // File: js2json.js
 // Note: Converting JavaScript Object to JSON String
-// Date: 04/05/2020
+// Date: 08/28/2020
 //..............................................................................
 console.log("Mounting js2json.js...");
 /*
@@ -8,7 +8,7 @@ console.log("Mounting js2json.js...");
  * JSON string.
  * 
  * Thus, you can store the string form in a file or database, send across an
- * HTTP connection, or write it to a stream or buffer.
+ * HTTP connection, WebSocket connection, or write it to a stream or buffer.
  * 
  * You use the JSON.stringify(object) method to parse a JavaScript object and
  * generate a JSON string.
