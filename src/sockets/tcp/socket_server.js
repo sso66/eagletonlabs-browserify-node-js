@@ -24,28 +24,44 @@ var net = require('net');
 
 var server = net.createServer(function(client) {
     console.log('Client connection: ');
-    console.log( ' local = %s:%s', this.localAddress, client.localPort);
-    console.log( ' remote = %s:%s', this.remoteAddress, client.remotePort); 
+    console.log( '--> local = %s:%s', this.localAddress, client.localPort);
+    console.log( '--> remote = %s:%s', this.remoteAddress, client.remotePort); 
         
     client.setTimeout(500);
     client.setEncoding('utf8'); 
-    
+
     client.on('data', function(data) {
-        console.log('Received data from client on port %d: %s', 
+        console.log('\t\n<-- Response data from server');
+        data = `
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <title>501 - Not Implemented</title>
+            </head>
+            <body>
+                <h1>501 - Not Implemented</h1>
+            </body>
+            </html>
+        `;
+
+        console.log('--> Received data from client on port %d: %s', 
                client.remotePort, data.toString());
-        console.log(' Bytes received: ' + client.bytesRead);
-        writeData(client, 'Sending: ' + data.toString());
-        console.log(' Bytes sent ' + client.bytesWritten);
+        console.log('--> Bytes received: ' + client.bytesRead);
+        writeData(client, data.toString());
+        console.log('<-- Bytes sent ' + client.bytesWritten);
     });
+
     client.on('end', function() {
         console.log("Client disconnected");
         server.getConnections(function(err, count) {
            console.log('Remaining Connections: ' + count);
         });
     });
+
     client.on('error', function(err) {
         console.log("Socket Error: " + JSON.stringify(err));
     });
+
     client.on('timeout', function() {
         console.log("Socket Timed Out");
     });
@@ -56,6 +72,7 @@ server.listen(8107, function() {
    server.on('close', function() {
        console.log("Server Terminated");
    }); 
+
    server.on('error', function(err) {
        console.log("Server Error: " + JSON.stringify(err));
    }); 
