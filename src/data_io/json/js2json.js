@@ -2,7 +2,7 @@
 // Note: Converting JavaScript Object to JSON String
 // Date: 08/28/2020
 //..............................................................................
-console.log("Mounting js2json.js...JSON.stringify(value[, replacer[, space]])");
+// console.log("Mounting js2json.js...JSON.stringify(value[, replacer[, space]])");
 /*
  * Node.js allows you to convert JavaScript object into a properly formatted 
  * JSON string.
