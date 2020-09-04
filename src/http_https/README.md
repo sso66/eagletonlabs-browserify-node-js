@@ -15,30 +15,30 @@
 **Impact**
 > This is where the `http` module is an invaluable tool in your arsenal.
 >
-> You can create basic HTTP **servers** that provide and interface for communications behind your firewall, and then create basic HTTP **clients** that interact with those services, for example, WebSocket: `websocket`, TCP: `net`, UDP: `dgram` and IP: `ip`  modules.
+> You can create basic HTTP **servers** that provide and interface for communications behind your firewall, and then create basic HTTP **clients** that interact with those services, for example, WebSocket: `ws`, TCP: `net`, UDP: `dgram` and IP: `ip`  modules.
 >
 > Focus on the Objects you use when implementing *clients* and *servers* using `http` module.
 
 ### Implementing HTTP Services in Node.js 
 
-- Processing URLs
+- *Processing URLs: 'url' npm*
   - Understanding URL Object
   - Resolving the URL Components
 	
-- Processing Query Strings and Form Parameters
+- *Processing Query Strings and Form Parameters: 'querystring' npm*
 
-- Understanding Request, Response, and Server Objects
+- *Understanding Request, Response, and Server Objects*
   > To use the `http` module in Node.js applications, you first need to understand the request and response objects. They provide the 
   > information and much of the functionality that comes into and out of HTTP clients and servers.
   >
   > Once you see the makeup of these **objects** - including the **properties**, **methods** and **events** they provide - it will be simple to implement your own HTTP servers and clients.
   
-  - The http.ClientRequest Object
+  - The http.ClientRequest Object 
   - The http.ServerResponse Object
   - The http.IncomingMessage Object
   - The HTTP Server Object
 	
-- Implementing HTTP Clients and Servers in Node.js
+- *Implementing HTTP Clients and HTTP Servers in Node.js*
 	> Now that you understand the http.ClientRequest, http.ServerResponse, and http.IncomingMessage object, you are ready to jump in and implement some
 	> Node.js HTTP clients and the servers.
 	>
