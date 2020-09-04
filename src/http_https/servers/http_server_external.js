@@ -111,8 +111,8 @@ http.createServer(function(request, response) {
   } 
 }).listen(8080);
 
-// url = 'http://127.0.0.1:8080';
-// console.log('HTTP web server runnig at ' + url);
+url = 'http://127.0.0.1:8080';
+console.log('HTTP web server runnig at ' + url);
 
 // eof
 
