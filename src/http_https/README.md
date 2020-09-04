@@ -21,13 +21,13 @@
 
 ### Implementing HTTP Services in Node.js 
 
-- **Processing URLs**
+- *Processing URLs: 'url' npm*
   - Understanding URL Object
   - Resolving the URL Components
 	
-- Processing Query Strings and Form Parameters
+- *Processing Query Strings and Form Parameters: 'querystring' npm
 
-- Understanding Request, Response, and Server Objects
+- * Understanding Request, Response, and Server Objects*
   > To use the `http` module in Node.js applications, you first need to understand the request and response objects. They provide the 
   > information and much of the functionality that comes into and out of HTTP clients and servers.
   >
@@ -38,7 +38,7 @@
   - The http.IncomingMessage Object
   - The HTTP Server Object
 	
-- Implementing HTTP Clients and Servers in Node.js
+- *Implementing HTTP Clients and HTTP Servers in Node.js*
 	> Now that you understand the http.ClientRequest, http.ServerResponse, and http.IncomingMessage object, you are ready to jump in and implement some
 	> Node.js HTTP clients and the servers.
 	>
