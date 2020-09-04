@@ -15,7 +15,7 @@
 **Impact**
 > This is where the `http` module is an invaluable tool in your arsenal.
 >
-> You can create basic HTTP **servers** that provide and interface for communications behind your firewall, and then create basic HTTP **clients** that interact with those services, for example, WebSocket: `websocket`, TCP: `net`, UDP: `dgram` and IP: `ip`  modules.
+> You can create basic HTTP **servers** that provide and interface for communications behind your firewall, and then create basic HTTP **clients** that interact with those services, for example, WebSocket: `ws`, TCP: `net`, UDP: `dgram` and IP: `ip`  modules.
 >
 > Focus on the Objects you use when implementing *clients* and *servers* using `http` module.
 
