@@ -25,7 +25,7 @@
   - Understanding URL Object
   - Resolving the URL Components
 	
-- *Processing Query Strings and Form Parameters: 'querystring' npm
+- *Processing Query Strings and Form Parameters: 'querystring' npm*
 
 - * Understanding Request, Response, and Server Objects*
   > To use the `http` module in Node.js applications, you first need to understand the request and response objects. They provide the 
