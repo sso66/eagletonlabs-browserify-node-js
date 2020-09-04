@@ -1,6 +1,6 @@
 // File: http_client_request_object.js
-// Note: Implementing http.ClientRequest object
-// Date: 3/28/2020
+// Note: Understanding http.ClientRequest Object
+// Date: 9/4/2020
 //..............................................................................
 console.log("Mounting http_client_request_object.js...\n");
 /*
@@ -14,7 +14,7 @@ console.log("Mounting http_client_request_object.js...\n");
  * response from the server.
  * 
  * The http.ClientRequest object implements a << Writable >> stream, so it 
- * provides all the functionality of a Writable stram object. For example, you
+ * provides all the functionality of a Writable stream object. For example, you
  * can use the write() method to write to the http.ClientRequest object as well
  * as pipe a << Readable >> stream into it.
  * 
@@ -26,8 +26,8 @@ console.log("Mounting http_client_request_object.js...\n");
  * The options parameter is an object (meta) who properties define how to open
  * and send the HTTP request to the server.
  * 
- * The callback parameter is a callback function that is call after a request is
- * sent to the server and handle the response back from the server. The only 
+ * The callback parameter is a callback function that is call after a request 
+ * is sent to the server and handle the response back from the server. The only 
  * parameter to the callback is and http.IncomingMessage object that is the 
  * response from the server.
  * 
@@ -42,16 +42,19 @@ var options = {
   port: 8080,
   method: 'POST',
 };
-
+// Create http.ClientRequest object internally
 var request = http.request(options, function(response) {
   var str = '';
+	
   response.on('data', function(chunk) {
     str += chunk;
   });
+	
   response.on('end', function() {
     console.log(str);
   });
 });
+
 request.end();
 
 /* 
@@ -70,6 +73,7 @@ request.end();
  * Events available on http.ClientRequest object
  * - response
  * - socket
+ * - connect
  * - upgrade
  * - continue
  * 

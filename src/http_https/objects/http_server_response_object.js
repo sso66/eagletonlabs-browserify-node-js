@@ -1,6 +1,6 @@
 // File: http_server_response_object.js
-// Note: Implementing http.ServerResponse object
-// Date: 3/30/2020
+// Note: Understanding http.ServerResponse object
+// Date: 9/4/2020
 //..............................................................................
 console.log("Mounting http_server_response_object.js...\n");
 /*

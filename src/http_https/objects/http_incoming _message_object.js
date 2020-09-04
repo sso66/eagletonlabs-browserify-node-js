@@ -1,6 +1,6 @@
 // File: http_incoming_message_object.js
-// Note: Implementing http.IncomingMessage object
-// Date: 3/30/2020
+// Note: Understanding http.IncomingMessage Object
+// Date: 9/4/2020
 //..............................................................................
 console.log("Mounting http_incoming_message_object.js...\n");
 /*
@@ -15,13 +15,15 @@ console.log("Mounting http_incoming_message_object.js...\n");
  * the functionality is basically the same.
  * 
  * The http.IncomingMessage object implements a << Readable >> stream, allowing
- * you to read the client request or server response as a streaming source.
+ * you to read the client request or server response as a streaming source. This
+ * means that the readable and data events can be listened on and usesd to read
+ * data from the stream.
  * 
  * In addition to the functionality provided by the << Readable >> class,
- * http.IncomingMessage objects als provide the properties, events and 
+ * http.IncomingMessage objects also provide the properties, events and 
  * methods. 
  * 
- * These following list allows you to access informaiton from the client request
+ * These following list allows you to access information from the client request
  * or the server response.
  * 
  * Properties:
