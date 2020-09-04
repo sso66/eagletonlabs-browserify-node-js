@@ -34,10 +34,10 @@
   > Once you see the makeup of these **objects** - including the **properties**, **methods** and **events** they provide - it will be simple to implement your own HTTP servers and clients.
   
   - The http.ClientRequest Object
-  > The `ClientRequest` object is created internally when you call `http.request() when building an HTTP client. This object is intended to represent the request
-  > while it is in progress to the server. You use the `ClientReq uest` object to initiate, monitor and handle the response from the server.
+  > The `ClientRequest` object is created internally when you call `http.request()` when building an HTTP client. This object is intended to represent the request
+  > while it is in progress to the server. You use the `ClientRequest` object to initiate, monitor and handle the response from the server.
   >
-  > The `ClientRequest` object implements `Writeable` stream, so it provides all the functionalityof a `Writable` stream object. For example, you can use the 
+  > The `ClientRequest` object implements `Writeable` stream, so it provides all the functionality of a `Writable` stream object. For example, you can use the 
   > `write()` method write to the `ClientRequest` object as well as pipe a `Readable` stream into it.
   >
   > To implement a `ClientRequest` object, you call to `http.request()` with the following syntax:
