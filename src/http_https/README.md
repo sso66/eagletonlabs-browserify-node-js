@@ -38,7 +38,8 @@
   	- the http.ServerResponse Object
   	- the http.IncomingMessage Object
   	- the HTTP Server Object
-  > Lessons learned about the most important events, properties and methods that each provides.
+  >
+  > Learn about the most important events, properties and methods that each provides.
 	
 - *Implementing HTTP Clients and HTTP Servers in Node.js*
 	> Now that you understand the http.ClientRequest, http.ServerResponse, and http.IncomingMessage object, you are ready to jump in and implement some
