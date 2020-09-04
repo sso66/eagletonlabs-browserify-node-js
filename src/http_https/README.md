@@ -21,7 +21,7 @@
 
 ### Implementing HTTP Services in Node.js 
 
-- Processing URLs
+- **Processing URLs**
   - Understanding URL Object
   - Resolving the URL Components
 	
