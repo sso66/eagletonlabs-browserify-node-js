@@ -32,11 +32,14 @@
   > information and much of the functionality that comes into and out of HTTP clients and servers.
   >
   > Once you see the makeup of these **objects** - including the **properties**, **methods** and **events** they provide - it will be simple to implement your own HTTP servers and clients.
-  
-  - The http.ClientRequest Object 
-  - The http.ServerResponse Object
-  - The http.IncomingMessage Object
-  - The HTTP Server Object
+  >
+  > The following sections cover the purposes and behaviors of 
+  	- the http.ClientRequest Object 
+  	- the http.ServerResponse Object
+  	- the http.IncomingMessage Object
+  	- the HTTP Server Object
+  >
+  > Learn about the most important events, properties and methods that each provides.
 	
 - *Implementing HTTP Clients and HTTP Servers in Node.js*
 	> Now that you understand the http.ClientRequest, http.ServerResponse, and http.IncomingMessage object, you are ready to jump in and implement some
