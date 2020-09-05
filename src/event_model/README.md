@@ -1,4 +1,4 @@
-## event_model: Using Events, Listeners, Timers, and Callback in Node.js
+## event_model: Using Events, Listeners, Timers, and Callbacks in Node.js
 
 Using Events, Listeners, Timers, and Callbacks 
 
