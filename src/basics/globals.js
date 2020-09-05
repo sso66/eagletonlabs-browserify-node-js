@@ -65,7 +65,7 @@ console.log(process.platform);
 // Print the current directory
 console.log('Current directory ' + process.cwd());
 
-// Print the proces version
+// Print the process version
 console.log('Current version: ' + process.version);
 
 console.log(process.memoryUsage());
