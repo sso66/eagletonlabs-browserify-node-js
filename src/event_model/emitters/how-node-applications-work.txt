@@ -1,0 +1,8 @@
+In Node Application, any async function accepts a callback as the last parameter and a
+callback function accepts an error as the first parameter. 
+
+Here fs.readFile() is asych function whose purpose is to read a file. If an error occurs
+during the read operation, the the error object will contain the corresponding error else
+data will contain the contents of the file. readFile() function passes error and data to
+the callback function after the read operations is complete, which finally prints the content.
+
