@@ -20,7 +20,6 @@ function printHello() {
 // const interval = setInterval(printHello, 2000);
 // clearInterval(interval)
 
-
 // ___ core NPM 'console' ___
 console.info("Program Started");
 
@@ -69,6 +68,5 @@ console.log('Current directory ' + process.cwd());
 console.log('Current version: ' + process.version);
 
 console.log(process.memoryUsage());
-
 
 // eof
