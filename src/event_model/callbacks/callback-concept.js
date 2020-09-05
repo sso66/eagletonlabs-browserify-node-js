@@ -9,7 +9,7 @@ const fs = require('fs')
 // For example, a function to read a file may start reading a file and return
 // the control to the execution environment immediately so that the next 
 // instruction can be executed. Once file I/O is complete, it will call the
-// call back function while passing the callback functio, the contend of the 
+// callback function while passing the callback functio, the contend of the 
 // file as a parameter. So there is no blocking or wait for File I/O. This
 // makes Node.js highly scalable, as it can process a high number of requests
 // without waiting for any function to return results. 
