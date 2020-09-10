@@ -2,7 +2,7 @@
 
 Scaling Applications Using Multiple Processors in Node.js: Peer-to-Peer Message Passing
 
-- Understanding the **process** Module
+- Understanding the **process** Module: Node.js Global Object
 	- Understanding Process I/O Pipes
 	- Understanding Process Signals
 	- Controlling Process Execution with process Module
