@@ -4,12 +4,13 @@
 
 // Based on the location of the program, it will print the
 // current filename and current directory, respectively.
-console.log('filename:' + __filename);
-console.log('dirname: ' + __dirname);
+console.log('\nUnderstanding Node.js Global Objects: modules and packages\n')
+console.log('filename: ' + __filename); // represent node module
+console.log('dirname: ' + __dirname); // represent node package
 
 // named callback function
 function printHello() {
-    console.log('Hello, World!');
+    console.log('console module I/O: Hello, World!');
 }
 
 // call the above function after 2 seconds
@@ -21,7 +22,7 @@ function printHello() {
 // clearInterval(interval)
 
 // ___ core NPM 'console' ___
-console.info("Program Started");
+console.info("\nProgram Started");
 
 const counter = 10;
 console.log('Counter: %d', counter);
@@ -35,7 +36,7 @@ for (let i = 0; i < counter; i++) {
 
 console.timeEnd('Getting data')
 
-console.info('Program Ended');
+console.info('Program Ended\n');
 
 // ___ core NPM 'process' ___
 process.on('exit', function(code) {
@@ -49,8 +50,8 @@ process.on('exit', function(code) {
     console.log('About to exit with code:', code);
 });
 
-// Printing to console
-process.stdout.write('Hello World!' + '\n');
+// __ process print out to console
+process.stdout.write('process module I/O: Hello World!' + '\n');
 
 // Reading passed parameter
 process.argv.forEach(function(val, index, array) {
@@ -59,7 +60,6 @@ process.argv.forEach(function(val, index, array) {
 
 // Platform Information
 console.log(process.platform);
-
 
 // Print the current directory
 console.log('Current directory ' + process.cwd());
