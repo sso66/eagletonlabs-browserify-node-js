@@ -1,12 +1,16 @@
 {
-  "injectChanges": false,
-  "files": [ "./**/*.{ html,htm,css,js }" ],
-  "watchOptions": { "ignored": "node_modules" },
-  "server": { "baseDir": "./" },
-  "host": "http://research.eagleton.com",
-  "browser": [ "chrome" ],
-  "port" : 8080,
-  "ui": {
-    "port": 9009
-  }
+    "injectChanges": false,
+    "files": [ "./**/*.{ html, css, js, jsx, es6, ico }" ],
+    "watchOptions": {
+        "ignored": "node_modules"
+    },
+    "server": {
+        "baseDir": "./"
+    },
+    "host": "http://octoplex.carlingtech.com",
+    "browser": [ "chrome" ],
+    "port": 3000,
+    "ui": {
+        "port": 3001
+    }
 }
