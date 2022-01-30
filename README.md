@@ -15,3 +15,4 @@
 - Implementing raw IP Services in Node.js
 - Implementing WebSockets in Node.js
 - Implementing React.jsx in Node.js
+- Implementing Next.js in Node.js
