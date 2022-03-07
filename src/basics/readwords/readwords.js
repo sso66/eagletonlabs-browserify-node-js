@@ -18,6 +18,6 @@ console.log("-----------------------------------------------");
 const content = document.getElementById('content');
 content.innerHTML = '<i>'+censor.getCensoredWords()+'</i><br />';
 content.innerHTML += censor.censor("Some very sad, bad and mad text. <hr/>");
-content.innerHTML += "Render Node App in the Browser";
+content.innerHTML += "React/Node Micro Apps in the Browser";
 
 // eof 

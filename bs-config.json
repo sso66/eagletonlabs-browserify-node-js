@@ -7,7 +7,7 @@
     "server": {
         "baseDir": "./"
     },
-    "host": "http://octoplex.carlingtech.com",
+    "host": "http://sun.stephen.oo@eagleton-labs.com",
     "browser": [ "chrome" ],
     "port": 3000,
     "ui": {
