@@ -1,5 +1,5 @@
 {
-  "name": "webpack-nodejs",
+  "name": "webpack-node.js",
   "version": "1.1.2",
   "description": "Webpack module loader and Browserify transpiler for Node.js modules",
   "main": "index.js",
