@@ -10,7 +10,7 @@
 > It is important to understand the mechanisms that Node.js provides to implement effective and 
 > efficient web applications and services.
 >
-> Focus on manipulating JSON data, managint binary data structure - byte arrray, and implementing
+> Focus on manipulating JSON data, managing binary data structure - byte arrray, and implementing
 > readable and writable streams and data compression / decompression.
 > 
 > Learn how to leverage the Node.js functionality to work with different I/O requirements.
@@ -20,7 +20,7 @@
 	- Converting JavaScript Objects to JSON
 	
 - Using the Buffer Module to Buffer Data
-	- Understainding Buffered Data
+	- Understanding Buffered Data
     - Creating Buffers
 	- Writing to Buffers
 	- Reading from Buffers
