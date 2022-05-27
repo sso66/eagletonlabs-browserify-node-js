@@ -1,0 +1,45 @@
+{
+  "name": "webpack-node.js",
+  "version": "1.2.0",
+  "description": "Using Node.js, React.jsx and Browserify transpiler for NPM builds",
+  "main": "index.js",
+  "scripts": {
+    "build": "browserify -t [ babelify ] src/index.js -o build/bundle.js",
+    "react": "browserify -t [ babelify --presets [ react ] ] src/index-react.js -o build/app.js",
+    "test": "jest --coverage",
+    "start": "lite-server --bs-config.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sso66/webpack-node.js.git"
+  },
+  "keywords": [
+    "nodejs",
+    "browserify",
+    "webpack",
+    "babel",
+    "lodash",
+    "react"
+  ],
+  "author": "Sun Stephen Oo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sso66/webpack-node.js/issues"
+  },
+  "homepage": "https://github.com/sso66/webpack-node.js#readme",
+  "devDependencies": {
+    "babel-preset-react": "^6.24.1",
+    "babelify": "^7.3.0",
+    "browserify": "^17.0.0",
+    "jest": "^27.5.1",
+    "lite-server": "^2.6.1",
+    "lodash": "^4.17.21"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "engines": {
+    "*node": "*"
+  }
+}
