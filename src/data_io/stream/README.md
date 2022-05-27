@@ -1,4 +1,5 @@
 ## Using the `Stream` Module to Stream Data
+
 **Reason**
 > An important module in Node.js is the `Stream` module. 
 >
@@ -6,7 +7,7 @@
 >
 > Streams are used all over in Node.js, when accessing files, when reading data from HTTP (Websocket) requests, and in several areas.
 >
-> This section covers using the `Stream` module to create streams as well as to read and write data from them
+> This section covers using the `Stream` module to create streams as well as to read and write data from them.
 
 **Purpose**
 > The purpose of streams is to provide a common mechanism to transfer data from one location to another. 
@@ -16,8 +17,8 @@
 > Streams are commonly used for HTTP data and files. You can open a file as readable stream or access the data from HTTP (Websocket) requests as readable stream and read bytes out of as needed.
 >
 > In addition, you can create your own custom streams. Follow up on the process of creating and using streams such as:
-  - `Readable` Streams
-  > `Readable` streams are designed to provide a mechanism to easily read data coming into and application, from another source. 
+  - `Readable` streams
+  > They are designed to provide a mechanism to easily read data coming into and application from another source. 
   > Common readable streams are:
    >  - `http` responses on the client
    >  - `http` request on the server
@@ -101,7 +102,7 @@
   > Instead, you implement the **_transform(chunk, encoding, callback)** and  `flush(callback)` methods. The **_transform()** method should accept data from `write()` request, modify it and push out the modified data.
   >
   - Piping `Readable` Streams and `Writable` Streams
-  > One of the coolest things you can doe with stream objects is chain `Readable` streams to `Writable` streams by using `pipe(writableStream, [options])` function.
+  > One of the coolest things you can do with stream objects is chain `Readable` streams to `Writable` streams by using `pipe(writableStream, [options])` function.
   >
   > This does exactly what the name implies: It puts the output of `Readable` stream directly into the `Writable` stream.
   >
@@ -110,4 +111,3 @@
   >   `readStream.pipe(writableStream, {end: true})`
   >
   > You can break the pipe programmatically by using `unpipe(destinationStream)` option. Re: stream_piped.js
-  

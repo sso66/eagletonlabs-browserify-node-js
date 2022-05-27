@@ -11,9 +11,9 @@
 > - JSON is easier to read from developer's perspective because its syntax is similar to that of JavaScript.
 
 #### Converting JSON to JavaScirpt Objects
-> js2json.js
+> `js2json.js`
 
 #### Converting JavaScript Objects to JSON
-> json2js.js
+> `json2js.js`
 
 

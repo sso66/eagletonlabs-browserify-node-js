@@ -13,12 +13,12 @@
   - Compressing and Decompressing Buffers
   > The `zlib` module provides several helper functions that make it easy to compress/decompress data buffers.
   >
-  > The all use the same basic format function(buffer, callback), where function is the compression/decompression method, buffer is the buffer to be compressed/decompressed, and callback is the callback function that is executed after the compression/decompression occurs. Re: zlib_buffers.js
+  > They all use the same basic format `function(buffer, callback)`, where function is the compression/decompression method, buffer is the buffer to be compressed/decompressed, and callback is the callback function that is executed after the compression/decompression occurs. Re: `zlib_buffers.js`
   
   - Compressing and Decompressing Streams
   > Compression/Decompression *streams* using `zlib` is slightly different from compressing/decompressing *buffers*.
   >
-  > Instead, you use the pipe() function to pipe the data from one stream through the compression/decompression object not another stream. This can apply to compressing `Readable` streams into `Writable` streams.
+  > Instead, you use the `pipe()` function to pipe the data from one stream through the compression/decompression object not another stream. This can apply to compressing `Readable` streams into `Writable` streams.
   >
-  > The good example of doing this is compressing the contents of a file by using `fs.Readstream` and  `fs.WriteSteam. Re: zlib_file.js`
+  > The good example of doing this is compressing the contents of a file by using `fs.Readstream` and  `fs.WriteSteam`. Re: `zlib_file.js`
   

@@ -1,6 +1,6 @@
-## event_model: Using Events, Listeners, Timers, and Callbacks in Node.js
+## event_model: Using Events, Emitters & Listeners, Timers, and Callbacks in Node.js
 
-Using Events, Listeners, Timers, and Callbacks 
+Using Events, Emitters, Listeners, Timers, and Callbacks 
 
 **Purpose**
 > Node.js provides scablablility and performance through its powerful event-driven model.
@@ -14,7 +14,7 @@ Using Events, Listeners, Timers, and Callbacks
 > However, those changes will be well worth the improvements in speed that you get by
 > using Node.js
 
-**Reason**
+**Reason** 
 > Covers the different methods you use to add work to the Node.js event queue:
 > - You can add work by using event listeners or timers or you can schedule work directly
 > - Learn also how to implement events in your own custom modules and objects
@@ -48,7 +48,7 @@ Using Events, Listeners, Timers, and Callbacks
 	>	- Using the `process.nextTick` option to schedule work to be picked up on the next cycle of the the event loop.
 	>	- Use timers to schedule work to be done after particular amount of time or at periodic intervals.
 
-	- Implementing Timers
+	- *Implementing Timers*
 		> A useful feature of Node.js and JavaScript is the ability to delay execution of code for the period of time.
 		>
 		> This can be useful for cleanup and refresh work that you do not want to always be running.
@@ -59,13 +59,14 @@ Using Events, Listeners, Timers, and Callbacks
 		- Performing Periodic Work with Intervals
 		- Performing Immediate Work with an Immediate Timer
 		- Dereferencing Timers from the Event Loop
-		- Using nextTick to Schedule Work
 	
-	- Implementing Event Emitters and Listeners
+	- *Using nextTick to Schedule Work*
+	
+	- *Implementing Event Emitters and Listeners*
 		> You will have opportunities to implement a lot of events that are built into various Node.js modules.
 		>
-		> For now, focus on you own custom events as well as implement listener callbacks that are implemented
-		> when an event is emitted (triggered).
+		> For now, focus on your own custom events as well as implement listener callbacks that are implemented
+		> when an event is emitted (triggered or disptached).
 		
 	  	- Adding Custom Events to Your JavaScript Objects
 	  		> Events are emitted using an `EventEmitter` object. This object is included in the `events` module.
@@ -80,17 +81,17 @@ Using Events, Listeners, Timers, and Callbacks
 	  		```
 			>
 			> Occasionally, you will want to add events directly to your JavaScript objects. To do that,
-			> you need to inherit the `EventEmitter` functionality in you object by calling `events`.
+			> you need to inherit the `EventEmitter` functionality in your object by calling `events`.
 			>
-			> `EventEmitter.call(this)` in you object instantiation. You also need to add
-			> `events.EventEmitter.prototype` to you object prototyping - Prototype Design Pattern.
+			> `EventEmitter.call(this)` in your object instantiation. You also need to add
+			> `events.EventEmitter.prototype` to your object prototyping - Prototype Design Pattern.
 			```
 			function MyObj() {
 			    events.EventEmitter.call(this);
 			}
 			MyObj.prototype.__proto__ = events.EventEmitter.prototype;
 			```
-			> You can then emit events directly form instances of your object, For example:
+			> You can then emit events directly from instances of your object, For example:
 			```
 			var myObj = new MyObj();
 			myObj.emit("someEvent"); // const SOME_EVENT = 'someEvent`;
@@ -107,7 +108,7 @@ Using Events, Listeners, Timers, and Callbacks
 				  
 			> - **on(eventName, callback):** Same as `.addListener()`.
 			
-			> - **.once(eventName, callback):** Only the firs time the `eventName` event is triggered,
+			> - **.once(eventName, callback):** Only the first time the `eventName` event is triggered,
 			> the `callback` function is placed in the event queue to be executed.
 			
 			> For example, to add a listener to an instance of the `MyObject` extends `EventEmitter` class
@@ -133,7 +134,8 @@ Using Events, Listeners, Timers, and Callbacks
 			> - **.removeListener(eventName, callback):** Removes the `callback` function from the `eventName` event
 			> of the `EventEmitter` object.
 			
-	  	- Implementing Event Listeners and Event Emitters - `emitter_listener.js`
+	  	- Implementing Event Listeners and Event Emitters 
+		  - `emitter_listener.js`
 		
 - *Implementing Callbacks*
 	> The Node.js event-driven model relies heavily on the callback functions. 
@@ -145,9 +147,12 @@ Using Events, Listeners, Timers, and Callbacks
 	> - handling callback function parameters in a loop (iterator), and
 	> - nesting callbacks
 		
-  	- Adding Additional Parameters to Callbacks - `callback_parameters.js`
-  	- Implementing Closure in Callbacks - `callback_closure.js`
-  	- Chaining Callbacks - `callback_chain.js`
+  	- Adding Additional Parameters to Callbacks 
+	  - `callback_parameters.js`
+  	- Implementing Closure in Callbacks 
+	  - `callback_closure.js`
+  	- Chaining Callbacks 
+	  - `callback_chain.js`
 
 - Summary
 > The event-driven model that Node.js uses provides scalability and performance.
@@ -166,6 +171,6 @@ Using Events, Listeners, Timers, and Callbacks
 > listener function to them.
 
 - Up Next
-> Get a chance to see how to manage data I/O by using streams and buffers. Also, learn
+> Get a chance to see how to manage *data I/O* by using streams and buffers. Also, learn
 > about Node.js functionality that allows you to manipulate JSON and compressed forms
 > of data.

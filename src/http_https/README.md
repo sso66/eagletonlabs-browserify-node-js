@@ -4,11 +4,11 @@
 > One of the most important aspects of Node.js is the ability to implement HTTP and HTTPS server and services quickly.
 
 **Reason**
-> Node.js provides the `http` and `https` modues out of the box, and they give you a basic framework to do just about anything you might need to do from an HTTP and HTTPS standpoint.
+> Node.js provides the `http` and `https` modues out of the box, and they give you a basic framework to do just about anything you might need to do from HTTP and HTTPS standpoint.
 >
 > In fact, it is not difficult to implement a full webserver using just the `http` module. However, the `http` module is pretty low level.
 >
-> You will likely to use different module to handle routing, cookies, caching, etc. Explore `express` module to see the  advantages of this module provides.
+> You will likely to use different module to handle routing, cookies, caching, etc. Explore `express` module to see the advantages of this module provides.
 >
 > What you will more likely be using the `http` module for is implementing backend web services for your applications.
 
@@ -28,8 +28,7 @@
 - *Processing Query Strings and Form Parameters: 'querystring' npm*
 
 - *Understanding Request, Response, and Server Objects*
-  > To use the `http` module in Node.js applications, you first need to understand the request and response objects. They provide the 
-  > information and much of the functionality that comes into and out of HTTP clients and servers.
+  > To use the `http` module in Node.js applications, you first need to understand the request and response objects. They provide the information and much of the functionality that comes into and out of HTTP clients and servers.
   >
   > Once you see the makeup of these **objects** - including the **properties**, **methods** and **events** they provide - it will be simple to implement your own HTTP servers and clients.
   >
@@ -42,8 +41,7 @@
   > Learn about the most important events, properties and methods that each provides.
 	
 - *Implementing HTTP Clients and HTTP Servers in Node.js*
-	> Now that you understand the http.ClientRequest, http.ServerResponse, and http.IncomingMessage object, you are ready to jump in and implement some
-	> Node.js HTTP clients and the servers.
+	> Now that you understand the http.ClientRequest, http.ServerResponse, and http.IncomingMessage object, you are ready to jump in and implement some Node.js HTTP clients and the servers.
 	>
 	> Follow the guidelines through the process of implementing basic HTTP clients and servers in Node.js.
 	>
@@ -65,12 +63,12 @@
 - Summary
 > An important aspects of Node.js is the ability to implement HTTP and HTTPS servers and the services quickly.
 
-> The `http` and `https` modules provide everything you need to implement webserver basics. For your full webserver, you are still going to want to use a more extended library, such  as `express`. 
+> The `http` and `https` modules provide everything you need to implement webserver basics. For your full webserver, you are still going to want to use a more extended library, such as `express`. 
 
 > However, the `http` and `https` modules work well for some basics web services and are super simple to implement.
 
 > Here it covers enough HTTP basics to give you a good start on implementing your own services. You also got a chance to seed how to use the `url` and `querystring` modules to parse URLs and query strings into object and back.
 
 - Up Next
-> You'll get a chance to go a little bit deeper and learn about the 'net` module. You will also learn how to implement your own socket services, using TCP clients and servers.
+> You'll get a chance to go a little bit deeper and learn about the `net` module. You will also learn how to implement your own socket services, using TCP clients and servers.
 
