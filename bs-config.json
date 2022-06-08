@@ -7,7 +7,7 @@
     "server": {
         "baseDir": "./"
     },
-    "host": "http://sun.stephen.oo@eagleton-labs.com",
+    "host": "localhost",
     "browser": [ "chrome" ],
     "port": 3000,
     "ui": {
