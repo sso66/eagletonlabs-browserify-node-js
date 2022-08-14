@@ -50,4 +50,7 @@ http.createServer(function(request, response) {
 	});
 }).listen(8080);
 
-// eof
+
+// eof// Console I/O will print the message
+console.log('curl Server running at http://127.0.0.1:8080');
+
