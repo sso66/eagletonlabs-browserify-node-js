@@ -41,7 +41,7 @@
     "@storybook/testing-library": "^0.0.11",
     "babel-loader": "^8.2.5",
     "babel-preset-react": "^6.24.1",
-    "babelify": "^7.3.0",
+    "babelify": "^10.0.0",
     "browserify": "^17.0.0",
     "jest": "^27.5.1",
     "lite-server": "^2.6.1",
