@@ -21,7 +21,8 @@
     "webpack",
     "babel",
     "lodash",
-    "react"
+    "react",
+    "storybook"
   ],
   "author": "Sun Stephen Oo",
   "license": "ISC",
