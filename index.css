@@ -1,0 +1,16 @@
+/* index.css */
+body { 
+	background-color: black;
+	border: 1px solid blue; 
+	color: white;
+	text-align: center;
+}
+
+#app { 
+	background-color: teal;
+	border: 1px solid orange;
+	font-size: 1.1em; 
+	text-align: center;
+}
+
+/* eof */
