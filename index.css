@@ -6,11 +6,13 @@ body {
 	text-align: center;
 }
 
+/* React App */
 #app { 
-	background-color: teal;
-	border: 1px solid orange;
-	font-size: 1.1em; 
+	background-color: orange;
+	border: 2px dotted teal;
+	font-size: 1.75em; 
 	text-align: center;
+	color: snow;
 }
 
 /* eof */

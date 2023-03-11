@@ -1,0 +1,24 @@
+// File: file_exists.js
+// Note: Creating Directores and  Files
+// Date: 03/12/2023
+//..............................................................................
+console.log("Mounting file_create.js...");
+// import fs from 'fs';
+
+const fs = require('fs');
+
+const createDir = (dirPath) => {
+
+}
+
+const createFile = (filePath, fileContent) => {
+
+} 
+
+const path = 'my/-new-dir/and-my-extra-dir';
+const content = 'content of my new file';
+
+createDir(path);
+createFile(path, content)
+
+// eof
