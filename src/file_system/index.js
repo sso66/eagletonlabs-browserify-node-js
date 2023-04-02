@@ -32,10 +32,3 @@ console.warn('Found no error in opening a file (sync) -> file descriptor: ', fd)
 console.info('___ The fd parameter is the file decriptor that you can use to read or write the file ___');
 
 // eof
-
-// Asynchronous File System Calls
-
-// Synchronous File System Calls...
-
-// Found no error in opening a file (sync) -> file descriptor:  3
-// ___ The fd parameter is the file decriptor that you can use to read or write
