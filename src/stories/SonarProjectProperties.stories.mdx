@@ -1,0 +1,80 @@
+import { Meta } from '@storybook/addon-docs';
+
+import SonarQube from './assets/settings-hierarchy-diagram.webp';
+
+<Meta title="Document/Sonar Project Properties" />
+
+<style>
+  {`
+    .subheading {
+      --mediumdark: '#999999';
+      font-weight: 900;
+      font-size: 13px;
+      color: #999;
+      letter-spacing: 6px;
+      line-height: 24px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      margin-top: 40px;
+    }
+
+    .tip {
+      display: inline-block;
+      border-radius: 1em;
+      font-size: 11px;
+      line-height: 12px;
+      font-weight: 700;
+      background: black;
+      color: white;
+      padding: 4px 12px;
+      margin-right: 10px;
+      vertical-align: top;
+    }
+
+    .tip-wrapper {
+      font-size: 13px;
+      line-height: 20px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    .tip-wrapper code {
+      font-size: 12px;
+      display: inline-block;
+    }
+  `}
+</style>
+
+# Sonar Project Properties
+## Analysis parameters
+Project analysis settings can be configured in multiple places. 
+Each plugin and language analyzer adds its own properties which can be defined 
+in the SonarQube UI; these properties can also be defined as analysis parameters, 
+however, the descriptions of those properties and the best place to set them is in 
+the UI when possible. Only parameters set through the UI are reusable for subsequent 
+analysis and there is a structure to the way parameters are read by the scanner.
+
+> Here is the hierarchy in order of precedence:
+<img src={SonarQube} alt="sonarqube" />
+
+- *Global / Admin properties*: Apply to all projects. Defined in the UI in **Administration > Configuration > General Settings**
+- *Project properties*: Apply to one project only. At project level, defined in the UI in **Project Settings > General Settings**
+- *Project analysis parameters*: Defined in a project analysis configuration file or scanner configuration file
+- *Analysis / Command line parameters*: Defined when launching an analysis with -D on the command line
+
+> Note that only parameters set through the UI are stored in the database. For example, if you override the sonar.exclusions parameter via the command line for a specific project, it will not be stored in the database. Subsequent analyses, or analyses in SonarLint with connected mode, would still be executed with the exclusions defined in the UI and therefore stored in the DB.
+
+> Most of the property keys shown in the interface at both global and project levels can also be set as analysis parameters, but the parameters listed below can only be set at analysis time.
+
+> For language-specific parameters related to test coverage and execution, see test coverage. For language-specific parameters related to external issue reports, see external issues. And to learn more about controlling the scope of your analysis, see the page on Narrowing the focus.  
+
+<div className="subheading">Mandatory parameters</div>
+
+
+<div className="subheading">Optional parameters</div>
+
+
+<div className="tip-wrapper">
+  <span className="tip">Tip</span>Edit the Markdown in{' '}
+  <code>stories/SonarProjectProperties.stories.mdx</code>
+</div>
