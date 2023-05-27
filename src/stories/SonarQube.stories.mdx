@@ -1,0 +1,67 @@
+import { Meta } from '@storybook/addon-docs';
+import SonarQube from './assets/SonarQube.jpg'
+
+<Meta title="Document/SonarQube" />
+
+<style>
+  {`
+    .tip {
+      display: inline-block;
+      border-radius: 1em;
+      font-size: 11px;
+      line-height: 12px;
+      font-weight: 700;
+      background: black;
+      color: white;
+      padding: 4px 12px;
+      margin-right: 10px;
+      vertical-align: top;
+    }
+
+    .tip-wrapper {
+      font-size: 13px;
+      line-height: 20px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+
+    .tip-wrapper code {
+      font-size: 12px;
+      display: inline-block;
+    }
+  `}
+</style>
+# SonarQube / Fortify
+## GitLab Integration = (GitLab Projects) => SonarQube
+### `feat/SIASP-5678_sonarqube_project` (GOAT)
+## What to have?
+### Prerequisites 
+## What to know?
+#### Branch analysis 
+## What to do?
+#### Authenticating with GitLab PaaS
+## How to do?
+#### Importing GitLab projects into SonarQube
+  - ##### Setting global settings
+  - ##### Adding personal access token for importing projects: Authorization
+
+#### Analying projects with GitLab CI/CD Pipelines
+  - ##### Setting environment variables
+  - ##### Configuring `gitlab-ci.yml` file
+  - ##### Failing the pipeline when quality gate fails
+  - ##### For more information
+
+#### Reporting Quality Gate Status in GitLab Platform as a Servicing React TypeScript
+  - ##### Advanced configuration
+>
+#### Conclusion
+  - ##### Merge Request Return to SonarQube Cycle
+>
+<img src={SonarQube} alt="sonarqube" />
+  - ##### Merge Request Exit from SonarQube Cycle
+
+
+<div className="tip-wrapper">
+  <span className="tip">Tip</span>Edit the Markdown in{' '}
+  <code>stories/SonarQube.stories.mdx</code>
+</div>
