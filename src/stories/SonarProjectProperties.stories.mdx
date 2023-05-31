@@ -63,11 +63,11 @@ apply by the scanner- the **SonarScanner**:
 - *Project analysis parameters*: Defined in a project analysis configuration file or scanner configuration file
 - *Analysis / Command line parameters*: Defined when launching an analysis with -D on the command line
 
->Notice only the stored parameters set through the UI are in the database. For example, if we override 
-the sonar.exclusions parameter via the command line for a specific project; we cannot store it in the database. 
+> Notice only the stored parameters set through the UI are in the database. For example, if we override `the sonar.exclusions` parameter 
+via the command line for a specific project; we do not store the settings in the database. 
 
-> Subsequent analyses, or analyses in SonarLint with connected mode, would still be executed with the exclusions defined 
-in the UI and, therefore, stored in the DB.
+> Subsequent analyses, or analyses in **SonarLint** with connected mode, would still be executed with the exclusions defined in the UI. 
+Thus, we can store the settings in the DB.
 
 > The interface shows the property keys at both global and project levels. We can also set them as analysis parameters, but 
 set the parameters listed below can only be at analysis time.
