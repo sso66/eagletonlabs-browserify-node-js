@@ -8,7 +8,6 @@
 - Implementing Socket Services in Node.js
 - Scaling Applications Using Multiple Processors in Node.js
 - Using Additional Nodes.js Modules
----
 - Implementing UDP Services in Nodes.
 - Implementing raw IP Services in Node.js
 - Implementing WebSockets in Node.js
