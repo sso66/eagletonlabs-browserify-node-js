@@ -1,6 +1,6 @@
 # webpack-node.js.git
 
-## Design Considerations for Service Orchestraction wih Node.js for building Web Services
+## Design Considerations for Service Orchestraction with Node.js for building Web Services
 
 #### Geting Started with default Console I/O Services Node.js
 #### Using Events, Listeners, Timers and Callbacks in Node.js
