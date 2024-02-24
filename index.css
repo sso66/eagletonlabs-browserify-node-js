@@ -1,18 +1,9 @@
 /* index.css */
-body { 
-	background-color: black;
-	border: 1px solid blue; 
-	color: white;
-	text-align: center;
-}
-
-/* React App */
-#app { 
-	background-color: orange;
-	border: 2px dotted teal;
-	font-size: 1.75em; 
-	text-align: center;
-	color: snow;
+body {
+  background-color: black;
+  border: 1px solid blue;
+  color: white;
+  text-align: center;
 }
 
 /* eof */

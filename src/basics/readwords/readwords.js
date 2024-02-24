@@ -1,4 +1,4 @@
-// File: basics/readwords.js 
+// File: src/basics/readwords/readwords.js 
 // Note: Consumer/Subscriber NPM
 // Date: 03/07/2020
 //.............................................................................. 
