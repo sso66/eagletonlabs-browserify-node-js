@@ -4,7 +4,7 @@
   "description": "Using Node.js and Browserify transpiler for NPM builds",
   "main": "index.js",
   "scripts": {
-    "build": "browserify -t [ babelify ] src/index.js -o build/bundle.js",
+    "build": "browserify -t [ babelify ] src/index.js -o dist/bundle.js",
     "test": "jest --coverage",
     "start": "lite-server --bs-config.json"
   },
