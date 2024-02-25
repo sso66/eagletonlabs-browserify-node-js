@@ -18,7 +18,8 @@
     "webpack",
     "babel",
     "lodash",
-    "react"
+    "jest",
+    "eslint"
   ],
   "author": "Sun Stephen Oo",
   "license": "ISC",
