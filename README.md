@@ -1,4 +1,4 @@
-# browserify-node.js.git
+# browserify-node-js.git
 
 ## A) Design Considerations for Service Orchestration with Node.js for Building Web Services
 
