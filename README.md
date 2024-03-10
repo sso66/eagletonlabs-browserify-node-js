@@ -1,6 +1,6 @@
 # browserify-node.js.git
 
-## Design Considerations for Service Orchestraction with Node.js for Building Web Services
+## A) Design Considerations for Service Orchestraction with Node.js for Building Web Services
 
 #### Geting Started with default Console I/O Services Node.js
 #### Using Events, Listeners, Timers and Callbacks in Node.js
@@ -14,7 +14,7 @@
 #### Implementing Brower I/O Services in Node.js
 #### Implementing Jest Testing Framework in Node.js
 
-## Using Express Middleware to Make Life Easier: Building Web Servers
+## B) Using Express Middleware to Make Life Easier: Building Web Servers
 #### Implementing Express in Node.js
 #### Implementing Express Middleware
 
