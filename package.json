@@ -1,5 +1,5 @@
 {
-  "name": "browserify-node.js",
+  "name": "browserify-node-js",
   "version": "1.0.0",
   "description": "Using Node.js and Browserify transpiler for NPM builds",
   "main": "index.js",
