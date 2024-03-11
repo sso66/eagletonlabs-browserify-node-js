@@ -1,4 +1,4 @@
-// index.js
+// src/index.js
 console.log('Mounting index.js Node.js Application...');
 
 const square = require('./square');
