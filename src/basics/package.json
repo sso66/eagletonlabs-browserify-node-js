@@ -4,8 +4,7 @@
   "description": "Getting Started with Node.js",
   "main": "globals.js",
   "scripts": {
-    "start": "node globals.js",
-    "dev": "node readwords/readwords.js"
+    "start": "node globals.js"
   },
   "keywords": [],
   "author": "",
