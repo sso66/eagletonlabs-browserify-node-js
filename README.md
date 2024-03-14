@@ -27,13 +27,12 @@
 11. #### Implementing Jest Testing Framework in Node.js
 
 ### B) Using Express Middleware to Make Life Easier: Building Web Servers
-
-#### Implementing Express in Node.js
-#### Implementing Express Middleware
+1. #### Implementing Express in Node.js
+2. #### Implementing Express Middleware
 ### C) Resources
 
-#### [Using Lite Server Development Dependency](https://www.npmjs.com/package/lite-server)
+1. #### [Using Lite Server Development Dependency](https://www.npmjs.com/package/lite-server)
 
-#### [Tweaking & Testing BrowserSync](https://medium.com/oceanize-geeks/browsersync-for-faster-development-f27b09b9896e)
+2. #### [Tweaking & Testing BrowserSync](https://medium.com/oceanize-geeks/browsersync-for-faster-development-f27b09b9896e)
 
-#### [Automatically generate and release a changelog using Node.js](https://blog.logrocket.com/automatically-generate-and-release-a-changelog-with-node-js/)
+3. #### [Automatically generate and release a changelog using Node.js](https://blog.logrocket.com/automatically-generate-and-release-a-changelog-with-node-js/)
