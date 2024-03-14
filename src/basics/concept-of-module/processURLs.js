@@ -35,7 +35,6 @@ console.log("\n___ Resolving the URL Componnts ___")
 const targetUrl = '/another/path?querynew';
 console.log('urlRsv: ' + url.resolve(baseUrl, targetUrl + '\n'));
 
-
 // Signature: data
 // qs.parse(str, [sep], [eq], [options]);
 // qs.stringify(obj, [sep], [eq]);
