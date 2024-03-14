@@ -26,9 +26,9 @@ Getting Started with Node.js
 
 - Writing Data to the Console
 
-  > One of the most useful modules in Node.js is the `console` module. This module provides a lot of functionality for writing debug and information statements to the console.
+  > One of the most useful modules in Node.js is the `console` module. This module provides a lot of functional for writing debug and information statements to the console.
   >
-  > The `console` module allows you to control output, implement time delta output, and write tracebacks and assertions to the console.
+  > The `console` module allows you to control output, implement time delta output, and write tracebacks and assertions to console.
 
 - Summary
 
