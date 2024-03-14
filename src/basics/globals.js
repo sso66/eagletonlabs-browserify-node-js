@@ -7,7 +7,6 @@ const processURLs = require('./concept-of-module/processURLs')
 console.log('load -> ' + load)
 console.log('processURLs -> ' + processURLs);
 
-
 // Based on the location of the program, it will print the
 // current filename and current directory, respectively.
 console.log('\nUnderstanding Node.js Global Objects: modules and packages\n')
