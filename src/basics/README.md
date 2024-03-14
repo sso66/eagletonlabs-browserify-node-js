@@ -41,4 +41,4 @@ Getting Started with Node.js
   > Lesson learned how to use the **npm** to package a local module as well as publish to NPM registry, also, how to install the Node.js module and use them in your own Node.js application.
 
 - Up Next
-  > Covers the event driven nature of Node.js to solve concurrency issues. Also, you will get a chance to see how events work in the Node.js environment and how to control, manipulae and use them in Node.js in your applications.
+  > Covers the event driven nature of Node.js to solve concurrency issues. Also, you will get a chance to see how events work in the Node.js environment and how to control, manipulate and use them in Node.js in your applications.
