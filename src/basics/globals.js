@@ -1,6 +1,12 @@
 // File: globals.js
 // Date: 9/5/2020
 // Note: Node.js globals: "scope", "context" and "function"
+const load = require('./concept-of-module/load')
+const processURLs = require('./concept-of-module/processURLs')
+
+console.log('load -> ' + load)
+console.log('processURLs -> ' + processURLs);
+
 
 // Based on the location of the program, it will print the
 // current filename and current directory, respectively.
@@ -9,8 +15,8 @@ console.log('filename: ' + __filename); // represent node module
 console.log('dirname: ' + __dirname); // represent node package
 
 // named callback function
-function printHello() {
-    console.log('console module I/O: Hello, World!');
+function printHello(idx) {
+    console.log(`${idx}. console module I/O: Hello, World!`);
 }
 
 // call the above function after 2 seconds
@@ -27,11 +33,11 @@ console.info("\nProgram Started");
 const counter = 10;
 console.log('Counter: %d', counter);
 
-console.time('Getting data');
+console.time('Getting data in');
 
 // Do some processing here...
 for (let i = 0; i < counter; i++) {
-    printHello();
+    printHello(i);
 }
 
 console.timeEnd('Getting data')

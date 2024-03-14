@@ -1,0 +1,12 @@
+{
+  "name": "basics",
+  "version": "1.0.0",
+  "description": "Getting Started with Node.js",
+  "main": "globals.js",
+  "scripts": {
+    "start": "node globals"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
