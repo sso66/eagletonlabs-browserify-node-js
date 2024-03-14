@@ -28,7 +28,9 @@
 
 ### B) Using Express Middleware to Make Life Easier: Building Web Servers
 1. #### Implementing Express in Node.js
-2. #### Implementing Express Middleware
+2. 
+3. #### Implementing Express Middleware
+4. 
 ### C) Resources
 
 1. #### [Using Lite Server Development Dependency](https://www.npmjs.com/package/lite-server)
